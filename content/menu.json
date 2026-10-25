@@ -1,7 +1,7 @@
 {
+  "heading": "Food menu",
   "enabled": false,
   "intro": "Add your current food offer here when the kitchen is serving.",
-  "heading": "Food menu",
   "sections": [
     {
       "items": [

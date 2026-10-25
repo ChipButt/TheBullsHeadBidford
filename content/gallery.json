@@ -1,5 +1,4 @@
 {
-  "note": "Prototype imagery should be replaced by business-owned photographs before commercial launch.",
   "enabled": true,
   "items": [
     {
@@ -7,8 +6,9 @@
       "image": "https://d2s8km3brsjp0y.cloudfront.net/eyJidWNrZXQiOiJ3aGF0cHViIiwia2V5IjoiU0hBXC9TSEErMzItMTczMDY3LTI0MC0zMjAuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyNDAsImhlaWdodCI6MzIwLCJmaXQiOiJjb3ZlciJ9LCJyb3RhdGUiOm51bGx9fQ%3D%3D"
     },
     {
-      "image": "https://d2s8km3brsjp0y.cloudfront.net/eyJidWNrZXQiOiJ3aGF0cHViIiwia2V5IjoiU0hBXC9TSEErMzItMTczMDY2LTI0MC0zMjAuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyNDAsImhlaWdodCI6MzIwLCJmaXQiOiJjb3ZlciJ9LCJyb3RhdGUiOm51bGx9fQ%3D%3D",
-      "alt": "Interior of The Bulls Head"
+      "alt": "Interior of The Bulls Head",
+      "image": "https://d2s8km3brsjp0y.cloudfront.net/eyJidWNrZXQiOiJ3aGF0cHViIiwia2V5IjoiU0hBXC9TSEErMzItMTczMDY2LTI0MC0zMjAuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyNDAsImhlaWdodCI6MzIwLCJmaXQiOiJjb3ZlciJ9LCJyb3RhdGUiOm51bGx9fQ%3D%3D"
     }
-  ]
+  ],
+  "note": "Prototype imagery should be replaced by business-owned photographs before commercial launch."
 }

@@ -1,36 +1,36 @@
 {
   "items": [
     {
-      "label": "Cask ale",
-      "enabled": true
+      "enabled": true,
+      "label": "Cask ale"
     },
     {
-      "label": "Beer garden",
-      "enabled": true
+      "enabled": true,
+      "label": "Beer garden"
     },
     {
-      "label": "Live music",
-      "enabled": true
+      "enabled": true,
+      "label": "Live music"
     },
     {
-      "label": "Dog friendly",
-      "enabled": true
+      "enabled": true,
+      "label": "Dog friendly"
     },
     {
-      "label": "Family friendly",
-      "enabled": true
+      "enabled": true,
+      "label": "Family friendly"
     },
     {
-      "label": "Real fire",
-      "enabled": true
+      "enabled": true,
+      "label": "Real fire"
     },
     {
-      "label": "Wi‑Fi",
-      "enabled": true
+      "enabled": true,
+      "label": "Wi‑Fi"
     },
     {
-      "label": "Separate bar",
-      "enabled": true
+      "enabled": true,
+      "label": "Separate bar"
     }
   ]
 }
