@@ -1,38 +1,641 @@
 {
   "version": 2,
   "pages": [
-    {"id":"home","label":"Home","url":"","groups":[
-      {"label":"Homepage text","fields":[
-        {"label":"Eyebrow text","type":"text","path":"site.heroEyebrow"},{"label":"Main heading","type":"text","path":"site.heroTitle"},{"label":"Second heading line","type":"text","path":"site.heroSubtitle"},{"label":"Main strapline","type":"text","path":"site.strapline"},{"label":"Main message","type":"text","path":"site.primaryMessage"},{"label":"Supporting note","type":"textarea","path":"site.heroNote"}
-      ]},
-      {"label":"Images","fields":[{"label":"Logo","type":"image","path":"site.logoImage"},{"label":"Main banner / hero image","type":"image","path":"site.heroImage"},{"label":"Hero image description","type":"text","path":"site.heroImageAlt"}]},
-      {"label":"Announcement","fields":[{"label":"Show announcement","type":"boolean","path":"site.notice.enabled"},{"label":"Heading","type":"text","path":"site.notice.title"},{"label":"Message","type":"textarea","path":"site.notice.text"}]}
-    ]},
-    {"id":"about","label":"About","url":"about/","groups":[
-      {"label":"Page banner","fields":[{"label":"Eyebrow text","type":"text","path":"site.aboutEyebrow"},{"label":"Banner heading","type":"text","path":"site.aboutTitle"},{"label":"Banner introduction","type":"textarea","path":"site.aboutLead"}]},
-      {"label":"About content","fields":[{"label":"Section heading","type":"text","path":"site.aboutHeading"},{"label":"Main text","type":"textarea","path":"site.aboutBody"}]}
-    ]},
-    {"id":"food","label":"Food","url":"food/","groups":[
-      {"label":"Page banner","fields":[{"label":"Eyebrow text","type":"text","path":"site.foodEyebrow"},{"label":"Banner heading","type":"text","path":"site.foodTitle"},{"label":"Banner introduction","type":"textarea","path":"site.foodLead"}]},
-      {"label":"Menu","fields":[{"label":"Menu heading","type":"text","path":"menu.heading"},{"label":"Introduction","type":"textarea","path":"menu.intro"},{"label":"Menu sections","type":"menu","path":"menu.sections"}]}
-    ]},
-    {"id":"drinks","label":"Drinks","url":"drinks/","groups":[
-      {"label":"Page banner","fields":[{"label":"Eyebrow text","type":"text","path":"site.drinksEyebrow"},{"label":"Banner heading","type":"text","path":"site.drinksTitle"},{"label":"Banner introduction","type":"textarea","path":"site.drinksLead"}]},
-      {"label":"Drinks","fields":[{"label":"Show drinks","type":"boolean","path":"drinks.enabled"},{"label":"Drinks heading","type":"text","path":"drinks.heading"},{"label":"Introduction","type":"textarea","path":"drinks.intro"}]}
-    ]},
-    {"id":"hours","label":"Hours","url":"hours/","groups":[
-      {"label":"Page banner","fields":[{"label":"Eyebrow text","type":"text","path":"site.hoursEyebrow"},{"label":"Banner heading","type":"text","path":"site.hoursTitle"},{"label":"Hours note","type":"textarea","path":"hours.note"}]},
-      {"label":"Opening Hours","fields":[{"label":"Weekly hours","type":"hours","path":"hours.hours"}]}
-    ]},
-    {"id":"events","label":"What's On","url":"whats-on/","groups":[
-      {"label":"Page banner","fields":[{"label":"Eyebrow text","type":"text","path":"site.eventsEyebrow"},{"label":"Banner heading","type":"text","path":"site.eventsTitle"},{"label":"Introduction","type":"textarea","path":"events.intro"}]},
-      {"label":"Events","fields":[{"label":"Events","type":"events","path":"events.items"}]}
-    ]},
-    {"id":"visit","label":"Visit","url":"visit/","groups":[
-      {"label":"Page banner","fields":[{"label":"Eyebrow text","type":"text","path":"site.visitEyebrow"},{"label":"Banner heading","type":"text","path":"site.visitTitle"},{"label":"Banner introduction","type":"textarea","path":"site.visitLead"}]},
-      {"label":"Contact","fields":[{"label":"Address","type":"textarea","path":"site.address"},{"label":"Phone","type":"text","path":"site.phone"},{"label":"Email","type":"text","path":"site.email"}]},
-      {"label":"Facilities","fields":[{"label":"Facilities","type":"features","path":"features.items"}]},
-      {"label":"Gallery","fields":[{"label":"Show gallery","type":"boolean","path":"gallery.enabled"},{"label":"Photos","type":"gallery","path":"gallery.items"}]}
-    ]}
+    {
+      "id": "index",
+      "label": "Home",
+      "url": "",
+      "groups": [
+        {
+          "label": "Logo",
+          "fields": [
+            {
+              "label": "Pub logo",
+              "type": "image",
+              "path": "site.editorBrand.logo"
+            }
+          ]
+        },
+        {
+          "label": "Edit page text",
+          "fields": [
+            {
+              "label": "P: Bidford-on-Avon · serving pints for 200+ years",
+              "type": "textarea",
+              "path": "site.editorPages.index.t01"
+            },
+            {
+              "label": "H1: A proper village local.",
+              "type": "text",
+              "path": "site.editorPages.index.t02"
+            },
+            {
+              "label": "P: Real ale, a fully enclosed garden, open fires in winter and live",
+              "type": "textarea",
+              "path": "site.editorPages.index.t03"
+            },
+            {
+              "label": "P: 36 High Street",
+              "type": "textarea",
+              "path": "site.editorPages.index.t04"
+            },
+            {
+              "label": "H1: Part of Bidford for more than two centuries.",
+              "type": "text",
+              "path": "site.editorPages.index.t05"
+            },
+            {
+              "label": "P: The Bulls Head has been part of Bidford life for more than 200 y",
+              "type": "textarea",
+              "path": "site.editorPages.index.t06"
+            },
+            {
+              "label": "H2: Dog friendly",
+              "type": "text",
+              "path": "site.editorPages.index.t07"
+            },
+            {
+              "label": "P: Dogs are welcome.",
+              "type": "textarea",
+              "path": "site.editorPages.index.t08"
+            },
+            {
+              "label": "H2: Garden",
+              "type": "text",
+              "path": "site.editorPages.index.t09"
+            },
+            {
+              "label": "P: A fully enclosed beer garden.",
+              "type": "textarea",
+              "path": "site.editorPages.index.t10"
+            },
+            {
+              "label": "H2: Winter fires",
+              "type": "text",
+              "path": "site.editorPages.index.t11"
+            },
+            {
+              "label": "P: Real/open fires are part of the pub for the colder months.",
+              "type": "textarea",
+              "path": "site.editorPages.index.t12"
+            }
+          ]
+        },
+        {
+          "label": "Replace pictures",
+          "fields": [
+            {
+              "label": "Photo 1",
+              "type": "image",
+              "path": "site.editorPages.index.img01"
+            },
+            {
+              "label": "Photo 2",
+              "type": "image",
+              "path": "site.editorPages.index.img02"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "The Pub",
+      "url": "about.html",
+      "groups": [
+        {
+          "label": "Edit page text",
+          "fields": [
+            {
+              "label": "P: 36 High Street",
+              "type": "textarea",
+              "path": "site.editorPages.about.t01"
+            },
+            {
+              "label": "H1: Part of Bidford for more than two centuries.",
+              "type": "text",
+              "path": "site.editorPages.about.t02"
+            },
+            {
+              "label": "P: The Bulls Head has been part of Bidford life for more than 200 y",
+              "type": "textarea",
+              "path": "site.editorPages.about.t03"
+            },
+            {
+              "label": "H2: Dog friendly",
+              "type": "text",
+              "path": "site.editorPages.about.t04"
+            },
+            {
+              "label": "P: Dogs are welcome according to current CAMRA and business listing",
+              "type": "textarea",
+              "path": "site.editorPages.about.t05"
+            },
+            {
+              "label": "H2: Garden",
+              "type": "text",
+              "path": "site.editorPages.about.t06"
+            },
+            {
+              "label": "P: A fully enclosed beer garden is described in the current managed",
+              "type": "textarea",
+              "path": "site.editorPages.about.t07"
+            },
+            {
+              "label": "H2: Winter fires",
+              "type": "text",
+              "path": "site.editorPages.about.t08"
+            },
+            {
+              "label": "P: Real/open fires are a documented feature for the colder months.",
+              "type": "textarea",
+              "path": "site.editorPages.about.t09"
+            }
+          ]
+        },
+        {
+          "label": "Replace pictures",
+          "fields": [
+            {
+              "label": "Photo 1",
+              "type": "image",
+              "path": "site.editorPages.about.img01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "url": "food.html",
+      "groups": [
+        {
+          "label": "Edit page text",
+          "fields": [
+            {
+              "label": "P: Food at The Bulls Head",
+              "type": "textarea",
+              "path": "site.editorPages.food.t01"
+            },
+            {
+              "label": "H1: Coming Soon.",
+              "type": "text",
+              "path": "site.editorPages.food.t02"
+            },
+            {
+              "label": "P: Food is coming to The Bulls Head. Menu, serving times and bookin",
+              "type": "textarea",
+              "path": "site.editorPages.food.t03"
+            },
+            {
+              "label": "H2: Menu",
+              "type": "text",
+              "path": "site.editorPages.food.t04"
+            },
+            {
+              "label": "P: Coming soon.",
+              "type": "textarea",
+              "path": "site.editorPages.food.t05"
+            },
+            {
+              "label": "H2: Serving times",
+              "type": "text",
+              "path": "site.editorPages.food.t06"
+            },
+            {
+              "label": "P: Coming soon.",
+              "type": "textarea",
+              "path": "site.editorPages.food.t07"
+            },
+            {
+              "label": "H2: Bookings",
+              "type": "text",
+              "path": "site.editorPages.food.t08"
+            },
+            {
+              "label": "P: Details will be added when food service begins.",
+              "type": "textarea",
+              "path": "site.editorPages.food.t09"
+            }
+          ]
+        },
+        {
+          "label": "Replace pictures",
+          "fields": [
+            {
+              "label": "Photo 1",
+              "type": "image",
+              "path": "site.editorPages.food.img01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "label": "Drinks",
+      "url": "drinks.html",
+      "groups": [
+        {
+          "label": "Edit page text",
+          "fields": [
+            {
+              "label": "P: At the bar",
+              "type": "textarea",
+              "path": "site.editorPages.drinks.t01"
+            },
+            {
+              "label": "H1: Keep it simple. Pour it well.",
+              "type": "text",
+              "path": "site.editorPages.drinks.t02"
+            },
+            {
+              "label": "P: At the heart of the bar are two Wye Valley favourites: Butty Bac",
+              "type": "textarea",
+              "path": "site.editorPages.drinks.t03"
+            },
+            {
+              "label": "H2: Butty Bach",
+              "type": "text",
+              "path": "site.editorPages.drinks.t04"
+            },
+            {
+              "label": "P: Wye Valley Brewery · regular cask ale.",
+              "type": "textarea",
+              "path": "site.editorPages.drinks.t05"
+            },
+            {
+              "label": "H2: HPA",
+              "type": "text",
+              "path": "site.editorPages.drinks.t06"
+            },
+            {
+              "label": "P: Wye Valley Brewery · regular cask ale.",
+              "type": "textarea",
+              "path": "site.editorPages.drinks.t07"
+            },
+            {
+              "label": "H2: Beyond cask",
+              "type": "text",
+              "path": "site.editorPages.drinks.t08"
+            },
+            {
+              "label": "P: Lager, cider, Guinness, wines, spirits and soft drinks.",
+              "type": "textarea",
+              "path": "site.editorPages.drinks.t09"
+            },
+            {
+              "label": "P: The range can change, so ask at the bar to see what’s pouring to",
+              "type": "textarea",
+              "path": "site.editorPages.drinks.t10"
+            }
+          ]
+        },
+        {
+          "label": "Replace pictures",
+          "fields": [
+            {
+              "label": "Photo 1",
+              "type": "image",
+              "path": "site.editorPages.drinks.img01"
+            },
+            {
+              "label": "Photo 2",
+              "type": "image",
+              "path": "site.editorPages.drinks.img02"
+            },
+            {
+              "label": "Photo 3",
+              "type": "image",
+              "path": "site.editorPages.drinks.img03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "live",
+      "label": "Live events",
+      "url": "live.html",
+      "groups": [
+        {
+          "label": "Edit page text",
+          "fields": [
+            {
+              "label": "P: Music & pub nights",
+              "type": "textarea",
+              "path": "site.editorPages.live.t01"
+            },
+            {
+              "label": "H1: The sort of night that belongs in a pub.",
+              "type": "text",
+              "path": "site.editorPages.live.t02"
+            },
+            {
+              "label": "P: Live music brings an extra buzz to The Bulls Head. Keep an eye o",
+              "type": "textarea",
+              "path": "site.editorPages.live.t03"
+            },
+            {
+              "label": "H2: Live music",
+              "type": "text",
+              "path": "site.editorPages.live.t04"
+            },
+            {
+              "label": "P: Live music is part of the pub’s calendar.",
+              "type": "textarea",
+              "path": "site.editorPages.live.t05"
+            },
+            {
+              "label": "H2: Traditional local",
+              "type": "text",
+              "path": "site.editorPages.live.t06"
+            },
+            {
+              "label": "P: A traditional village pub with a real fire and enclosed garden.",
+              "type": "textarea",
+              "path": "site.editorPages.live.t07"
+            },
+            {
+              "label": "H2: Check what’s on",
+              "type": "text",
+              "path": "site.editorPages.live.t08"
+            },
+            {
+              "label": "P: Email the pub for the latest entertainment schedule.",
+              "type": "textarea",
+              "path": "site.editorPages.live.t09"
+            }
+          ]
+        },
+        {
+          "label": "Replace pictures",
+          "fields": [
+            {
+              "label": "Photo 1",
+              "type": "image",
+              "path": "site.editorPages.live.img01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reviews",
+      "label": "Reviews",
+      "url": "reviews.html",
+      "groups": [
+        {
+          "label": "Edit page text",
+          "fields": [
+            {
+              "label": "H1: What people say.",
+              "type": "text",
+              "path": "site.editorPages.reviews.t01"
+            },
+            {
+              "label": "P: A warm welcome, a great atmosphere and a proper village pub feel",
+              "type": "textarea",
+              "path": "site.editorPages.reviews.t02"
+            },
+            {
+              "label": "P: September 2026 · Family",
+              "type": "textarea",
+              "path": "site.editorPages.reviews.t03"
+            },
+            {
+              "label": "H2: Great night at the Bulls Head",
+              "type": "text",
+              "path": "site.editorPages.reviews.t04"
+            },
+            {
+              "label": "P: “A really friendly, welcoming pub with a great atmosphere and st",
+              "type": "textarea",
+              "path": "site.editorPages.reviews.t05"
+            },
+            {
+              "label": "P: Adam L · Tripadvisor",
+              "type": "textarea",
+              "path": "site.editorPages.reviews.t06"
+            },
+            {
+              "label": "P: September 2026 · Friends",
+              "type": "textarea",
+              "path": "site.editorPages.reviews.t07"
+            },
+            {
+              "label": "H2: Transformation",
+              "type": "text",
+              "path": "site.editorPages.reviews.t08"
+            },
+            {
+              "label": "P: “Great ale. Good wine. Lovely landlords and welcoming locals. Mu",
+              "type": "textarea",
+              "path": "site.editorPages.reviews.t09"
+            },
+            {
+              "label": "P: Geoff B · Tripadvisor",
+              "type": "textarea",
+              "path": "site.editorPages.reviews.t10"
+            },
+            {
+              "label": "P: September 2026 · Family",
+              "type": "textarea",
+              "path": "site.editorPages.reviews.t11"
+            },
+            {
+              "label": "H2: Fantastic — The Bulls Head",
+              "type": "text",
+              "path": "site.editorPages.reviews.t12"
+            },
+            {
+              "label": "P: “Great atmosphere, great musicians, such a friendly pub, can’t r",
+              "type": "textarea",
+              "path": "site.editorPages.reviews.t13"
+            },
+            {
+              "label": "P: BEVERLEY W · Tripadvisor",
+              "type": "textarea",
+              "path": "site.editorPages.reviews.t14"
+            }
+          ]
+        },
+        {
+          "label": "Replace pictures",
+          "fields": [
+            {
+              "label": "Photo 1",
+              "type": "image",
+              "path": "site.editorPages.reviews.img01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hours",
+      "label": "Opening hours",
+      "url": "hours.html",
+      "groups": [
+        {
+          "label": "Edit page text",
+          "fields": [
+            {
+              "label": "P: Current summer hours",
+              "type": "textarea",
+              "path": "site.editorPages.hours.t01"
+            },
+            {
+              "label": "H1: When the doors are open.",
+              "type": "text",
+              "path": "site.editorPages.hours.t02"
+            },
+            {
+              "label": "P: Our current opening hours.",
+              "type": "textarea",
+              "path": "site.editorPages.hours.t03"
+            },
+            {
+              "label": "STRONG: Monday",
+              "type": "text",
+              "path": "site.editorPages.hours.t04"
+            },
+            {
+              "label": "SPAN: 1–9pm",
+              "type": "text",
+              "path": "site.editorPages.hours.t05"
+            },
+            {
+              "label": "STRONG: Tuesday",
+              "type": "text",
+              "path": "site.editorPages.hours.t06"
+            },
+            {
+              "label": "SPAN: 3–9pm",
+              "type": "text",
+              "path": "site.editorPages.hours.t07"
+            },
+            {
+              "label": "STRONG: Wednesday",
+              "type": "text",
+              "path": "site.editorPages.hours.t08"
+            },
+            {
+              "label": "SPAN: 3–9pm",
+              "type": "text",
+              "path": "site.editorPages.hours.t09"
+            },
+            {
+              "label": "STRONG: Thursday",
+              "type": "text",
+              "path": "site.editorPages.hours.t10"
+            },
+            {
+              "label": "SPAN: 3–9pm",
+              "type": "text",
+              "path": "site.editorPages.hours.t11"
+            },
+            {
+              "label": "STRONG: Friday",
+              "type": "text",
+              "path": "site.editorPages.hours.t12"
+            },
+            {
+              "label": "SPAN: 1–10pm",
+              "type": "text",
+              "path": "site.editorPages.hours.t13"
+            },
+            {
+              "label": "STRONG: Saturday",
+              "type": "text",
+              "path": "site.editorPages.hours.t14"
+            },
+            {
+              "label": "SPAN: 1–10pm",
+              "type": "text",
+              "path": "site.editorPages.hours.t15"
+            },
+            {
+              "label": "STRONG: Sunday",
+              "type": "text",
+              "path": "site.editorPages.hours.t16"
+            },
+            {
+              "label": "SPAN: Noon–8pm",
+              "type": "text",
+              "path": "site.editorPages.hours.t17"
+            },
+            {
+              "label": "STRONG: Food is coming soon.",
+              "type": "text",
+              "path": "site.editorPages.hours.t18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": "Visit",
+      "url": "visit.html",
+      "groups": [
+        {
+          "label": "Edit page text",
+          "fields": [
+            {
+              "label": "P: Bidford-on-Avon",
+              "type": "textarea",
+              "path": "site.editorPages.visit.t01"
+            },
+            {
+              "label": "H1: Right on the High Street.",
+              "type": "text",
+              "path": "site.editorPages.visit.t02"
+            },
+            {
+              "label": "P: The Bulls Head is at 36 High Street, right in the centre of Bidf",
+              "type": "textarea",
+              "path": "site.editorPages.visit.t03"
+            },
+            {
+              "label": "H2: Call",
+              "type": "text",
+              "path": "site.editorPages.visit.t04"
+            },
+            {
+              "label": "H2: Email",
+              "type": "text",
+              "path": "site.editorPages.visit.t05"
+            },
+            {
+              "label": "H2: Directions",
+              "type": "text",
+              "path": "site.editorPages.visit.t06"
+            },
+            {
+              "label": "H2: Food",
+              "type": "text",
+              "path": "site.editorPages.visit.t07"
+            },
+            {
+              "label": "P: Coming soon.",
+              "type": "textarea",
+              "path": "site.editorPages.visit.t08"
+            }
+          ]
+        },
+        {
+          "label": "Replace pictures",
+          "fields": [
+            {
+              "label": "Photo 1",
+              "type": "image",
+              "path": "site.editorPages.visit.img01"
+            }
+          ]
+        }
+      ]
+    }
   ]
 }
