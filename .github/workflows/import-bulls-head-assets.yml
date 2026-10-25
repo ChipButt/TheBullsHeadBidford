@@ -1,0 +1,50 @@
+name: Import Bulls Head image assets
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/import-bulls-head-assets.yml']
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Copy original image files into this repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p bulls-head-assets
+          for filename in \
+            01-bulls-head-hero.png \
+            02-bulls-head-interior-fireplace.png \
+            03-bulls-head-interior-bar.png \
+            04-bulls-head-beer-garden.png \
+            05-wye-valley-butty-bach.png \
+            06-wye-valley-hpa.png \
+            07-bar-spirits.png \
+            08-bulls-head-exterior.png \
+            09-bulls-head-logo.png \
+            10-bulls-head-live-music.png
+          do
+            curl --fail --location --silent --show-error --retry 3 \
+              "https://raw.githubusercontent.com/ChipButt/HospoLP/main/bulls-head-assets/${filename}" \
+              --output "bulls-head-assets/${filename}"
+            test -s "bulls-head-assets/${filename}"
+          done
+          python3 - <<'PY'
+          from pathlib import Path
+          for page in Path('.').glob('*.html'):
+              original = page.read_text(encoding='utf-8')
+              fixed = original.replace('../../bulls-head-assets/', 'bulls-head-assets/')
+              fixed = fixed.replace('https://chipbutt.github.io/HospoLP/bulls-head-assets/', 'bulls-head-assets/')
+              if fixed != original:
+                  page.write_text(fixed,encoding='utf-8')
+          PY
+          git add bulls-head-assets/ *.html
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Bundle Bull Head images locally and remove HospoLP asset dependencies'
+            git push
+          fi
