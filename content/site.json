@@ -7,7 +7,13 @@
   "aboutHeading": "A pub made for popping in.",
   "aboutLead": "A village local on Bidford High Street, reopened under new management in August 2025.",
   "aboutBody": "The Bulls Head is a relaxed place to meet, have a pint and stay awhile. With cask ale, a garden, live music and a traditional pub atmosphere, the focus is simple: a friendly local that feels easy to walk into.",
-  "facts": ["Village pub", "Over 200 years of pub history", "Live music", "Dog friendly", "Family friendly"],
+  "facts": [
+    "Village pub",
+    "Over 200 years of pub history",
+    "Live music",
+    "Dog friendly",
+    "Family friendly"
+  ],
   "address": "36 High Street, Bidford-on-Avon, Alcester, B50 4AA",
   "streetAddress": "36 High Street",
   "addressLocality": "Bidford-on-Avon",
@@ -22,5 +28,129 @@
   "seoTitle": "The Bulls Head | Pub in Bidford-on-Avon",
   "seoDescription": "The Bulls Head, 36 High Street, Bidford-on-Avon. Opening hours, drinks, live music, contact details and visitor information.",
   "footerNote": "Opening hours and availability can change; please check before making a special journey.",
-  "notice": {"enabled": true, "title": "Drinks only at present", "text": "Food is not currently available."}
+  "notice": {
+    "enabled": true,
+    "title": "Drinks only at present",
+    "text": "Food is not currently available."
+  },
+  "editorPages": {
+    "index": {
+      "t01": "Bidford-on-Avon · serving pints for 200+ years",
+      "t02": "A proper village local.",
+      "t03": "Real ale, a fully enclosed garden, open fires in winter and live music — back under new management since August 2025.",
+      "t04": "36 High Street",
+      "t05": "Part of Bidford for more than two centuries.",
+      "t06": "The Bulls Head has been part of Bidford life for more than 200 years. Reopened under new management in August 2025, it remains a traditional High Street local built around good beer, good company and a warm welcome.",
+      "t07": "Dog friendly",
+      "t08": "Dogs are welcome.",
+      "t09": "Garden",
+      "t10": "A fully enclosed beer garden.",
+      "t11": "Winter fires",
+      "t12": "Real/open fires are part of the pub for the colder months.",
+      "img01": "bulls-head-assets/01-bulls-head-hero.png",
+      "img02": "bulls-head-assets/02-bulls-head-interior-fireplace.png"
+    },
+    "about": {
+      "t01": "36 High Street",
+      "t02": "Part of Bidford for more than two centuries.",
+      "t03": "The Bulls Head has been part of Bidford life for more than 200 years. Reopened under new management in August 2025, it remains a traditional High Street local built around good beer, good company and a warm welcome.",
+      "t04": "Dog friendly",
+      "t05": "Dogs are welcome according to current CAMRA and business listings.",
+      "t06": "Garden",
+      "t07": "A fully enclosed beer garden is described in the current managed listing.",
+      "t08": "Winter fires",
+      "t09": "Real/open fires are a documented feature for the colder months.",
+      "img01": "bulls-head-assets/08-bulls-head-exterior.png"
+    },
+    "food": {
+      "t01": "Food at The Bulls Head",
+      "t02": "Coming Soon.",
+      "t03": "Food is coming to The Bulls Head. Menu, serving times and booking details will be announced when the kitchen opens.",
+      "t04": "Menu",
+      "t05": "Coming soon.",
+      "t06": "Serving times",
+      "t07": "Coming soon.",
+      "t08": "Bookings",
+      "t09": "Details will be added when food service begins.",
+      "img01": "bulls-head-assets/03-bulls-head-interior-bar.png"
+    },
+    "drinks": {
+      "t01": "At the bar",
+      "t02": "Keep it simple. Pour it well.",
+      "t03": "At the heart of the bar are two Wye Valley favourites: Butty Bach and HPA, alongside lager, cider, Guinness, wine, spirits and soft drinks.",
+      "t04": "Butty Bach",
+      "t05": "Wye Valley Brewery · regular cask ale.",
+      "t06": "HPA",
+      "t07": "Wye Valley Brewery · regular cask ale.",
+      "t08": "Beyond cask",
+      "t09": "Lager, cider, Guinness, wines, spirits and soft drinks.",
+      "t10": "The range can change, so ask at the bar to see what’s pouring today.",
+      "img01": "bulls-head-assets/05-wye-valley-butty-bach.png",
+      "img02": "bulls-head-assets/06-wye-valley-hpa.png",
+      "img03": "bulls-head-assets/07-bar-spirits.png"
+    },
+    "live": {
+      "t01": "Music & pub nights",
+      "t02": "The sort of night that belongs in a pub.",
+      "t03": "Live music brings an extra buzz to The Bulls Head. Keep an eye on what’s coming up, or get in touch with the pub for the latest dates.",
+      "t04": "Live music",
+      "t05": "Live music is part of the pub’s calendar.",
+      "t06": "Traditional local",
+      "t07": "A traditional village pub with a real fire and enclosed garden.",
+      "t08": "Check what’s on",
+      "t09": "Email the pub for the latest entertainment schedule.",
+      "img01": "bulls-head-assets/10-bulls-head-live-music.png"
+    },
+    "reviews": {
+      "t01": "What people say.",
+      "t02": "A warm welcome, a great atmosphere and a proper village pub feel.",
+      "t03": "September 2026 · Family",
+      "t04": "Great night at the Bulls Head",
+      "t05": "“A really friendly, welcoming pub with a great atmosphere and staff who always make you feel at home.”",
+      "t06": "Adam L · Tripadvisor",
+      "t07": "September 2026 · Friends",
+      "t08": "Transformation",
+      "t09": "“Great ale. Good wine. Lovely landlords and welcoming locals. Music evenings. Charity support.”",
+      "t10": "Geoff B · Tripadvisor",
+      "t11": "September 2026 · Family",
+      "t12": "Fantastic — The Bulls Head",
+      "t13": "“Great atmosphere, great musicians, such a friendly pub, can’t recommend it enough, love it!”",
+      "t14": "BEVERLEY W · Tripadvisor",
+      "img01": "bulls-head-assets/08-bulls-head-exterior.png"
+    },
+    "hours": {
+      "t01": "Current summer hours",
+      "t02": "When the doors are open.",
+      "t03": "Our current opening hours.",
+      "t04": "Monday",
+      "t05": "1–9pm",
+      "t06": "Tuesday",
+      "t07": "3–9pm",
+      "t08": "Wednesday",
+      "t09": "3–9pm",
+      "t10": "Thursday",
+      "t11": "3–9pm",
+      "t12": "Friday",
+      "t13": "1–10pm",
+      "t14": "Saturday",
+      "t15": "1–10pm",
+      "t16": "Sunday",
+      "t17": "Noon–8pm",
+      "t18": "Food is coming soon."
+    },
+    "visit": {
+      "t01": "Bidford-on-Avon",
+      "t02": "Right on the High Street.",
+      "t03": "The Bulls Head is at 36 High Street, right in the centre of Bidford-on-Avon. The 247 Stratford–Redditch and 28 Stratford–Evesham bus services stop close by.",
+      "t04": "Call",
+      "t05": "Email",
+      "t06": "Directions",
+      "t07": "Food",
+      "t08": "Coming soon.",
+      "img01": "bulls-head-assets/04-bulls-head-beer-garden.png"
+    }
+  },
+  "editorBrand": {
+    "logo": "bulls-head-assets/09-bulls-head-logo.png"
+  }
 }
