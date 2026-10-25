@@ -1,3 +1,5 @@
+const EDITOR_DATA_URL='https://script.google.com/macros/s/AKfycbzz7FWTrjHkH8LUCrEElzr1MFCN9lN408-C_wC2o2FAU5j8HYXd43uUBgUHRDsiB78/exec';
+const EDITOR_SITE_ID='bulls-head-bidford'; // Replaced with registered ID by Client Project Hub.
 const files={site:'content/site.json',hours:'content/hours.json',drinks:'content/drinks.json',menu:'content/menu.json',events:'content/events.json',features:'content/features.json',gallery:'content/gallery.json',theme:'content/theme.json'};
 const load=async p=>{const r=await fetch(p,{cache:'no-store'});if(!r.ok)throw new Error(`${p}: ${r.status}`);return r.json()};
 const txt=(selector,value)=>document.querySelectorAll(selector).forEach(el=>el.textContent=value??'');
@@ -45,3 +47,18 @@ document.querySelector('[data-lightbox]')?.addEventListener('click',e=>{if(e.tar
 
 Promise.all(Object.values(files).map(load)).then(([s,h,d,m,e,f,g,t])=>{renderSite(s);renderHours(h);renderDrinks(d);renderMenu(m);renderEvents(e);renderFeatures(f);renderGallery(g);theme(t);txt('[data-current-year]',new Date().getFullYear())}).catch(err=>{console.error(err);document.querySelector('[data-load-error]').hidden=false;txt('[data-current-year]',new Date().getFullYear())});
 const toggle=document.querySelector('.nav-toggle'),nav=document.querySelector('.primary-nav');toggle?.addEventListener('click',()=>{nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(nav.classList.contains('open')))});nav?.addEventListener('click',e=>{if(e.target.matches('a')){nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false')}});
+
+// Client editor live-preview bridge. No editor credentials or GitHub tokens are exposed here.
+function applyEditorData(d){if(!d||typeof d!=='object')return;try{if(d.site)renderSite(d.site);if(d.hours)renderHours(d.hours);if(d.drinks)renderDrinks(d.drinks);if(d.menu)renderMenu(d.menu);if(d.events)renderEvents(d.events);if(d.features)renderFeatures(d.features);if(d.gallery)renderGallery(d.gallery);if(d.theme)theme(d.theme)}catch(err){console.error('Editor preview:',err)}}
+function notifyEditorPage(){if(window.parent!==window)window.parent.postMessage({type:'hospolp-preview-page',pathname:window.location.pathname},'*')}
+window.addEventListener('message',event=>{if(event.data?.type==='hospolp-preview'&&event.data.data)applyEditorData(event.data.data)});
+window.addEventListener('pageshow',notifyEditorPage);
+if(window.parent!==window){
+  const callback='__chipin_bulls_editor_'+Date.now();
+  const script=document.createElement('script');
+  const timer=setTimeout(()=>{delete window[callback];script.remove()},3500);
+  window[callback]=data=>{clearTimeout(timer);delete window[callback];script.remove();applyEditorData(data)};
+  script.onerror=()=>{clearTimeout(timer);delete window[callback];script.remove()};
+  script.src=EDITOR_DATA_URL+'?mode=content&site='+encodeURIComponent(EDITOR_SITE_ID)+'&callback='+encodeURIComponent(callback);
+  document.head.appendChild(script);
+}
