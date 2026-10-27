@@ -1,18 +1,18 @@
 {
-  "heading": "Food menu",
-  "enabled": false,
-  "intro": "Add your current food offer here when the kitchen is serving.",
   "sections": [
     {
+      "name": "Main dishes",
       "items": [
         {
           "description": "Replace this in the editor",
-          "price": "£0.00",
           "available": true,
-          "name": "Example dish"
+          "name": "Example dish",
+          "price": "£0.00"
         }
-      ],
-      "name": "Main dishes"
+      ]
     }
-  ]
+  ],
+  "enabled": false,
+  "intro": "Add your current food offer here when the kitchen is serving.",
+  "heading": "Food menu"
 }

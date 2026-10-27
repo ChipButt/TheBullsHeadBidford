@@ -3,9 +3,9 @@
   "items": [
     {
       "title": "Saturday live music",
+      "when": "Usually Saturday evenings",
       "enabled": true,
-      "description": "Live entertainment at The Bulls Head. Check the pub's latest updates for this week's act and start time.",
-      "when": "Usually Saturday evenings"
+      "description": "Live entertainment at The Bulls Head. Check the pub's latest updates for this week's act and start time."
     }
   ]
 }
