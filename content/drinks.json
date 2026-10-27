@@ -1,25 +1,25 @@
 {
+  "intro": "Current regular cask ales listed for The Bulls Head. The bar selection can change, so treat this as a guide rather than a promise.",
   "items": [
     {
-      "style": "Session Pale Ale",
       "category": "Regular cask ale",
-      "abv": "4%",
-      "name": "Wye Valley HPA"
+      "name": "Wye Valley HPA",
+      "style": "Session Pale Ale",
+      "abv": "4%"
     },
     {
       "style": "Premium Bitter",
-      "name": "Wye Valley Butty Bach",
       "category": "Regular cask ale",
-      "abv": "4.5%"
+      "abv": "4.5%",
+      "name": "Wye Valley Butty Bach"
     },
     {
-      "category": "Also available",
       "abv": "",
+      "name": "Bar selection",
       "style": "Ask at the bar for today's range",
-      "name": "Bar selection"
+      "category": "Also available"
     }
   ],
   "heading": "What we're pouring",
-  "enabled": true,
-  "intro": "Current regular cask ales listed for The Bulls Head. The bar selection can change, so treat this as a guide rather than a promise."
+  "enabled": true
 }

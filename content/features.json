@@ -5,16 +5,16 @@
       "label": "Cask ale"
     },
     {
-      "enabled": true,
-      "label": "Beer garden"
+      "label": "Beer garden",
+      "enabled": true
     },
     {
       "enabled": true,
       "label": "Live music"
     },
     {
-      "enabled": true,
-      "label": "Dog friendly"
+      "label": "Dog friendly",
+      "enabled": true
     },
     {
       "enabled": true,

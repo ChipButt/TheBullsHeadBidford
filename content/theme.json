@@ -1,10 +1,10 @@
 {
-  "primaryDark": "#0f3028",
-  "accent": "#b78a44",
-  "paperDeep": "#e9dfcc",
   "paper": "#f4efe3",
-  "primary": "#173f35",
-  "ink": "#18201d",
+  "primaryDark": "#0f3028",
+  "paperDeep": "#e9dfcc",
   "alert": "#7f1f24",
-  "surface": "#fffdf8"
+  "surface": "#fffdf8",
+  "ink": "#18201d",
+  "accent": "#b78a44",
+  "primary": "#173f35"
 }
