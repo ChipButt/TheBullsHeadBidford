@@ -105,3 +105,28 @@ html.bh-warm-preview main .bh-simple-hero--live .bh-simple-hero__shade{
 html.bh-warm-preview main .bh-simple-hero--live .bh-simple-hero__content{
   position:relative;z-index:2;
 }
+
+/* Consistent banner-to-content rhythm, measured from the Visit page:
+   the opening-hours panel, Google reviews frame and Food social panel
+   start on the same horizontal line relative to their hero banners. */
+:root{--bh-banner-to-panel-gap:clamp(52px,6.5vw,78px)}
+html.bh-warm-preview main > section.page.bh-after-hero,
+html.bh-warm-preview main > section.page.bh-food-updates{
+  padding-top:calc(var(--bh-banner-to-panel-gap) + 3px)!important;
+}
+html.bh-warm-preview main .bh-visit-lower{
+  padding-top:var(--bh-banner-to-panel-gap)!important;
+}
+/* Remove legacy per-card offsets; the section controls the spacing. */
+html.bh-warm-preview main .bh-after-hero .bh-hours-card.hours{
+  margin-top:0!important;
+}
+html.bh-warm-preview main .bh-food-updates .bh-food-social{
+  margin-top:0!important;
+}
+html.bh-warm-preview main .bh-reviews-page .bh-reviews-showcase{
+  margin-top:0!important;
+}
+@media(max-width:760px){
+  :root{--bh-banner-to-panel-gap:53px}
+}
