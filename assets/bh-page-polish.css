@@ -1,0 +1,73 @@
+/* Bulls Head secondary-page design polish, 29 October 2026.
+   References the existing warm cream, light oak and woodland green design system. */
+:root{--bh-polish-cream:#f7f0e3;--bh-polish-green:#293d2b;--bh-polish-oak:#c9a77d;--bh-polish-ink:#374535;--bh-polish-line:#d3b48d}
+.bh-visit-page{background:var(--bh-polish-cream);color:var(--bh-polish-green)}
+.bh-visit-hero{padding:clamp(126px,12vw,170px) clamp(20px,4.5vw,66px) clamp(62px,6vw,92px)}
+.bh-visit-hero__inner{width:min(1200px,100%);margin-inline:auto;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:center;gap:clamp(35px,6.5vw,108px)}
+.bh-visit-hero__copy{min-width:0}
+.bh-visit-eyebrow{margin:0 0 17px;color:#59704c;font:700 .73rem/1.55 "Inter",sans-serif;letter-spacing:.19em;text-transform:uppercase}
+.bh-visit-hero h1{color:var(--bh-polish-green);font-size:clamp(2.4rem,4.3vw,4.5rem);line-height:1.12;font-weight:600;letter-spacing:-.025em;margin:0 0 26px;max-width:12ch}
+.bh-visit-lead{font:400 clamp(1rem,1.2vw,1.1rem)/1.78 "Inter",sans-serif;color:#52604e;max-width:43ch;margin:0 0 26px}
+.bh-visit-address{padding:0 0 0 20px;border-left:4px solid var(--bh-polish-oak);font:500 clamp(1.05rem,1.55vw,1.24rem)/1.7 "Inter",sans-serif;color:#344535;margin:0 0 33px}
+.bh-visit-hero__actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.bh-visit-button{display:inline-flex;justify-content:center;align-items:center;gap:13px;min-height:49px;padding:13px 24px;border:2px solid var(--bh-polish-green);border-radius:7px;text-decoration:none!important;font:700 .89rem/1.3 "Inter",sans-serif;transition:background .15s,color .15s}
+.bh-visit-button--primary{background:var(--bh-polish-green);color:#fff9ed!important}
+.bh-visit-button--primary:hover{background:#405b42}
+.bh-visit-button--secondary{color:var(--bh-polish-green)!important;background:transparent}
+.bh-visit-button--secondary:hover{background:#e9ddc7}
+.bh-visit-hero__photo{margin:0;min-width:0}
+.bh-visit-hero__photo img{display:block;width:100%;height:clamp(365px,41vw,565px);object-fit:cover;object-position:center;border:9px solid var(--bh-polish-oak);border-radius:5px;box-shadow:15px 17px 0 rgba(116,89,54,.12),0 22px 45px rgba(39,55,40,.10)}
+.bh-visit-lower{padding:clamp(55px,7vw,90px) clamp(20px,4.5vw,66px) clamp(85px,10vw,135px);background:#ede5d7;border-top:3px solid #dec7a8}
+.bh-visit-lower__inner{width:min(1200px,100%);margin-inline:auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:clamp(34px,5.5vw,88px)}
+.bh-visit-map{padding:7px;background:#f8f3e9;border:3px solid var(--bh-polish-oak);border-radius:10px;box-shadow:0 14px 32px rgba(39,55,40,.10);min-width:0;overflow:hidden}
+.bh-visit-map iframe{display:block;width:100%;height:clamp(340px,36vw,455px);border:0;border-radius:4px}
+.bh-visit-details h2{font-size:clamp(1.65rem,2.9vw,2.85rem);line-height:1.2;color:var(--bh-polish-green);margin:0 0 29px}
+.bh-visit-contact-list{border-top:1px solid #cdb996}
+.bh-visit-contact{display:grid;grid-template-columns:minmax(96px,1fr) minmax(0,1.5fr);gap:18px;align-items:baseline;padding:20px 0;border-bottom:1px solid #cdb996}
+.bh-visit-contact>span{font:600 .8rem/1.5 "Inter",sans-serif;color:#68715f}
+.bh-visit-contact a{font:600 clamp(.88rem,1.08vw,1rem)/1.5 "Inter",sans-serif;text-align:right;overflow-wrap:anywhere;text-decoration:none;color:var(--bh-polish-green)}
+.bh-visit-contact a:hover{text-decoration:underline;text-underline-offset:4px}
+.bh-visit-inline-directions{display:inline-flex;margin-top:28px;color:var(--bh-polish-green);font:700 .94rem/1.5 "Inter",sans-serif;text-decoration:underline;text-underline-offset:5px}
+.bh-visit-inline-directions:hover{color:#56704e}
+.bh-unified-page main .bh-hours-card.hours,
+html.bh-warm-preview main .bh-hours-card.hours{
+  width:min(760px,100%);max-width:760px;margin:35px auto 15px;
+  border:3px solid var(--bh-polish-oak)!important;
+  border-top-width:5px!important;background:#f9f5eb!important;
+  border-radius:11px;padding:12px clamp(18px,3vw,38px) 17px;
+  box-shadow:0 15px 32px rgba(39,55,40,.09);
+}
+.bh-unified-page main .bh-hours-card .row{padding:17px 0;align-items:center;gap:20px;border-bottom:1px solid #dccdb6;color:#344535}
+.bh-unified-page main .bh-hours-card .row:last-child{border-bottom:0}
+.bh-unified-page main .bh-hours-card .row strong{font-weight:600}
+.bh-unified-page main .bh-hours-card .row span{color:#354d38;font-weight:500;text-align:right}
+.bh-unified-page main .bh-food-updates.page{min-height:0;padding-top:clamp(42px,5vw,67px);padding-bottom:clamp(55px,6vw,82px)}
+.bh-unified-page main .bh-food-updates__cards{display:none!important}
+.bh-unified-page main .bh-food-hero__intro{max-width:620px}
+.bh-unified-page main .cards:not(.drinks-three) .card{border:2px solid #d4bb96;border-top:5px solid var(--bh-polish-oak);border-radius:9px;background:#f8f2e7;box-shadow:0 10px 25px rgba(39,55,40,.065)}
+.bh-unified-page main .cards:not(.drinks-three) .card a.bh-live-facebook{display:inline-flex;margin:18px auto 0;color:var(--bh-polish-green);font:700 .84rem/1.5 "Inter",sans-serif;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){
+.bh-visit-hero__inner{gap:35px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.bh-visit-lower__inner{gap:35px}
+.bh-visit-contact{grid-template-columns:1fr;gap:4px;padding:16px 0}
+.bh-visit-contact a{text-align:left}
+}
+@media(max-width:760px){
+.bh-visit-hero{padding:123px 22px 55px}
+.bh-visit-hero__inner{display:flex;flex-direction:column;gap:35px}
+.bh-visit-hero__copy,.bh-visit-hero__photo{width:100%}
+.bh-visit-hero h1{max-width:100%;font-size:clamp(2.25rem,8vw,3.2rem)}
+.bh-visit-hero__photo img{height:auto;aspect-ratio:4/3;border-width:6px;box-shadow:8px 9px 0 rgba(116,89,54,.12)}
+.bh-visit-lower{padding:53px 22px 77px}
+.bh-visit-lower__inner{display:flex;flex-direction:column-reverse;align-items:stretch;gap:37px}
+.bh-visit-map iframe{height:350px}
+.bh-visit-contact{grid-template-columns:minmax(90px,1fr) minmax(0,1.6fr);gap:8px}
+.bh-visit-contact a{text-align:right}
+.bh-visit-details h2{font-size:clamp(1.65rem,6vw,2.2rem)}
+}
+@media(max-width:420px){
+.bh-visit-contact{grid-template-columns:1fr;gap:4px}
+.bh-visit-contact a{text-align:left}
+.bh-visit-hero__actions .bh-visit-button{flex:1}
+}
+@media(prefers-reduced-motion:reduce){.bh-visit-button{transition:none}}
