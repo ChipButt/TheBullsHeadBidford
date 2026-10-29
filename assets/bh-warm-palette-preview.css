@@ -142,7 +142,7 @@ html.bh-warm-preview {
 .bh-warm-preview .bh-about__eyebrow{color:#293d2b}
 .bh-warm-preview .bh-about__story .bh-about__signoff{border-color:#293d2b;color:#293d2b!important}
 .bh-warm-preview .bh-about__photo img{border-color:#ddbd96}
-.bh-warm-preview .bh-footer{background:#253629!important;color:#fff5e8}
+.bh-warm-preview .bh-footer{background:#293d2b!important;color:#fff5e8}
 .bh-warm-preview .bh-footer .bh-home-footer-cta{background:#293d2b!important;border-color:#c9a77d;border-bottom-width:4px}
 .bh-warm-preview .bh-home-footer-cta__inner h2{color:#fff4df}
 .bh-warm-preview .bh-home-footer-cta__inner p{color:#e9edde}
@@ -158,3 +158,25 @@ html.bh-warm-preview {
   .bh-warm-preview .bh-history__photo img,.bh-warm-preview .bh-home-features__photo img,
   .bh-warm-preview .bh-about__photo img{border-width:6px}
 }
+
+/* Continue exactly the same cream/oak/woodland palette on secondary pages. */
+.bh-warm-preview main > .page:not(.bh-food-updates){background:#f7f0e3;color:#394332}
+.bh-warm-preview main .bh-page-intro h1{color:#293d2b}
+.bh-warm-preview main .bh-page-intro .lead{color:#544f41}
+.bh-warm-preview main .bh-page-intro .text-pulse{color:#293d2b}
+.bh-warm-preview main .cards .card{background:#efe7d8;border-top-color:#c9a77d}
+.bh-warm-preview main .cards .card h2{color:#293d2b}
+.bh-warm-preview main .cards .card p{color:#554e41}
+.bh-warm-preview main .hours{background:#efe7d8;border-color:#d6c5a8}
+.bh-warm-preview main .drinks-three .drink-tile img,
+.bh-warm-preview main > .page > .wrap > img[data-chipin-image] {border-color:#dbbf99}
+.bh-warm-preview main .review-stars{color:#293d2b}
+.bh-warm-preview main .bh-food-updates.page{background:#f7f0e3}
+.bh-warm-preview main .bh-food-social{background:#efe7d8;border-color:#dac5a7}
+.bh-warm-preview main .bh-food-social__eyebrow,
+.bh-warm-preview main .bh-food-social h2{color:#293d2b}
+.bh-warm-preview main .bh-food-follow-card{background:#fffaf0;border-color:#ddcdb7}
+.bh-warm-preview main .bh-food-follow-card__action{color:#293d2b}
+.bh-warm-preview main .bh-food-hero{border-bottom:9px solid #c9a77d}
+.bh-warm-preview .bh-footer,
+.bh-warm-preview .bh-footer .bh-home-footer-cta{background:#293d2b!important}
