@@ -1,0 +1,19 @@
+/* Bulls Head Food page — centred announcement and social follow links. */
+.bh-food-heading{text-align:center;max-width:860px;margin:0 auto}
+.bh-food-heading .display{max-width:100%;margin-left:auto;margin-right:auto;text-align:center}
+.bh-food-heading .lead{max-width:680px;margin:20px auto 0;text-align:center}
+.bh-food-social{max-width:940px;margin:44px auto 0;background:#f8f6f0;border:1px solid #e7e1d5;border-radius:20px;padding:clamp(25px,4vw,46px);text-align:center}
+.bh-food-social__eyebrow{color:#836f49;font-size:.75rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;margin:0 0 12px}
+.bh-food-social h2{font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.2;margin:0 0 13px;color:#26332a}
+.bh-food-social__intro{max-width:650px;margin:0 auto 25px;color:#525f53;font-size:1rem;line-height:1.65}
+.bh-food-social__links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:650px;margin:0 auto}
+.bh-food-follow-card{min-width:0;min-height:124px;display:flex;align-items:center;gap:18px;padding:19px;background:#fff;border:1px solid #e1e5dd;border-radius:15px;text-decoration:none;color:#243429;box-shadow:0 5px 18px rgba(26,44,29,.045);text-align:left;transition:transform .15s,box-shadow .15s,border-color .15s}
+.bh-food-follow-card[href]:hover,.bh-food-follow-card[href]:focus-visible{transform:translateY(-2px);box-shadow:0 9px 26px rgba(26,44,29,.12);border-color:#9baf99;outline-offset:3px}
+.bh-food-follow-card__logo{display:block;width:76px;height:76px;flex:0 0 76px;object-fit:contain}
+.bh-food-follow-card__details{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0}
+.bh-food-follow-card__name{font-size:1.06rem;font-weight:800;line-height:1.25}
+.bh-food-follow-card__action{color:#305a42;font-size:.9rem;font-weight:650;line-height:1.45}
+.bh-food-follow-card.is-unavailable{opacity:.82;cursor:default;background:#fdfdfb}
+.bh-food-follow-card.is-unavailable .bh-food-follow-card__action{color:#666b66}
+@media(max-width:600px){.bh-food-social{margin-top:30px;padding:23px 18px}.bh-food-social__links{grid-template-columns:1fr}.bh-food-follow-card{min-height:104px;padding:16px}.bh-food-follow-card__logo{width:66px;height:66px;flex-basis:66px}}
+@media(prefers-reduced-motion:reduce){.bh-food-follow-card{transition:none}}
