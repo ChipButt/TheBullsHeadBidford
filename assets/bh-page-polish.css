@@ -31,7 +31,7 @@
   color:#fff8ed!important;margin:0 auto;max-width:none;
   text-shadow:0 3px 18px rgba(0,0,0,.23);
 }
-.bh-visit-lower{padding:clamp(52px,6.5vw,78px) clamp(20px,4.5vw,66px) clamp(65px,8vw,105px);background:#ede5d7;border-top:3px solid #dec7a8}
+.bh-visit-lower{padding:clamp(52px,6.5vw,78px) clamp(20px,4.5vw,66px) clamp(65px,8vw,105px);background:#ede5d7;border-top:0}
 .bh-visit-lower__inner{width:min(1200px,100%);margin-inline:auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:clamp(34px,5.5vw,88px)}
 .bh-visit-map{padding:7px;background:#f8f3e9;border:3px solid var(--bh-polish-oak);border-radius:10px;box-shadow:0 8px 24px rgba(39,55,40,.055);min-width:0;overflow:hidden}
 .bh-visit-map iframe{display:block;width:100%;height:clamp(340px,36vw,455px);border:0;border-radius:4px}
