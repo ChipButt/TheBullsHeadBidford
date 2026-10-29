@@ -56,13 +56,13 @@
     "index": {
       "img02": "bulls-head-assets/02-bulls-head-interior-fireplace.png",
       "t02": "A Quintessential Village local",
-      "t12": "When the colder months arrive, a real fire brings the warmth back inside.",
-      "t11": "Real fires in winter",
+      "t12": "From live music nights and charity days to plenty more exciting events, there is always something to look forward to at The Bulls Head.",
+      "t11": "Live Events",
       "t01": "Bidford-on-Avon · serving pints for 200+ years",
       "img01": "bulls-head-assets/01-bulls-head-hero.png",
       "t09": "The enclosed garden",
       "t10": "A fully enclosed beer garden, with room to take your drink outside and make the most of a dry day.",
-      "t05": "Two centuries on Bidford High Street",
+      "t05": "Two centuries on",
       "t08": "Four-legged regulars are welcome too, so nobody has to miss out on a visit to the pub.",
       "t03": "Real ale, a fully enclosed garden, open fires in winter and live music. Back under new management since August 2025.",
       "t06": "Bidford's story begins at the river. The Roman road known as Ryknild Street once crossed the Avon at a ford near St Laurence's Church. In the early fifteenth century a stone bridge took the crossing farther west. It was already being repaired in 1449, and its eight arches still carry people into the village today.",
@@ -91,7 +91,8 @@
       "t22": "CAMRA records this pub as having served pints for more than 200 years. Generations of shops, trades and neighbours have come and gone around it, but the pub is still here at 36 High Street. It remains somewhere to meet after work, catch up with friends and take part in the life of the village.",
       "t23": "More than a pint",
       "t24": "A place to settle in",
-      "img04": "bulls-head-assets/04-bulls-head-beer-garden.png"
+      "img04": "bulls-head-assets/04-bulls-head-beer-garden.png",
+      "t25": "Bidford High Street"
     },
     "visit": {
       "t08": "Coming soon.",
