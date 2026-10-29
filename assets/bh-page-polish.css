@@ -30,9 +30,17 @@
   font-style:normal;
 }
 .bh-visit-contact a{word-break:normal;}
-@media(max-width:900px){.bh-visit-contact address{text-align:left}}
-@media(max-width:760px) and (min-width:421px){.bh-visit-contact address{text-align:right}}
-@media(max-width:420px){.bh-visit-contact address{text-align:left}}
+/* The postal address uses the same right-aligned value column at every width. */
+.bh-visit-page .bh-visit-contact .bh-visit-postal-address{
+  display:block;
+  width:100%;
+  margin:0;
+  text-align:right!important;
+  font-style:normal!important;
+  line-height:1.7;
+}
+.bh-visit-page .bh-visit-postal-address > span {display:block;}
+
 
 .bh-visit-map-link{
   display:flex;align-items:center;justify-content:center;
@@ -84,3 +92,10 @@ html.bh-warm-preview main .bh-hours-card.hours{
 
 }
 @media(prefers-reduced-motion:reduce){.bh-visit-button{transition:none}}
+
+/* Keep contact values consistently right aligned, including single-column mobile rows. */
+.bh-visit-page .bh-visit-contact > a,
+.bh-visit-page .bh-visit-contact > .bh-visit-postal-address{
+  text-align:right!important;
+  justify-self:stretch;
+}
