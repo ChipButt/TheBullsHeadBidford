@@ -1,0 +1,87 @@
+/* Consistent inside-page headings for The Bulls Head.
+   Same height, vertical alignment, Cinzel weight and gold band as the Food/Visit heroes.
+   Home intentionally retains its distinct full-height hero. */
+:root{
+  --bh-inner-hero-full-height:clamp(640px, calc(100svh - 80px), 840px);
+  --bh-inner-hero-height:calc(var(--bh-inner-hero-full-height) * 0.6667);
+}
+html.bh-warm-preview main .bh-simple-hero{
+  position:relative;isolation:isolate;box-sizing:border-box;
+  min-height:var(--bh-inner-hero-height);height:var(--bh-inner-hero-height);
+  display:grid;place-items:center;overflow:hidden;
+  padding:clamp(90px,11vh,132px) 24px clamp(42px,5vh,60px);
+  background:radial-gradient(ellipse at 50% 0%,#37513a 0%,#293d2b 54%,#223326 100%);
+  border-bottom:9px solid #c9a77d;
+  color:#fff8ed;
+}
+html.bh-warm-preview main .bh-simple-hero__content{
+  box-sizing:border-box;width:min(1200px,100%);margin:0 auto;text-align:center;
+}
+html.bh-warm-preview main .bh-simple-hero__eyebrow{
+  margin:0 auto 21px;color:#f1dcbd;
+  font:700 .73rem/1.55 "Inter",sans-serif;letter-spacing:.26em;text-transform:uppercase;
+}
+html.bh-warm-preview main .bh-simple-hero__title{
+  color:#fff8ed!important;max-width:none;margin:0 auto;
+  text-align:center;font-family:var(--bulls-heading-font,"Cinzel",Georgia,serif)!important;
+  font-size:clamp(2rem,4.8vw,4.4rem)!important;
+  font-weight:800!important;line-height:1.12;letter-spacing:-.025em;
+  text-wrap:balance;
+}
+html.bh-warm-preview main .bh-simple-hero__intro{
+  max-width:690px;margin:23px auto 0;
+  color:#fff6e9;
+  font:500 clamp(.92rem,1.3vw,1.15rem)/1.65 "Inter",sans-serif;
+  text-align:center;
+}
+html.bh-warm-preview main .bh-simple-hero__title--long{
+  font-size:clamp(1.4rem,3.4vw,3.35rem)!important;
+}
+html.bh-warm-preview main .bh-simple-hero__title--drinks{
+  font-size:clamp(1.2rem,3.8vw,3.65rem)!important;
+  white-space:nowrap;text-wrap:nowrap;
+  overflow-wrap:normal;
+}
+/* Match the prominent typography on the existing image heroes. */
+html.bh-warm-preview main .bh-food-hero__title,
+html.bh-warm-preview main .bh-visit-hero h1{
+  font-family:var(--bulls-heading-font,"Cinzel",Georgia,serif)!important;
+  font-size:clamp(2rem,4.8vw,4.4rem)!important;
+  font-weight:800!important;
+  line-height:1.12;letter-spacing:-.025em;
+}
+html.bh-warm-preview main > section.page.bh-after-hero{
+  box-sizing:border-box;min-height:0;
+  padding-top:clamp(52px,6vw,82px)!important;
+  padding-bottom:clamp(65px,8vw,110px);
+}
+html.bh-warm-preview main > section.bh-after-hero .wrap > img[data-chipin-image]{
+  margin-top:0;
+}
+@media(max-width:767px){
+  :root{--bh-inner-hero-full-height:clamp(580px, calc(100svh - 72px), 720px)}
+  html.bh-warm-preview main .bh-simple-hero{
+    padding:100px 18px 40px;border-bottom-width:7px;
+  }
+  html.bh-warm-preview main .bh-simple-hero__eyebrow{
+    margin-bottom:15px;font-size:.66rem;letter-spacing:.19em;
+  }
+  html.bh-warm-preview main .bh-simple-hero__title,
+  html.bh-warm-preview main .bh-food-hero__title,
+  html.bh-warm-preview main .bh-visit-hero h1{
+    font-size:clamp(1.9rem,7.6vw,3.1rem)!important;
+  }
+  html.bh-warm-preview main .bh-simple-hero__title--long{
+    font-size:clamp(1.4rem,5.7vw,2rem)!important;
+    white-space:normal;
+  }
+  html.bh-warm-preview main .bh-simple-hero__title--drinks{
+    font-size:clamp(.98rem,4vw,1.7rem)!important;
+    white-space:nowrap;
+  }
+  html.bh-warm-preview main .bh-simple-hero__intro{
+    font-size:clamp(.85rem,3.55vw,.96rem);
+    line-height:1.5;margin-top:15px;
+  }
+  html.bh-warm-preview main > section.page.bh-after-hero{padding-top:40px!important}
+}
