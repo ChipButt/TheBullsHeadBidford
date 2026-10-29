@@ -78,18 +78,11 @@
 <figure class="bh-home-features__photo">
   <div class="bh-home-slideshow" data-bh-home-slideshow aria-label="Photos of The Bulls Head">
     <div class="bh-home-slideshow__viewport">
-      <img src="bulls-head-assets/04-bulls-head-beer-garden.png" alt="The enclosed beer garden at The Bulls Head" data-chipin-image="img04" data-bh-slide class="bh-home-slideshow__slide is-active" loading="eager" decoding="async" fetchpriority="high">
-<img src="bulls-head-assets/02-bulls-head-interior-fireplace.png" alt="A cosy fireplace inside The Bulls Head" data-bh-slide class="bh-home-slideshow__slide" loading="lazy" decoding="async" aria-hidden="true">
-<img src="bulls-head-assets/03-bulls-head-interior-bar.png" alt="The bar inside The Bulls Head" data-bh-slide class="bh-home-slideshow__slide" loading="lazy" decoding="async" aria-hidden="true">
-<img src="bulls-head-assets/10-bulls-head-live-music.png" alt="Live music at The Bulls Head" data-bh-slide class="bh-home-slideshow__slide" loading="lazy" decoding="async" aria-hidden="true">
-<img src="bulls-head-assets/08-bulls-head-exterior.png" alt="The Bulls Head exterior on Bidford High Street" data-bh-slide class="bh-home-slideshow__slide" loading="lazy" decoding="async" aria-hidden="true">
-    </div>
-    <div class="bh-home-slideshow__dots" role="group" aria-label="Choose a photo">
-      <button type="button" class="bh-home-slideshow__dot is-active" aria-label="Show beer garden photograph" aria-pressed="true" data-bh-dot="0"></button>
-<button type="button" class="bh-home-slideshow__dot" aria-label="Show fireplace photograph" aria-pressed="false" data-bh-dot="1"></button>
-<button type="button" class="bh-home-slideshow__dot" aria-label="Show bar photograph" aria-pressed="false" data-bh-dot="2"></button>
-<button type="button" class="bh-home-slideshow__dot" aria-label="Show live music photograph" aria-pressed="false" data-bh-dot="3"></button>
-<button type="button" class="bh-home-slideshow__dot" aria-label="Show exterior photograph" aria-pressed="false" data-bh-dot="4"></button>
+      <img src="bulls-head-assets/08-bulls-head-exterior.png" alt="The Bulls Head exterior on Bidford High Street" data-chipin-image="img04" data-bh-slide class="bh-home-slideshow__slide is-active" loading="eager" decoding="async" fetchpriority="high">
+      <img src="bulls-head-assets/02-bulls-head-interior-fireplace.png" alt="A cosy fireplace inside The Bulls Head" data-bh-slide class="bh-home-slideshow__slide" loading="lazy" decoding="async" aria-hidden="true">
+      <img src="bulls-head-assets/03-bulls-head-interior-bar.png" alt="The bar inside The Bulls Head" data-bh-slide class="bh-home-slideshow__slide" loading="lazy" decoding="async" aria-hidden="true">
+      <img src="bulls-head-assets/10-bulls-head-live-music.png" alt="Live music at The Bulls Head" data-bh-slide class="bh-home-slideshow__slide" loading="lazy" decoding="async" aria-hidden="true">
+      <img src="bulls-head-assets/04-bulls-head-beer-garden.png" alt="The enclosed beer garden at The Bulls Head" data-bh-slide class="bh-home-slideshow__slide" loading="lazy" decoding="async" aria-hidden="true">
     </div>
   </div>
 </figure>
@@ -219,68 +212,58 @@
   var root = document.querySelector("[data-bh-home-slideshow]");
   if (!root) return;
   var slides = Array.prototype.slice.call(root.querySelectorAll("[data-bh-slide]"));
-  var dots = Array.prototype.slice.call(root.querySelectorAll("[data-bh-dot]"));
-  if (slides.length !== 5 || dots.length !== slides.length) return;
+  if (slides.length !== 5) return;
   var current = 0;
   var timer = null;
-  var visible = false;
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var inView = false;
+  var motion = window.matchMedia("(prefers-reduced-motion: reduce)");
   function stop() {
-    if (timer !== null) { window.clearInterval(timer); timer = null; }
-  }
-  function canPlay() {
-    return visible && !document.hidden && !reduce.matches &&
-      !root.matches(":hover") && !root.contains(document.activeElement);
+    if (timer !== null) window.clearInterval(timer);
+    timer = null;
   }
   function show(index) {
-    var next = (index + slides.length) % slides.length;
-    var nextImage = slides[next];
-    if (!nextImage.complete) {
-      nextImage.addEventListener("load", function () { if (current !== next) show(next); }, {once:true});
-      return;
+    if (!inView || document.hidden) return;
+    current = index;
+    slides.forEach(function (slide, i) {
+      var active = i === current;
+      slide.classList.toggle("is-active", active);
+      if (active) slide.removeAttribute("aria-hidden");
+      else slide.setAttribute("aria-hidden", "true");
+    });
+  }
+  function advance() {
+    var next = (current + 1) % slides.length;
+    var image = slides[next];
+    if (image.complete && image.naturalWidth) {
+      show(next);
+    } else if (!image.dataset.bhWaiting) {
+      image.dataset.bhWaiting = "1";
+      image.addEventListener("load", function () {
+        delete image.dataset.bhWaiting;
+        if (inView && !document.hidden && !motion.matches) show(next);
+      }, {once: true});
+      image.addEventListener("error", function () {
+        delete image.dataset.bhWaiting;
+      }, {once: true});
     }
-    if (!nextImage.naturalWidth) return;
-    current = next;
-    slides.forEach(function (img, i) {
-      var active = i === current;
-      img.classList.toggle("is-active", active);
-      if (active) img.removeAttribute("aria-hidden");
-      else img.setAttribute("aria-hidden", "true");
-    });
-    dots.forEach(function (dot, i) {
-      var active = i === current;
-      dot.classList.toggle("is-active", active);
-      dot.setAttribute("aria-pressed", active ? "true" : "false");
-    });
   }
   function start() {
     stop();
-    if (!canPlay()) return;
-    // Start the next photo loading before the first transition.
-    slides.forEach(function (img) { img.loading = "eager"; });
-    timer = window.setInterval(function () { show(current + 1); }, 6500);
+    if (!inView || document.hidden || motion.matches) return;
+    slides.forEach(function (image) { image.loading = "eager"; });
+    timer = window.setInterval(advance, 2700);
   }
-  dots.forEach(function (dot, i) {
-    dot.addEventListener("click", function () {
-      stop();
-      var image = slides[i];
-      if (!image.complete) {
-        image.addEventListener("load", function () { show(i); }, {once:true});
-      } else show(i);
-    });
-  });
-  root.addEventListener("mouseenter", stop);
-  root.addEventListener("mouseleave", start);
-  root.addEventListener("focusin", stop);
-  root.addEventListener("focusout", function () { window.setTimeout(start, 0); });
   document.addEventListener("visibilitychange", start);
-  if (typeof reduce.addEventListener === "function") reduce.addEventListener("change", start);
+  if (typeof motion.addEventListener === "function") motion.addEventListener("change", start);
   if ("IntersectionObserver" in window) {
     var observer = new IntersectionObserver(function (entries) {
-      visible = !!entries[0] && entries[0].isIntersecting;
-      if (visible) start(); else stop();
-    }, {threshold:0.25});
+      inView = !!entries[0] && entries[0].isIntersecting;
+      if (inView) start(); else stop();
+    }, {threshold:0.2});
     observer.observe(root);
-  } else { visible = true; start(); }
+  } else {
+    inView = true;
+    start();
+  }
 })();
 </script><script src="demo-editor/demo-preview.js" defer></script><script src="assets/chipin-live-content.js" defer></script></body></html>
