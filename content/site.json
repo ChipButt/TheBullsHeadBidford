@@ -43,16 +43,16 @@
     "index": {
       "img02": "bulls-head-assets/02-bulls-head-interior-fireplace.png",
       "t02": "A Quintessential Village local",
-      "t12": "From live music nights and charity days to plenty more exciting events, there is always something to look forward to at The Bulls Head.",
+      "t12": "We love bringing everyone together for live music, acoustic singalongs and charity events. Keep an eye out for what's coming up.",
       "t11": "Live Events",
       "t01": "Bidford-on-Avon · serving pints for 200+ years",
       "img01": "bulls-head-assets/01-bulls-head-hero.png",
       "t09": "The enclosed garden",
-      "t10": "A fully enclosed beer garden, with room to take your drink outside and make the most of a dry day.",
+      "t10": "Our fully enclosed beer garden is a lovely place to take your drink outside and make the most of a sunny day.",
       "t05": "Two centuries on",
-      "t08": "Four-legged regulars are welcome too, so nobody has to miss out on a visit to the pub.",
+      "t08": "We love welcoming four-legged regulars as much as their humans, so feel free to bring your dog along.",
       "t03": "Real ale, a fully enclosed garden, open fires in winter and live music. Back under new management since August 2025.",
-      "t06": "Bidford's story begins at the river. The Roman road known as Ryknild Street once crossed the Avon at a ford near St Laurence's Church. In the early fifteenth century a stone bridge took the crossing farther west. It was already being repaired in 1449, and its eight arches still carry people into the village today.",
+      "t06": "We're lucky to be part of a village with so much history. Bidford grew up around a crossing of the River Avon, where people were travelling long before our pub opened its doors. The old stone bridge has been part of village life for centuries, and we love being just a short walk from it.",
       "t04": "36 High Street · Our village story",
       "t07": "Dog friendly",
       "t13": "ABOUT US",
@@ -74,8 +74,8 @@
           "y": 23
         }
       },
-      "t21": "By 1861, Bidford had around 950 residents and a busy High Street. Grocers, butchers and drapers served local households, while farmers, blacksmiths and other trades kept the village working. There were seven pubs and inns in Bidford at the time — and The Bulls Head was one of them.",
-      "t22": "CAMRA records this pub as having served pints for more than 200 years. Generations of shops, trades and neighbours have come and gone around it, but the pub is still here at 36 High Street. It remains somewhere to meet after work, catch up with friends and take part in the life of the village.",
+      "t21": "Back in the nineteenth century, our High Street was full of village shops and trades. There were seven pubs and inns in Bidford in 1861, and The Bulls Head was one of them. It's lovely to think of all the conversations that have happened here as the village has changed around us.",
+      "t22": "People have been coming to The Bulls Head for a pint and a catch-up for more than 200 years. We're proud to carry that tradition on at 36 High Street, and our hope is simple: to make this somewhere friends, neighbours and visitors always feel welcome.",
       "t23": "More than a pint",
       "t24": "A place to settle in",
       "img04": "bulls-head-assets/04-bulls-head-beer-garden.png",
@@ -112,7 +112,7 @@
       "t17": "Noon–8pm"
     },
     "food": {
-      "t03": "Food is on its way. Follow our social pages for news from the kitchen.",
+      "t03": "We're working towards serving food at The Bulls Head. We'll share our menu, serving times and booking details once we're ready.",
       "t06": "Serving times",
       "t07": "Coming soon.",
       "t04": "Menu",
@@ -123,30 +123,30 @@
       "t08": "Bookings",
       "t09": "Details will be added when food service begins.",
       "t10": "Stay in the loop",
-      "t11": "Food updates from The Bulls Head will be shared here first."
+      "t11": "Follow us on Facebook or Instagram for the latest kitchen news, menus and serving times."
     },
     "live": {
       "img01": "bulls-head-assets/10-bulls-head-live-music.png",
-      "t09": "For upcoming music nights, special events and charity days, follow the pub’s latest announcements.",
-      "t03": "From lively acoustic evenings to charity days, there’s always a good reason to get together at The Bulls Head.",
+      "t09": "We share upcoming music nights, special events and charity news on our Facebook page.",
+      "t03": "We love getting the pub together for music, a singalong and our charity events.",
       "t06": "Community & charity",
       "t01": "Music & pub nights",
-      "t07": "The pub has raised £700 for I’m Homeless Get Me Out of Here and supports the Royal British Legion Poppy Appeal.",
+      "t07": "Together with our customers, we've raised £700 for I'm Homeless Get Me Out of Here. We're also proud to support the Royal British Legion Poppy Appeal each year.",
       "t04": "Acoustic evenings",
       "t02": "The sort of night that belongs in a pub",
-      "t05": "Regular acoustic evenings bring musicians, friends and neighbours together for a proper singalong.",
+      "t05": "Our regular acoustic evenings are open to musicians and customers alike. Come and play, join in with a singalong or simply enjoy the music.",
       "t08": "What’s coming up"
     },
     "about": {
-      "t07": "A fully enclosed beer garden is described in the current managed listing.",
+      "t07": "We've got a fully enclosed beer garden, perfect for making the most of a dry day.",
       "t04": "Dog friendly",
       "t01": "36 High Street",
       "t06": "Garden",
-      "t03": "The Bulls Head has been part of Bidford life for more than 200 years. Reopened under new management in August 2025, it remains a traditional High Street local built around good beer, good company and a warm welcome.",
+      "t03": "We're Anouska and Simon, and we've been running The Bulls Head since August 2025. This pub has been part of Bidford life for more than 200 years, and we're proud to keep its friendly village spirit going.",
       "t08": "Winter fires",
-      "t05": "Dogs are welcome according to current CAMRA and business listings.",
+      "t05": "Dogs are very welcome here. Bring your four-legged friend when you come in for a drink.",
       "t02": "Part of Bidford for more than two centuries",
-      "t09": "Real/open fires are a documented feature for the colder months.",
+      "t09": "When the colder weather arrives, there's nothing quite like settling in beside the fire with a drink.",
       "img01": "bulls-head-assets/08-bulls-head-exterior.png"
     }
   },
