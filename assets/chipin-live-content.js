@@ -12,7 +12,11 @@ const applyChipInData = data => {
   });
   document.querySelectorAll('[data-chipin-image]').forEach(el=>{
     const value=current[el.dataset.chipinImage];
-    if(typeof value==='string'&&value.trim())el.setAttribute('src',value.replace(/^\//,''));
+    if(typeof value==='string'&&value.trim()){
+      const nextSrc=value.replace(/^\//,'');
+      // Keep an already-correct image in place; setting src again can trigger a visible flash.
+      if(el.getAttribute('src')!==nextSrc)el.setAttribute('src',nextSrc);
+    }
   });
   // Responsive hero framing is content data, not a destructive crop of the photograph.
   if(slug==='index'){
