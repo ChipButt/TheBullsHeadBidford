@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Bulls Head — Homepage Hero Layout Editor</title>
+<style>
+:root{color-scheme:light;--green:#173f35;--gold:#c69a51;--ink:#1a2923;--line:#d6ded7}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font:15px/1.5 system-ui,-apple-system,sans-serif;color:var(--ink);background:#eef1ed}
+button,input,textarea{font:inherit}button{cursor:pointer}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--green);color:#fff;padding:18px clamp(18px,3vw,36px)}
+.topbar h1{font:700 clamp(19px,2.2vw,26px) Georgia,serif;margin:0}.topbar p{margin:3px 0 0;opacity:.85;font-size:13px}.topbar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.layout{display:grid;grid-template-columns:320px minmax(0,1fr);min-height:calc(100vh - 86px)}
+.controls{background:#fff;border-right:1px solid var(--line);padding:24px;min-width:0}
+.controls h2{font-size:18px;margin:0 0 12px}.controls p{margin:0 0 18px;color:#475b50}
+.switch{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#edf1ed;padding:5px;border-radius:11px}
+.switch button{border:0;background:transparent;color:var(--green);font-weight:750;padding:12px;border-radius:8px}
+.switch button[aria-pressed="true"]{background:var(--green);color:#fff}
+.field{margin:24px 0}.field .labelrow{display:flex;justify-content:space-between;align-items:center;font-weight:700;margin:0 0 10px}.field output{font-variant-numeric:tabular-nums;color:#325f4c}
+input[type=range]{width:100%;accent-color:var(--green);cursor:pointer}
+.range-labels{display:flex;justify-content:space-between;color:#60746a;font-size:12px;margin-top:2px}
+.actions{display:grid;gap:9px;margin-top:22px}.actions button{border-radius:9px;padding:12px 13px;font-weight:750;border:1px solid var(--green);background:var(--green);color:white}
+.actions button.subtle{background:white;color:var(--green)}.actions button.export{background:#fff8e9;border-color:#e3c994;color:#5c431b}
+textarea{width:100%;border:1px solid var(--line);border-radius:9px;background:#f7f9f7;color:var(--ink);padding:11px;min-height:92px;resize:vertical;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;margin-top:12px}
+.status{min-height:42px;color:#276045;font-size:13px;font-weight:650;margin:12px 0}
+.notice{padding:13px;border-left:4px solid var(--gold);background:#f9f5eb;font-size:13px;color:#5c4c31;margin-top:18px}
+.viewer{min-width:0;padding:22px clamp(14px,2vw,28px);display:flex;flex-direction:column;align-items:stretch}
+.viewer-head{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:12px}.viewer-head strong{font-size:16px}.viewer-head span{font-size:13px;color:#51685b}
+.stage{min-width:0;display:flex;justify-content:center;align-items:flex-start;overflow:hidden;padding:18px;background:repeating-linear-gradient(45deg,#e5eae4 0 14px,#edf1ec 14px 28px);border:1px solid #d1dbd2;border-radius:14px}
+.frame-wrap{position:relative;flex:none}
+.canvas{position:relative;transform-origin:top left;background:white;box-shadow:0 4px 22px #0003;overflow:hidden;border:1px solid #b7c5ba}
+iframe{display:block;width:100%;height:100%;border:0;background:white}
+.viewer-note{font-size:13px;color:#55665c;max-width:750px;margin:15px 0 0}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.controls{border-right:0;border-bottom:1px solid var(--line)}.viewer{padding:14px}.topbar{padding:16px 20px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div><h1>The Bulls Head · Hero Image Layout Editor</h1><p>Reframe the existing homepage photograph. No image replacement or cropping required.</p></div><a href="../index.html" target="_blank" rel="noopener">Open website</a></header>
+<div class="layout">
+<aside class="controls">
+<h2>Choose the visible area</h2>
+<p>Drag directly on the photograph in the actual homepage preview, or use the sliders. Desktop and mobile have independent positions.</p>
+<div class="switch" role="group" aria-label="Preview screen size">
+<button type="button" id="desktop" aria-pressed="true">Desktop</button>
+<button type="button" id="mobile" aria-pressed="false">Mobile</button>
+</div>
+<div class="field"><div class="labelrow"><label for="x">Horizontal position</label><output id="xout" for="x">50%</output></div><input id="x" type="range" min="0" max="100" step="1" value="50"><div class="range-labels"><span>Left</span><span>Right</span></div></div>
+<div class="field"><div class="labelrow"><label for="y">Vertical position</label><output id="yout" for="y">50%</output></div><input id="y" type="range" min="0" max="100" step="1" value="50"><div class="range-labels"><span>Top</span><span>Bottom</span></div></div>
+<div class="actions">
+<button type="button" class="subtle" id="center">Centre this view</button>
+<button type="button" id="save">Save draft in this browser</button>
+<button type="button" class="export" id="copy">Copy positions for publishing</button>
+</div>
+<textarea id="positions" readonly aria-label="Position values to copy"></textarea>
+<div id="status" class="status" role="status" aria-live="polite"></div>
+<div class="notice"><strong>Publishing:</strong> Saving here does not alter the public website. Copy the positions and paste them into our ChatGPT conversation; I can then apply and publish your chosen framing to GitHub.</div>
+</aside>
+<section class="viewer" aria-label="Real homepage preview">
+<div class="viewer-head"><strong id="preview-label">Desktop homepage preview</strong><span>Drag photo to move it · Responsive preview</span></div>
+<div class="stage" id="stage"><div class="frame-wrap" id="frame-wrap"><div class="canvas" id="canvas"><iframe id="preview" title="The Bulls Head homepage" src="../index.html?hero-layout-preview=1"></iframe></div></div></div>
+<p class="viewer-note">Only the photograph moves. The text, buttons, overlay and rest of the homepage stay exactly as they are. If a slider appears to have no effect, the photograph fills that direction without surplus image to move.</p>
+</section>
+</div>
+<script>
+(function(){
+'use strict';
+var frame=document.getElementById('preview');
+var stage=document.getElementById('stage');
+var wrap=document.getElementById('frame-wrap');
+var canvas=document.getElementById('canvas');
+var status=document.getElementById('status');
+var storeKey='bulls-head-hero-framing-draft-v1';
+var device='desktop';
+var settings={desktop:{x:50,y:50},mobile:{x:50,y:50}};
+var ready=false;
+function clamp(n){n=Number(n);return Number.isFinite(n)?Math.max(0,Math.min(100,Math.round(n))):50}
+function clean(obj){return {desktop:{x:clamp(obj&&obj.desktop&&obj.desktop.x),y:clamp(obj&&obj.desktop&&obj.desktop.y)},mobile:{x:clamp(obj&&obj.mobile&&obj.mobile.x),y:clamp(obj&&obj.mobile&&obj.mobile.y)}}}
+function show(msg){status.textContent=msg}
+function code(){return JSON.stringify({heroFraming:settings},null,2)}
+function renderControls(){
+ document.getElementById('x').value=settings[device].x;
+ document.getElementById('y').value=settings[device].y;
+ document.getElementById('xout').textContent=settings[device].x+'%';
+ document.getElementById('yout').textContent=settings[device].y+'%';
+ document.getElementById('positions').value=code();
+ document.getElementById('desktop').setAttribute('aria-pressed',String(device==='desktop'));
+ document.getElementById('mobile').setAttribute('aria-pressed',String(device==='mobile'));
+ document.getElementById('preview-label').textContent=(device==='desktop'?'Desktop':'Mobile')+' homepage preview';
+}
+function apply(){
+ try{
+  var img=frame.contentDocument.querySelector('.home-hero .hero-bg img[data-chipin-image="img01"]');
+  if(img){img.style.objectPosition=settings[device].x+'% '+settings[device].y+'%';}
+ }catch(err){show('The preview could not be accessed. Use the sliders and copy the values.');}
+ renderControls();
+}
+function fit(){
+ var width=device==='desktop'?1280:390;
+ var height=device==='desktop'?800:844;
+ var factor=Math.min(1,Math.max(.1,(stage.clientWidth-36)/width));
+ canvas.style.width=width+'px';
+ canvas.style.height=height+'px';
+ canvas.style.transform='scale('+factor+')';
+ wrap.style.width=Math.ceil(width*factor)+'px';
+ wrap.style.height=Math.ceil(height*factor)+'px';
+}
+function setDevice(next){
+ device=next;fit();apply();show('');
+}
+function bindPreview(){
+ try{
+ var doc=frame.contentDocument;
+ var hero=doc.querySelector('.home-hero');
+ var img=doc.querySelector('.home-hero .hero-bg img[data-chipin-image="img01"]');
+ if(!hero||!img){show('Hero image not found on preview.');return}
+ ready=true;
+ hero.style.cursor='grab';
+ hero.style.touchAction='none';
+ doc.addEventListener('click',function(ev){if(ev.target.closest('a')){ev.preventDefault();ev.stopPropagation()}},true);
+ var drag=null;
+ hero.addEventListener('pointerdown',function(ev){
+  if(ev.button!==0||!img.naturalWidth||!img.naturalHeight)return;
+  ev.preventDefault();ev.stopPropagation();
+  var rect=img.getBoundingClientRect();
+  var cover=Math.max(rect.width/img.naturalWidth,rect.height/img.naturalHeight);
+  drag={id:ev.pointerId,clientX:ev.clientX,clientY:ev.clientY,x:settings[device].x,y:settings[device].y,
+        overX:Math.max(0,img.naturalWidth*cover-rect.width),
+        overY:Math.max(0,img.naturalHeight*cover-rect.height)};
+  hero.style.cursor='grabbing';
+  hero.setPointerCapture(ev.pointerId);
+ },true);
+ hero.addEventListener('pointermove',function(ev){
+  if(!drag||ev.pointerId!==drag.id)return;
+  ev.preventDefault();ev.stopPropagation();
+  settings[device].x=clamp(drag.x-(drag.overX>1?(ev.clientX-drag.clientX)*100/drag.overX:0));
+  settings[device].y=clamp(drag.y-(drag.overY>1?(ev.clientY-drag.clientY)*100/drag.overY:0));
+  apply();
+ },true);
+ function stop(ev){if(drag&&ev.pointerId===drag.id){drag=null;hero.style.cursor='grab';}}
+ hero.addEventListener('pointerup',stop,true);
+ hero.addEventListener('pointercancel',stop,true);
+ hero.addEventListener('lostpointercapture',function(){drag=null;hero.style.cursor='grab'},true);
+ apply();
+ }catch(err){show('The homepage preview is unavailable here: '+err.message)}
+}
+frame.addEventListener('load',bindPreview);
+document.getElementById('desktop').onclick=function(){setDevice('desktop')};
+document.getElementById('mobile').onclick=function(){setDevice('mobile')};
+document.getElementById('x').oninput=function(ev){settings[device].x=clamp(ev.target.value);apply()};
+document.getElementById('y').oninput=function(ev){settings[device].y=clamp(ev.target.value);apply()};
+document.getElementById('center').onclick=function(){settings[device]={x:50,y:50};apply();show('View centred. Save draft if you want to keep it.')};
+document.getElementById('save').onclick=function(){
+ try{localStorage.setItem(storeKey,code());show('Draft saved in this browser. It has not been published.')}
+ catch(e){show('Could not store draft in this browser. Copy the positions instead.')}
+};
+document.getElementById('copy').onclick=function(){
+ var value=document.getElementById('positions').value;
+ if(navigator.clipboard&&navigator.clipboard.writeText){
+ navigator.clipboard.writeText(value).then(function(){show('Positions copied. Paste them into our chat for publication.')}).catch(function(){document.getElementById('positions').select();show('Select the text above and copy it to send in chat.')});
+ }else{document.getElementById('positions').select();show('Select the text above and copy it to send in chat.')}
+};
+window.addEventListener('resize',fit);
+if(window.ResizeObserver)new ResizeObserver(fit).observe(stage);
+fetch('../content/site.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('Content not available');return r.json()}).then(function(site){
+ var published=site&&site.editorPages&&site.editorPages.index&&site.editorPages.index.heroFraming;
+ if(published)settings=clean(published);
+ try{var draft=JSON.parse(localStorage.getItem(storeKey)||'null');if(draft&&draft.heroFraming){settings=clean(draft.heroFraming);show('Restored your browser draft.')}}catch(e){}
+ fit();apply();
+}).catch(function(){
+ try{var draft=JSON.parse(localStorage.getItem(storeKey)||'null');if(draft&&draft.heroFraming)settings=clean(draft.heroFraming)}catch(e){}
+ fit();apply();
+});
+fit();renderControls();
+})();
+</script>
+</body>
+</html>
