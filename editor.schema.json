@@ -40,9 +40,14 @@
               "path": "site.editorPages.index.t04"
             },
             {
-              "label": "History section heading",
+              "label": "History heading: line 1",
               "type": "text",
               "path": "site.editorPages.index.t05"
+            },
+            {
+              "label": "History heading: line 2",
+              "type": "text",
+              "path": "site.editorPages.index.t25"
             },
             {
               "label": "History paragraph 1",
@@ -90,12 +95,12 @@
               "path": "site.editorPages.index.t10"
             },
             {
-              "label": "Winter fires heading",
+              "label": "Live events heading",
               "type": "text",
               "path": "site.editorPages.index.t11"
             },
             {
-              "label": "Winter fires description",
+              "label": "Live events description",
               "type": "textarea",
               "path": "site.editorPages.index.t12"
             }
