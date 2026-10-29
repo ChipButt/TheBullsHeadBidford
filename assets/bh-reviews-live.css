@@ -33,6 +33,28 @@
   display:block!important;margin-left:auto!important;margin-right:auto!important;
   max-width:100%!important;
 }
+/* Centre the rendered Tripadvisor widget inside its white gold-framed panel.
+   Widget copy remains provider-controlled in its cross-origin iframe. */
+.bh-tripadvisor-embed .TA_selfserveprop{
+  display:flex!important;
+  flex-direction:column;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+}
+.bh-tripadvisor-embed .TA_selfserveprop > :is(div,iframe,ul),
+.bh-tripadvisor-embed :is(#CDSWIDSSP,.widSSP){
+  float:none!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  max-width:100%!important;
+}
+.bh-tripadvisor-embed :is(#CDSWIDSSP,.widSSP) iframe{
+  display:block;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  max-width:100%!important;
+}
 .bh-tripadvisor-embed .TA_links{list-style:none;margin:0;padding:0}
 .bh-tripadvisor-embed .TA_links a{color:#293d2b;font:600 .94rem/1.6 "Inter",sans-serif;text-underline-offset:4px}
 @media(max-width:680px){
