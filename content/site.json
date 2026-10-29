@@ -23,7 +23,8 @@
   "editorPages": {
     "reviews": {
       "img01": "bulls-head-assets/08-bulls-head-exterior.png",
-      "t01": "What people say"
+      "t01": "What people say",
+      "t03": "We’re grateful to everyone who takes the time to share their visit. Here’s what our guests have been saying about The Bulls Head."
     },
     "drinks": {
       "t05": "Wye Valley Brewery · regular cask ale.",
@@ -90,7 +91,7 @@
       "t07": "Food",
       "t04": "Call",
       "t01": "Bidford-on-Avon",
-      "t03": "Right in the heart of the village, The Bulls Head is easy to find on Bidford High Street.",
+      "t03": "We’re right on Bidford High Street, in the heart of the village. Come in, say hello and make yourself at home.",
       "img01": "bulls-head-assets/08-bulls-head-exterior.png"
     },
     "hours": {
@@ -109,7 +110,8 @@
       "t05": "1–9pm",
       "t10": "Thursday",
       "t09": "3–9pm",
-      "t17": "Noon–8pm"
+      "t17": "Noon–8pm",
+      "t03": "Whether you’re dropping in for a pint or catching up with friends, we look forward to welcoming you. Here’s when our doors are open."
     },
     "food": {
       "t03": "We're working towards serving food at The Bulls Head. We'll share our menu, serving times and booking details once we're ready.",
@@ -133,7 +135,7 @@
       "t01": "Music & pub nights",
       "t07": "Together with our customers, we've raised £700 for I'm Homeless Get Me Out of Here. We're also proud to support the Royal British Legion Poppy Appeal each year.",
       "t04": "Acoustic evenings",
-      "t02": "The sort of night that belongs in a pub",
+      "t02": "Lively pub nights",
       "t05": "Our regular acoustic evenings are open to musicians and customers alike. Come and play, join in with a singalong or simply enjoy the music.",
       "t08": "What’s coming up"
     },
@@ -145,7 +147,7 @@
       "t03": "We're Anouska and Simon, and we've been running The Bulls Head since August 2025. This pub has been part of Bidford life for more than 200 years, and we're proud to keep its friendly village spirit going.",
       "t08": "Winter fires",
       "t05": "Dogs are very welcome here. Bring your four-legged friend when you come in for a drink.",
-      "t02": "Part of Bidford for more than two centuries",
+      "t02": "Our village story",
       "t09": "When the colder weather arrives, there's nothing quite like settling in beside the fire with a drink.",
       "img01": "bulls-head-assets/08-bulls-head-exterior.png"
     }
