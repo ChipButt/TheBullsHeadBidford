@@ -1,19 +1,11 @@
 {
-  "intro": "Upcoming announcements from The Bulls Head's Facebook page. Check the original posts for changes before making a special journey.",
+  "intro": "Live entertainment is usually held on Saturday evenings. Specific events can be added here as soon as they are confirmed.",
   "items": [
     {
-      "title": "Acoustic evening",
-      "when": "Tuesday 3 November 2026",
-      "description": "Regular acoustic evening. All performance slots for this session are full, but visitors are welcome to listen. Start time unconfirmed.",
-      "source": "Facebook post dated 20 October 2026",
-      "enabled": true
-    },
-    {
-      "title": "First Ladies Book Club",
-      "when": "Tuesday 3 November 2026",
-      "description": "First Ladies Book Club hosted by Elaine. Time to be confirmed.",
-      "source": "Facebook post dated 20 October 2026",
-      "enabled": true
+      "description": "Live entertainment at The Bulls Head. Check the pub's latest updates for this week's act and start time.",
+      "title": "Saturday live music",
+      "enabled": true,
+      "when": "Usually Saturday evenings"
     }
   ]
 }
