@@ -1,0 +1,36 @@
+/* Bulls Head publicans' story and consistent footer */
+.bh-about{background:#f7f4ee;color:#252b25;padding:clamp(68px,8vw,120px) 0}
+.bh-about__inner{max-width:1280px;margin:0 auto;padding:0 clamp(24px,4vw,56px);display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);gap:clamp(36px,5.5vw,88px);align-items:center}
+.bh-about__photo{margin:0;min-width:0}
+.bh-about__photo img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 32%;border-radius:8px;box-shadow:0 20px 60px rgba(16,25,18,.14)}
+.bh-about__photo figcaption{font-size:.82rem;font-weight:600;color:#3d483d;margin-top:16px}
+.bh-about__photo figcaption span{color:#827967;font-weight:400}
+.bh-about__eyebrow,.bh-footer__eyebrow{font:600 .72rem/1.4 "Inter",sans-serif;letter-spacing:.22em}
+.bh-about__eyebrow{color:#827047;margin:0 0 18px}
+.bh-about__story h2{font:600 clamp(2.4rem,4.1vw,4.6rem)/1.04 "Inter Tight",sans-serif;letter-spacing:-.04em;color:#232923;margin:0 0 28px}
+.bh-about__story p:not(.bh-about__eyebrow){font:400 clamp(.99rem,1.25vw,1.065rem)/1.8 "Inter",sans-serif;margin:0 0 15px;color:#4c554d;max-width:66ch}
+.bh-about__story .bh-about__signoff{font-weight:600!important;color:#293e30!important;border-left:3px solid #b59c65;padding:3px 0 3px 18px;margin-top:22px!important}
+.bh-footer{background:#1e2922;color:#f8f5ee;font-family:"Inter",sans-serif}
+.bh-footer *{box-sizing:border-box}
+.bh-footer__container{max-width:1280px;margin:0 auto;padding-left:clamp(24px,4vw,56px);padding-right:clamp(24px,4vw,56px)}
+.bh-footer__cta{background:#28372e;border-bottom:1px solid rgba(255,255,255,.12)}
+.bh-footer__cta-inner{display:flex;align-items:center;justify-content:space-between;gap:32px;padding-top:clamp(50px,6vw,85px);padding-bottom:clamp(50px,6vw,85px)}
+.bh-footer__eyebrow{color:#dbc397;margin-bottom:14px}
+.bh-footer__cta h2{font:600 clamp(2.5rem,4.4vw,5rem)/1.05 "Inter Tight",sans-serif;letter-spacing:-.04em;margin:0}
+.bh-footer__cta p:not(.bh-footer__eyebrow){font-size:1rem;color:#d1d8d0;margin-top:16px;line-height:1.6}
+.bh-footer__button{display:inline-flex;align-items:center;justify-content:center;gap:24px;border-radius:100px;background:#dfc998;color:#1a2920!important;font-size:.94rem;font-weight:700;white-space:nowrap;text-decoration:none;padding:17px 24px;min-height:52px;transition:background .2s,transform .2s}
+.bh-footer__button:hover{background:#f2deb1;transform:translateY(-2px)}
+.bh-footer__main{padding-top:65px;padding-bottom:72px;display:grid;grid-template-columns:1.5fr .8fr 1.25fr 1fr;gap:clamp(24px,4vw,55px)}
+.bh-footer__identity img{width:150px;max-height:110px;object-fit:contain;object-position:left center}
+.bh-footer__identity p{margin:24px 0 0;max-width:270px;color:#bec9c0;font-size:.92rem;line-height:1.7}
+.bh-footer__main h3{font:600 .76rem/1.3 "Inter",sans-serif;color:#e2ca98;letter-spacing:.1em;text-transform:uppercase;margin:5px 0 23px}
+.bh-footer__main nav{display:flex;flex-direction:column;gap:14px}
+.bh-footer__main a:not(.bh-footer__identity a),.bh-footer__main address{display:block;font-style:normal;color:#d3dbd3;font-size:.91rem;line-height:1.7;text-decoration:none;margin:0 0 13px;overflow-wrap:anywhere}
+.bh-footer__main nav a{margin-bottom:0!important}
+.bh-footer__main a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.bh-footer__bottom{display:flex;justify-content:space-between;gap:15px;padding-top:23px;padding-bottom:30px;border-top:1px solid rgba(255,255,255,.14)}
+.bh-footer__bottom small{font-size:.78rem;color:#a4b3a7;line-height:1.6}
+@media(max-width:960px){.bh-about__inner{grid-template-columns:1fr 1.1fr;gap:36px}.bh-footer__main{grid-template-columns:repeat(2,minmax(0,1fr));gap:42px}}
+@media(max-width:700px){.bh-about__inner{display:flex;flex-direction:column;align-items:stretch}.bh-about__photo{width:min(100%,460px);align-self:center}.bh-about__story h2{font-size:clamp(2.2rem,9vw,3.6rem)}.bh-footer__cta-inner{flex-direction:column;align-items:flex-start;gap:24px}.bh-footer__main{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 24px;padding-top:48px;padding-bottom:48px}.bh-footer__identity{grid-column:1/-1}.bh-footer__bottom{flex-direction:column}}
+@media(max-width:420px){.bh-footer__main{grid-template-columns:1fr}.bh-footer__identity{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){.bh-footer__button{transition:none}}
