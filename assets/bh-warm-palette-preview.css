@@ -2,8 +2,8 @@
  * PROPOSAL ONLY — activate on the Bulls Head homepage with ?palette=warm.
  * The normal homepage and all other pages keep their existing scheme.
  *
- * Concept: warmed cream #F7F0E3, natural-oak #76533B, olive #657348.
- * Deep wood #38291F and pale sage #E6E8D8 supply contrast.
+ * Concept: warm cream #F7F0E3, light-oak #C9A77D, dark woodland olive #293D2B.
+ * Subtle oak-grain detailing, pale ivory and natural charcoal for balance.
  */
 html.bh-warm-preview {
   --background:39 48% 94%;
@@ -100,4 +100,61 @@ html.bh-warm-preview {
 .bh-warm-preview .bh-footer .bh-home-footer-bottom{border-color:rgba(255,246,221,.15)}
 @media(max-width:760px){
 .bh-warm-preview .bh-history__photo img,.bh-warm-preview .bh-home-features__photo img,.bh-warm-preview .bh-about__photo img{border-width:6px;box-shadow:7px 9px 0 rgba(118,83,59,.12)}
+}
+
+
+/* Revised concept: richer woodland green with paler, textured natural oak. */
+html.bh-warm-preview {
+  --pulse:112 20% 20%;
+  --ring:112 20% 20%;
+}
+.bh-warm-preview .navbar.solid {
+  border-bottom:3px solid #c9a77d!important;
+  box-shadow:0 4px 16px rgba(34,53,32,.08);
+}
+.bh-warm-preview .navbar .nav-link.active,
+.bh-warm-preview .navbar .nav-link:hover {color:#293d2b!important}
+.bh-warm-preview .nav-cta {
+  color:#293d2b!important;
+  border:1px solid #293d2b!important;
+}
+.bh-warm-preview .nav-cta:hover{color:#fff!important;background:#293d2b!important}
+.bh-warm-preview .nav-toggle{color:#293d2b!important;border-color:#293d2b!important}
+.bh-warm-preview .home-hero {
+  border-bottom:12px solid #c9a77d;
+  border-image:repeating-linear-gradient(94deg,#c9a77d 0 4px,#d4b18a 5px 7px,#bd9870 9px 10px,#c9a77d 12px 22px) 12;
+}
+.bh-warm-preview .bh-home-eyebrow{color:#293d2b}
+.bh-warm-preview .bh-history__copy h2{color:#59412c}
+.bh-warm-preview .bh-home-features{border-top:4px solid #c9a77d;border-bottom:4px solid #c9a77d;background:#ede6d8}
+.bh-warm-preview .bh-home-feature__icon {
+  color:#293d2b;background:#fffaf0;border-color:#b8c4a4;
+}
+.bh-warm-preview .bh-home-feature h3{color:#293d2b}
+.bh-warm-preview .bh-history__photo img{
+  border:9px solid #ddbd96;
+  box-shadow:13px 15px 0 rgba(147,111,73,.16),0 15px 36px rgba(65,50,29,.1);
+}
+.bh-warm-preview .bh-home-features__photo img{
+  border:9px solid #c9a77d;
+  box-shadow:13px 15px 0 rgba(155,115,75,.16),0 15px 36px rgba(65,50,29,.1);
+}
+.bh-warm-preview .bh-about__eyebrow{color:#293d2b}
+.bh-warm-preview .bh-about__story .bh-about__signoff{border-color:#293d2b;color:#293d2b!important}
+.bh-warm-preview .bh-about__photo img{border-color:#ddbd96}
+.bh-warm-preview .bh-footer{background:#253629!important;color:#fff5e8}
+.bh-warm-preview .bh-footer .bh-home-footer-cta{background:#293d2b!important;border-color:#c9a77d;border-bottom-width:4px}
+.bh-warm-preview .bh-home-footer-cta__inner h2{color:#fff4df}
+.bh-warm-preview .bh-home-footer-cta__inner p{color:#e9edde}
+.bh-warm-preview .bh-home-visit-button{
+  background:#ead0aa!important;
+  border-color:#ead0aa!important;
+  color:#2b3a29!important;
+}
+.bh-warm-preview .bh-home-visit-button:hover{background:#fff0d8!important;border-color:#fff0d8!important}
+.bh-warm-preview .bh-home-footer-links a{color:#f0dfc6}
+.bh-warm-preview .bh-home-footer-address,.bh-warm-preview .bh-home-footer-bottom small{color:#c4d2bf}
+@media(max-width:760px){
+  .bh-warm-preview .bh-history__photo img,.bh-warm-preview .bh-home-features__photo img,
+  .bh-warm-preview .bh-about__photo img{border-width:6px}
 }
