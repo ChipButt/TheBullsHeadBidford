@@ -9,7 +9,52 @@
 #hero-positioner .hero-buttons{grid-column:2;grid-row:2;align-self:end;margin:0;width:auto;left:auto;right:auto;top:auto;bottom:auto}
 @media(max-width:1050px){#hero-positioner{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;padding-top:110px;padding-bottom:40px}#hero-positioner .hero-title{width:100%;max-width:850px;margin:0 0 24px}#hero-positioner .hero-copy{width:min(100%,36rem);margin:0 0 24px}#hero-positioner .hero-buttons{align-self:flex-start}}
 @media(max-width:767px){#hero-positioner{padding-top:105px;padding-bottom:34px}#hero-positioner .hero-title{margin-bottom:20px}#hero-positioner .hero-title h1{font-size:clamp(2.5rem,9.25vw,4.75rem);line-height:.98;letter-spacing:-.02em}#hero-positioner .hero-copy{font-size:1rem;line-height:1.5;margin-bottom:22px}#hero-positioner .hero-buttons{width:100%;align-self:stretch}#hero-positioner .hero-buttons a{min-width:0;flex:1 1 0;padding:12px 10px}}
-</style><link rel="stylesheet" href="assets/bulls-head-components.css"><style>.home-hero .hero-bg>img[data-chipin-image="img01"]{object-position:var(--bh-hero-desktop,50% 50%)}@media(max-width:767px){.home-hero .hero-bg>img[data-chipin-image="img01"]{object-position:var(--bh-hero-mobile,50% 50%)}}</style></head><body><header class="navbar solid fixed top-0 inset-x-0 z-50" data-force-solid="1"><nav class="mx-auto max-w-[120rem] px-6 md:px-12 h-20 flex items-center justify-between"><a href="index.html" class="nav-brand" aria-label="The Bulls Head home"><img src="bulls-head-assets/09-bulls-head-logo.png" alt="The Bulls Head" style="height:56px;width:auto;max-width:150px;object-fit:contain" data-chipin-brand-image="logo"></a><ul class="hidden md:flex items-center gap-8"><li><a href="index.html" class="nav-link text-sm active">Home</a></li><li><a href="drinks.html" class="nav-link text-sm ">Drinks</a></li><li><a href="food.html" class="nav-link text-sm ">Food</a></li><li><a href="live.html" class="nav-link text-sm ">Live</a></li><li><a href="reviews.html" class="nav-link text-sm ">Reviews</a></li><li><a href="hours.html" class="nav-link text-sm ">Hours</a></li><li><a href="visit.html" class="nav-link text-sm ">Visit</a></li></ul><div class="flex items-center gap-3"><a href="visit.html" class="nav-cta hidden sm:inline-flex text-sm font-medium px-5 py-2.5 rounded-full border">Find us</a><button class="nav-toggle md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border"><span class="nav-open">☰</span><span class="nav-close hidden">×</span></button></div></nav><div class="nav-panel md:hidden border-t border-border/60 bg-background/95 hidden"><ul class="px-6 py-4 space-y-1"><li><a href="drinks.html" class="block py-2.5 text-sm">Drinks</a></li><li><a href="food.html" class="block py-2.5 text-sm">Food</a></li><li><a href="live.html" class="block py-2.5 text-sm">Live</a></li><li><a href="reviews.html" class="block py-2.5 text-sm">Reviews</a></li><li><a href="hours.html" class="block py-2.5 text-sm">Hours</a></li><li><a href="visit.html" class="block py-2.5 text-sm">Visit</a></li></ul></div></header><main><section class="home-hero relative min-h-[640px] overflow-hidden"><div class="hero-bg absolute inset-0"><img src="bulls-head-assets/01-bulls-head-hero.png" class="w-full h-full object-cover" data-chipin-image="img01"><div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/85"></div></div><div id="hero-positioner" class="relative h-full mx-auto max-w-[120rem] px-6 md:px-12">
+</style><link rel="stylesheet" href="assets/bulls-head-components.css"><style>.home-hero .hero-bg>img[data-chipin-image="img01"]{object-position:var(--bh-hero-desktop,50% 50%)}@media(max-width:767px){.home-hero .hero-bg>img[data-chipin-image="img01"]{object-position:var(--bh-hero-mobile,50% 50%)}}
+/* Mobile: move headline and introduction to the top of the hero photo.
+   Keep the navigation unobscured and the call-to-action buttons at the bottom. */
+@media (max-width:767px) {
+  #hero-positioner {
+    justify-content:flex-start;
+    align-items:stretch;
+    padding-top:100px;
+    padding-bottom:34px;
+  }
+  #hero-positioner .hero-title {
+    flex:0 0 auto;
+    width:100%;
+    margin:0 0 9px;
+    align-self:auto;
+  }
+  #hero-positioner .hero-title p {
+    font-size:10px;
+    letter-spacing:.18em;
+    line-height:1.35;
+    margin-bottom:7px;
+  }
+  #hero-positioner .hero-title h1 {
+    font-size:clamp(1.95rem,8.25vw,2.25rem);
+    line-height:1.02;
+    letter-spacing:-.035em;
+  }
+  #hero-positioner .hero-copy {
+    flex:0 0 auto;
+    width:100%;
+    max-width:100%;
+    margin:0;
+    font-size:clamp(.875rem,3.6vw,.925rem);
+    line-height:1.42;
+  }
+  #hero-positioner .hero-title,
+  #hero-positioner .hero-copy {
+    text-shadow:0 2px 14px rgba(0,0,0,.65);
+  }
+  #hero-positioner .hero-buttons {
+    flex:0 0 auto;
+    margin-top:auto;
+    align-self:stretch;
+  }
+}
+</style></head><body><header class="navbar solid fixed top-0 inset-x-0 z-50" data-force-solid="1"><nav class="mx-auto max-w-[120rem] px-6 md:px-12 h-20 flex items-center justify-between"><a href="index.html" class="nav-brand" aria-label="The Bulls Head home"><img src="bulls-head-assets/09-bulls-head-logo.png" alt="The Bulls Head" style="height:56px;width:auto;max-width:150px;object-fit:contain" data-chipin-brand-image="logo"></a><ul class="hidden md:flex items-center gap-8"><li><a href="index.html" class="nav-link text-sm active">Home</a></li><li><a href="drinks.html" class="nav-link text-sm ">Drinks</a></li><li><a href="food.html" class="nav-link text-sm ">Food</a></li><li><a href="live.html" class="nav-link text-sm ">Live</a></li><li><a href="reviews.html" class="nav-link text-sm ">Reviews</a></li><li><a href="hours.html" class="nav-link text-sm ">Hours</a></li><li><a href="visit.html" class="nav-link text-sm ">Visit</a></li></ul><div class="flex items-center gap-3"><a href="visit.html" class="nav-cta hidden sm:inline-flex text-sm font-medium px-5 py-2.5 rounded-full border">Find us</a><button class="nav-toggle md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border"><span class="nav-open">☰</span><span class="nav-close hidden">×</span></button></div></nav><div class="nav-panel md:hidden border-t border-border/60 bg-background/95 hidden"><ul class="px-6 py-4 space-y-1"><li><a href="drinks.html" class="block py-2.5 text-sm">Drinks</a></li><li><a href="food.html" class="block py-2.5 text-sm">Food</a></li><li><a href="live.html" class="block py-2.5 text-sm">Live</a></li><li><a href="reviews.html" class="block py-2.5 text-sm">Reviews</a></li><li><a href="hours.html" class="block py-2.5 text-sm">Hours</a></li><li><a href="visit.html" class="block py-2.5 text-sm">Visit</a></li></ul></div></header><main><section class="home-hero relative min-h-[640px] overflow-hidden"><div class="hero-bg absolute inset-0"><img src="bulls-head-assets/01-bulls-head-hero.png" class="w-full h-full object-cover" data-chipin-image="img01"><div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/85"></div></div><div id="hero-positioner" class="relative h-full mx-auto max-w-[120rem] px-6 md:px-12">
 <div class="hero-move hero-title" data-hero-item="title">
 <p class="text-xs uppercase tracking-[0.3em] text-white/70 mb-3" data-chipin-text="t01">Bidford-on-Avon · serving pints for 200+ years</p>
 <h1 class="font-heading font-semibold text-white" data-chipin-text="t02">A Quintessential Village local</h1>
