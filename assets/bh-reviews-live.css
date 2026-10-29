@@ -18,6 +18,11 @@
   display:flex;justify-content:center;align-items:center;
   overflow:hidden;
 }
+/* Tripadvisor renders a white widget. Match the frame interior to it,
+   while leaving the Google frame matched to the page's cream. */
+.bh-reviews-showcase .bh-tripadvisor-embed.bh-review-frame{
+  background:#fff;
+}
 .bh-tripadvisor-embed .TA_selfserveprop{
   width:100%!important;max-width:100%!important;
   margin:0 auto!important;display:block!important;text-align:center;
