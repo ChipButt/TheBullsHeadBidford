@@ -127,3 +127,22 @@ html.bh-warm-preview main .bh-hours-card.hours{
   text-align:right!important;
   justify-self:stretch;
 }
+
+/* Shared hero dimensions: Home / Food / Visit keep the same banner height
+   while each retains its own image, crop and text placement. */
+:root{--bh-shared-hero-height:clamp(640px, calc(100svh - 80px), 840px)}
+html.bh-warm-preview .home-hero,
+html.bh-warm-preview .bh-food-hero,
+html.bh-warm-preview .bh-visit-hero{
+  box-sizing:border-box;
+  height:var(--bh-shared-hero-height)!important;
+  min-height:var(--bh-shared-hero-height)!important;
+}
+html.bh-warm-preview #hero-positioner{
+  box-sizing:border-box;
+  height:100%!important;
+  min-height:100%!important;
+}
+@media(max-width:767px){
+  :root{--bh-shared-hero-height:clamp(580px, calc(100svh - 72px), 720px)}
+}
