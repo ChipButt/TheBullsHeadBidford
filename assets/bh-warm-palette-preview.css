@@ -177,3 +177,11 @@ html.bh-warm-preview {
 .bh-warm-preview main .bh-food-hero{border-bottom:9px solid #c9a77d}
 .bh-warm-preview .bh-footer,
 .bh-warm-preview .bh-footer .bh-home-footer-cta{background:#293d2b!important}
+
+/* Subtle oak band below the home hero, matching the Food hero. */
+.bh-warm-preview .home-hero{border-bottom:9px solid #c9a77d!important}
+/* Lighter, more natural photo shadows across the homepage. */
+.bh-warm-preview .bh-history__photo img{box-shadow:6px 8px 0 rgba(147,111,73,.08),0 8px 22px rgba(65,50,29,.055)!important}
+.bh-warm-preview .bh-home-features__photo img{box-shadow:6px 8px 0 rgba(155,115,75,.08),0 8px 22px rgba(65,50,29,.055)!important}
+.bh-warm-preview .bh-about__photo img{box-shadow:6px 8px 0 rgba(118,83,59,.075),0 9px 23px rgba(42,35,25,.055)!important}
+@media(max-width:760px){.bh-warm-preview .home-hero{border-bottom-width:7px!important}}
