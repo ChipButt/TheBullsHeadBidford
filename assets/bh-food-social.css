@@ -17,3 +17,78 @@
 .bh-food-follow-card.is-unavailable .bh-food-follow-card__action{color:#666b66}
 @media(max-width:600px){.bh-food-social{margin-top:30px;padding:23px 18px}.bh-food-social__links{grid-template-columns:1fr}.bh-food-follow-card{min-height:104px;padding:16px}.bh-food-follow-card__logo{width:66px;height:66px;flex-basis:66px}}
 @media(prefers-reduced-motion:reduce){.bh-food-follow-card{transition:none}}
+
+
+/* Food page hero: use the existing business photograph as the full-bleed banner. */
+.bh-food-hero {
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  isolation:isolate;
+  min-height:clamp(530px,72svh,850px);
+  padding:clamp(130px,15vh,185px) 24px clamp(76px,11vh,120px);
+  color:#fff;
+  overflow:hidden;
+  background:#27342b;
+}
+.bh-food-hero__image {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center 52%;
+  z-index:-2;
+}
+.bh-food-hero__shade {
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(to bottom,rgba(17,21,17,.57),rgba(16,22,18,.48) 47%,rgba(15,20,16,.7));
+}
+.bh-food-hero__content {
+  width:min(900px,100%);
+  margin:0 auto;
+  text-align:center;
+  text-shadow:0 2px 16px rgba(0,0,0,.48);
+}
+.bh-food-hero__eyebrow {
+  font:700 .79rem/1.5 "Inter",sans-serif;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:#fff4d9;
+  margin:0 0 20px;
+}
+.bh-food-hero__title {
+  font-size:clamp(3.3rem,8vw,7.5rem);
+  line-height:1.04;
+  letter-spacing:-.026em;
+  color:#fff;
+  margin:0 auto 23px;
+}
+.bh-food-hero__intro {
+  font:500 clamp(1rem,1.5vw,1.22rem)/1.75 "Inter",sans-serif;
+  max-width:660px;
+  margin:0 auto;
+  color:#fff9ed;
+}
+.bh-food-updates.page {
+  min-height:0;
+  padding:clamp(64px,7vw,104px) clamp(20px,4vw,64px);
+  background:#f7f4ee;
+}
+.bh-food-updates .wrap{max-width:1160px}
+.bh-food-updates .bh-food-social{margin-top:0}
+.bh-food-updates__cards{margin-top:clamp(45px,5vw,75px)}
+.bh-food-updates__cards .card{padding:23px 10px 0;text-align:center}
+.bh-food-updates__cards .card h2{font-size:clamp(1.35rem,2.1vw,1.75rem)}
+@media(max-width:767px) {
+  .bh-food-hero{min-height:620px;min-height:80svh;padding:125px 22px 62px}
+  .bh-food-hero__title{font-size:clamp(2.5rem,10.2vw,4.3rem)}
+  .bh-food-hero__eyebrow{font-size:.68rem;letter-spacing:.19em}
+  .bh-food-hero__intro{font-size:1rem;line-height:1.62}
+  .bh-food-updates.page{padding:56px 20px 70px}
+  .bh-food-updates__cards{margin-top:44px}
+}
