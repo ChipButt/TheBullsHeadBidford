@@ -39,12 +39,11 @@
 .bh-visit-details > .bh-visit-eyebrow{text-align:right}
 .bh-visit-details h2.bh-visit-details__heading{
   text-align:right;
-  font-size:clamp(2.05rem,3.45vw,3.85rem);
-  font-weight:600;line-height:1.1;letter-spacing:-.028em;
+  font-size:clamp(1.05rem,2.4vw,2.2rem);
+  font-weight:700;line-height:1.16;letter-spacing:-.025em;
+  white-space:nowrap;
   color:var(--bh-polish-green);margin:0 0 29px;
 }
-.bh-visit-details__heading span{display:block}
-.bh-visit-details__heading span+span{color:inherit;font-size:1em;margin-top:0}
 .bh-visit-contact-list{border-top:1px solid #cdb996}
 .bh-visit-contact{display:grid;grid-template-columns:minmax(96px,1fr) minmax(0,1.5fr);gap:18px;align-items:baseline;padding:20px 0;border-bottom:1px solid #cdb996}
 .bh-visit-contact>span{font:600 .8rem/1.5 "Inter",sans-serif;color:#68715f}
@@ -112,7 +111,7 @@ html.bh-warm-preview main .bh-hours-card.hours{
 .bh-visit-map iframe{height:350px}
 .bh-visit-contact{grid-template-columns:minmax(90px,1fr) minmax(0,1.6fr);gap:8px}
 .bh-visit-contact a{text-align:right}
-.bh-visit-details h2.bh-visit-details__heading{font-size:clamp(2.15rem,7.5vw,3.3rem)}
+.bh-visit-details h2.bh-visit-details__heading{font-size:clamp(1rem,4.4vw,1.45rem)}
 }
 @media(max-width:420px){
 .bh-visit-contact{grid-template-columns:1fr;gap:4px}
