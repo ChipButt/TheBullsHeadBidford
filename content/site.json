@@ -23,8 +23,7 @@
   "editorPages": {
     "reviews": {
       "img01": "bulls-head-assets/08-bulls-head-exterior.png",
-      "t01": "What people say",
-      "t02": "Guest reviews from Tripadvisor, presented in three easy-to-read cards."
+      "t01": "What people say"
     },
     "drinks": {
       "t05": "Wye Valley Brewery · regular cask ale.",
@@ -84,14 +83,14 @@
     },
     "visit": {
       "t08": "Coming soon.",
-      "t02": "Right on the High Street",
+      "t02": "Come and find us",
       "t05": "Email",
       "t06": "Directions",
       "t07": "Food",
       "t04": "Call",
       "t01": "Bidford-on-Avon",
-      "t03": "The Bulls Head is at 36 High Street, right in the centre of Bidford-on-Avon. The 247 Stratford–Redditch and 28 Stratford–Evesham bus services stop close by.",
-      "img01": "bulls-head-assets/04-bulls-head-beer-garden.png"
+      "t03": "Right in the heart of the village, The Bulls Head is easy to find on Bidford High Street.",
+      "img01": "bulls-head-assets/08-bulls-head-exterior.png"
     },
     "hours": {
       "t16": "Sunday",
@@ -112,7 +111,7 @@
       "t17": "Noon–8pm"
     },
     "food": {
-      "t03": "Food is coming to The Bulls Head. Menu, serving times and booking details will be announced when the kitchen opens.",
+      "t03": "Food is on its way. Follow our social pages for news from the kitchen.",
       "t06": "Serving times",
       "t07": "Coming soon.",
       "t04": "Menu",
@@ -122,20 +121,20 @@
       "t05": "Coming soon.",
       "t08": "Bookings",
       "t09": "Details will be added when food service begins.",
-      "t10": "Be the first to know when food is served",
-      "t11": "Follow The Bulls Head for kitchen opening news, menus and serving times as soon as they're announced."
+      "t10": "Stay in the loop",
+      "t11": "Food updates from The Bulls Head will be shared here first."
     },
     "live": {
       "img01": "bulls-head-assets/10-bulls-head-live-music.png",
-      "t09": "Email the pub for the latest entertainment schedule.",
-      "t03": "Live music brings an extra buzz to The Bulls Head. Keep an eye on what’s coming up, or get in touch with the pub for the latest dates.",
-      "t06": "Traditional local",
+      "t09": "For upcoming music nights, special events and charity days, follow the pub’s latest announcements.",
+      "t03": "From lively acoustic evenings to charity days, there’s always a good reason to get together at The Bulls Head.",
+      "t06": "Community & charity",
       "t01": "Music & pub nights",
-      "t07": "A traditional village pub with a real fire and enclosed garden.",
-      "t04": "Live music",
+      "t07": "The pub has raised £700 for I’m Homeless Get Me Out of Here and supports the Royal British Legion Poppy Appeal.",
+      "t04": "Acoustic evenings",
       "t02": "The sort of night that belongs in a pub",
-      "t05": "Live music is part of the pub’s calendar.",
-      "t08": "Check what’s on"
+      "t05": "Regular acoustic evenings bring musicians, friends and neighbours together for a proper singalong.",
+      "t08": "What’s coming up"
     },
     "about": {
       "t07": "A fully enclosed beer garden is described in the current managed listing.",
