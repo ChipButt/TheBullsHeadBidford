@@ -271,6 +271,31 @@
           ]
         },
         {
+          "label": "Food announcements & social media",
+          "fields": [
+            {
+              "label": "Social invitation heading",
+              "type": "text",
+              "path": "site.editorPages.food.t10"
+            },
+            {
+              "label": "Food updates invitation",
+              "type": "textarea",
+              "path": "site.editorPages.food.t11"
+            },
+            {
+              "label": "The Bulls Head Facebook profile URL",
+              "type": "text",
+              "path": "site.facebook"
+            },
+            {
+              "label": "The Bulls Head Instagram profile URL",
+              "type": "text",
+              "path": "site.instagram"
+            }
+          ]
+        },
+        {
           "label": "Replace pictures",
           "fields": [
             {
