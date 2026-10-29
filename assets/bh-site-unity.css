@@ -171,3 +171,18 @@
   .bh-footer .bh-home-footer-links{gap:6px 17px;margin-bottom:7px}
   .bh-footer .bh-home-footer-bottom{padding-top:9px;padding-bottom:10px}
 }
+
+/* Strong, consistent display headings on the requested interior pages. */
+.bh-unified-page main .bh-page-intro h1.bh-strong-page-title{
+  font-weight:800!important;
+}
+/* Keep the full Drinks headline on one line, including smaller screens. */
+.bh-unified-page main .bh-page-intro h1.bh-drinks-one-line{
+  font-size:clamp(.83rem,4.05vw,4.4rem)!important;
+  letter-spacing:-.035em;
+  white-space:nowrap;
+  overflow-wrap:normal;
+  max-width:100%;
+  text-align:center;
+  line-height:1.15;
+}
