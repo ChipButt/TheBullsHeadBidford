@@ -128,21 +128,52 @@ html.bh-warm-preview main .bh-hours-card.hours{
   justify-self:stretch;
 }
 
-/* Shared hero dimensions: Home / Food / Visit keep the same banner height
-   while each retains its own image, crop and text placement. */
-:root{--bh-shared-hero-height:clamp(640px, calc(100svh - 80px), 840px)}
-html.bh-warm-preview .home-hero,
+/* Keep the homepage hero at its own original height.
+   Food and Visit are about two-thirds of their previously shared height.
+   Their PHOTOS remain at the former height and anchored at the top, so only
+   the bottom of each visible photo is clipped as the section gets shorter. */
+:root{
+  --bh-full-secondary-hero-height:clamp(640px, calc(100svh - 80px), 840px);
+  --bh-short-secondary-hero-height:calc(var(--bh-full-secondary-hero-height) * 0.6667);
+}
 html.bh-warm-preview .bh-food-hero,
 html.bh-warm-preview .bh-visit-hero{
   box-sizing:border-box;
-  height:var(--bh-shared-hero-height)!important;
-  min-height:var(--bh-shared-hero-height)!important;
+  height:var(--bh-short-secondary-hero-height)!important;
+  min-height:var(--bh-short-secondary-hero-height)!important;
+  overflow:hidden;
 }
-html.bh-warm-preview #hero-positioner{
-  box-sizing:border-box;
+/* Retain exactly the old cover scale and crop, then clip from the bottom. */
+html.bh-warm-preview .bh-food-hero__image{
+  top:0!important;
+  bottom:auto!important;
+  height:var(--bh-full-secondary-hero-height)!important;
+  max-height:none;
+}
+html.bh-warm-preview .bh-visit-hero__photo{
+  inset:0 auto auto 0!important;
+  height:var(--bh-full-secondary-hero-height)!important;
+}
+html.bh-warm-preview .bh-visit-hero__photo img{
   height:100%!important;
-  min-height:100%!important;
 }
 @media(max-width:767px){
-  :root{--bh-shared-hero-height:clamp(580px, calc(100svh - 72px), 720px)}
+  :root{
+    --bh-full-secondary-hero-height:clamp(580px, calc(100svh - 72px), 720px);
+  }
+}
+/* Allow the hero headings and introductions to fit the shorter frame. */
+@media(min-width:768px){
+  html.bh-warm-preview .bh-food-hero{
+    padding-top:clamp(70px,8vh,110px);
+    padding-bottom:clamp(36px,5vh,65px);
+  }
+  html.bh-warm-preview .bh-visit-hero__inner{
+    padding-top:clamp(90px,10vh,130px);
+    padding-bottom:clamp(45px,6vh,80px);
+  }
+}
+@media(max-width:767px){
+  html.bh-warm-preview .bh-food-hero{padding:70px 22px 36px}
+  html.bh-warm-preview .bh-visit-hero__inner{padding:88px 20px 40px}
 }
