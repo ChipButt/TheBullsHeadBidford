@@ -21,6 +21,19 @@
 .bh-visit-contact>span{font:600 .8rem/1.5 "Inter",sans-serif;color:#68715f}
 .bh-visit-contact a{font:600 clamp(.88rem,1.08vw,1rem)/1.5 "Inter",sans-serif;text-align:right;overflow-wrap:anywhere;text-decoration:none;color:var(--bh-polish-green)}
 .bh-visit-contact a:hover{text-decoration:underline;text-underline-offset:4px}
+/* Plain, easily readable contact details (including the postal address). */
+.bh-visit-contact address{
+  color:#354535;
+  font:500 clamp(.88rem,1.08vw,1rem)/1.6 "Inter",sans-serif;
+  text-align:right;
+  overflow-wrap:anywhere;
+  font-style:normal;
+}
+.bh-visit-contact a{word-break:normal;}
+@media(max-width:900px){.bh-visit-contact address{text-align:left}}
+@media(max-width:760px) and (min-width:421px){.bh-visit-contact address{text-align:right}}
+@media(max-width:420px){.bh-visit-contact address{text-align:left}}
+
 .bh-visit-map-link{
   display:flex;align-items:center;justify-content:center;
   min-height:44px;padding:12px 18px;
