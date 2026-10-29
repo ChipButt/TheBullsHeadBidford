@@ -1,0 +1,103 @@
+/*
+ * PROPOSAL ONLY — activate on the Bulls Head homepage with ?palette=warm.
+ * The normal homepage and all other pages keep their existing scheme.
+ *
+ * Concept: warmed cream #F7F0E3, natural-oak #76533B, olive #657348.
+ * Deep wood #38291F and pale sage #E6E8D8 supply contrast.
+ */
+html.bh-warm-preview {
+  --background:39 48% 94%;
+  --foreground:28 31% 19%;
+  --card:38 45% 97%;
+  --muted:39 26% 91%;
+  --muted-foreground:30 16% 37%;
+  --border:34 21% 76%;
+  --ring:81 24% 36%;
+  --pulse:82 23% 36%;
+  --surface:39 43% 92%;
+}
+.bh-warm-preview body {background:#f7f0e3;color:#3b2b20}
+.bh-warm-preview .navbar.solid{
+  background:rgba(247,240,227,.97)!important;
+  border-bottom:1px solid rgba(118,83,59,.21)!important;
+  backdrop-filter:blur(16px)!important;
+  box-shadow:0 3px 16px rgba(67,50,37,.06);
+}
+.bh-warm-preview .navbar .nav-link {color:#4f4837!important}
+.bh-warm-preview .navbar .nav-link:hover,
+.bh-warm-preview .navbar .nav-link.active {color:#5b7040!important}
+.bh-warm-preview .nav-cta {border-color:#849068!important;color:#415432!important;background:#f9f6ef}
+.bh-warm-preview .nav-cta:hover{background:#657348!important;color:#fff!important}
+.bh-warm-preview .nav-toggle{color:#465734!important;border-color:#a5ad91!important}
+.bh-warm-preview .nav-panel{background:#f7f0e3!important;border-color:#d7c9af!important}
+.bh-warm-preview .home-hero{border-bottom:9px solid #76533b}
+.bh-warm-preview .home-hero .bg-gradient-to-b {
+  background-image:linear-gradient(180deg,rgba(39,31,20,.29) 0%,rgba(44,33,24,.39) 48%,rgba(32,28,19,.76) 100%)!important;
+}
+.bh-warm-preview #hero-positioner .hero-title p{color:#f4e7ce!important}
+.bh-warm-preview #hero-positioner .hero-buttons a:first-child {background:#f7ecdb!important;color:#38291f!important;font-weight:700;border:1px solid #f7ecdb!important}
+.bh-warm-preview #hero-positioner .hero-buttons a:last-child {background:rgba(35,31,24,.25)!important;border:1px solid #efe4d1!important;color:#fff!important}
+.bh-warm-preview #hero-positioner .hero-buttons a:hover{filter:brightness(1.09)}
+.bh-warm-preview .bh-history{background:#f7f0e3;color:#34291e}
+.bh-warm-preview .bh-history__copy h2{color:#654832}
+.bh-warm-preview .bh-history__copy p:not(.bh-home-eyebrow){color:#4f4b3d}
+.bh-warm-preview .bh-home-eyebrow{color:#657348}
+.bh-warm-preview .bh-history__photo img {
+  border:9px solid #e6d6bc;
+  border-radius:4px;
+  box-shadow:14px 16px 0 rgba(118,83,59,.15),0 15px 35px rgba(63,45,31,.10);
+}
+.bh-warm-preview .bh-home-features{
+  background:#e8e2d4;
+  color:#352d23;
+  border-top:1px solid #d7c8ad;
+  border-bottom:1px solid #d7c8ad;
+}
+.bh-warm-preview .bh-home-features__body h2{color:#684b35}
+.bh-warm-preview .bh-home-features__list,
+.bh-warm-preview .bh-home-feature{border-color:#cec6af}
+.bh-warm-preview .bh-home-feature__icon{background:#f4efdf;color:#687a4f;border-color:#c7cfad}
+.bh-warm-preview .bh-home-feature h3{color:#48583a}
+.bh-warm-preview .bh-home-feature p{color:#584f44}
+.bh-warm-preview .bh-home-features__photo img{
+  border:9px solid #b28f68;
+  border-radius:4px;
+  box-shadow:14px 16px 0 rgba(92,76,46,.13),0 12px 34px rgba(48,37,27,.11);
+}
+/* The owners' words and layout are unchanged; this is a palette-only treatment. */
+.bh-warm-preview .bh-about{background:#faf5ec;color:#33291e}
+.bh-warm-preview .bh-about__eyebrow{color:#687748}
+.bh-warm-preview .bh-about__story h2{color:#604630}
+.bh-warm-preview .bh-about__story p:not(.bh-about__eyebrow){color:#554b3e}
+.bh-warm-preview .bh-about__story .bh-about__signoff{border-color:#7c8a55;color:#445538!important}
+.bh-warm-preview .bh-about__photo img{
+  border:8px solid #d9c5a8;border-radius:4px;
+  box-shadow:12px 14px 0 rgba(118,83,59,.12),0 17px 40px rgba(42,35,25,.1);
+}
+.bh-warm-preview .bh-about__photo figcaption{color:#4f4738}
+.bh-warm-preview .bh-footer {background:#392a20;color:#f8eedf}
+.bh-warm-preview .bh-footer .bh-home-footer-cta {
+  background:#647247;
+  border-bottom:1px solid rgba(248,241,226,.19);
+}
+.bh-warm-preview .bh-home-footer-cta__inner h2{color:#fff8e8}
+.bh-warm-preview .bh-home-footer-cta__inner p{color:#e9eddb}
+.bh-warm-preview .bh-home-visit-button{
+  background:#f5e6ce!important;
+  color:#48301f!important;
+  border-color:#f5e6ce!important;
+  border-radius:7px;
+}
+.bh-warm-preview .bh-home-visit-button:hover{
+  background:#fff5e7!important;
+  border-color:#fff5e7!important;
+}
+.bh-warm-preview .bh-home-footer-tagline{color:#f7ecdc}
+.bh-warm-preview .bh-home-footer-links a{color:#e0d1b7}
+.bh-warm-preview .bh-home-footer-links a:hover{color:#fff5e3}
+.bh-warm-preview .bh-home-footer-address,
+.bh-warm-preview .bh-home-footer-bottom small{color:#c8bba7}
+.bh-warm-preview .bh-footer .bh-home-footer-bottom{border-color:rgba(255,246,221,.15)}
+@media(max-width:760px){
+.bh-warm-preview .bh-history__photo img,.bh-warm-preview .bh-home-features__photo img,.bh-warm-preview .bh-about__photo img{border-width:6px;box-shadow:7px 9px 0 rgba(118,83,59,.12)}
+}
