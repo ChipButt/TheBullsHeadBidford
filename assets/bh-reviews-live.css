@@ -35,3 +35,56 @@
   .bh-tripadvisor-embed{padding:16px 10px;border-width:2px!important}
   .bh-reviews-secondary{margin-top:30px}
 }
+
+/* More definition within the Google ReviewsPlugin embed.
+   These are additive styles: the provider is responsible for review data and layout.
+   The selectors match common semantic card/navigation hooks, without changing review text. */
+.bh-google-reviews .rpi :is(
+  [class*="review-card"],[class*="review_card"],[class*="review-item"],
+  [class*="review_item"],[itemprop="review"]
+){
+  background:#fffcf6;
+  border:1px solid #d7bd91!important;
+  border-radius:10px;
+  box-shadow:0 4px 14px rgba(45,53,36,.055);
+}
+.bh-google-reviews .rpi :is(
+  [class*="rating-summary"],[class*="rating_header"],[class*="rating-header"],
+  [class*="header-rating"],[class*="head-rating"]
+){
+  text-align:center!important;
+  justify-content:center!important;
+  margin-inline:auto;
+}
+.bh-google-reviews .rpi :is(
+  [class*="rating-summary"],[class*="rating_header"],[class*="rating-header"]
+) img{margin-left:auto;margin-right:auto}
+/* Carousel controls: warm ivory background, oak-gold borders, symbols and active dots. */
+.bh-google-reviews .rpi :is(
+  button[class*="arrow"],button[class*="next"],button[class*="prev"],
+  button[class*="nav"],button[aria-label*="next" i],
+  button[aria-label*="previous" i],button[aria-label*="prev" i],
+  .swiper-button-next,.swiper-button-prev,.splide__arrow
+){
+  color:#b38a54!important;
+  border-color:#c9a77d!important;
+  background-color:#fffaf0!important;
+}
+.bh-google-reviews .rpi :is(
+  button[class*="arrow"],button[class*="next"],button[class*="prev"],
+  button[class*="nav"],button[aria-label*="next" i],
+  button[aria-label*="previous" i],button[aria-label*="prev" i],
+  .swiper-button-next,.swiper-button-prev,.splide__arrow
+) svg{color:#b38a54!important;fill:currentColor}
+.bh-google-reviews .rpi :is(
+  .swiper-pagination-bullet-active,.splide__pagination__page.is-active,
+  [role="tab"][aria-selected="true"],[class*="dot"][aria-current="true"],
+  [class*="dot"].active
+){background-color:#c9a77d!important;border-color:#c9a77d!important}
+.bh-reviews-showcase .bh-review-frame{box-shadow:0 8px 24px rgba(40,55,40,.065)}
+@media(max-width:680px){
+  .bh-google-reviews .rpi :is(
+    [class*="review-card"],[class*="review_card"],[class*="review-item"],
+    [class*="review_item"],[itemprop="review"]
+  ){border-width:1px!important}
+}
