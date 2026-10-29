@@ -587,19 +587,9 @@
           "label": "Edit page text",
           "fields": [
             {
-              "label": "Hours section label",
-              "type": "textarea",
-              "path": "site.editorPages.hours.t01"
-            },
-            {
-              "label": "Page heading",
+              "label": "Opening hours page heading",
               "type": "text",
               "path": "site.editorPages.hours.t02"
-            },
-            {
-              "label": "Page introduction",
-              "type": "textarea",
-              "path": "site.editorPages.hours.t03"
             },
             {
               "label": "Day 1 name",

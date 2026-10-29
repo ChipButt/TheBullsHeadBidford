@@ -30,7 +30,7 @@ html.bh-warm-preview {
 .bh-warm-preview .nav-cta:hover{background:#657348!important;color:#fff!important}
 .bh-warm-preview .nav-toggle{color:#465734!important;border-color:#a5ad91!important}
 .bh-warm-preview .nav-panel{background:#f7f0e3!important;border-color:#d7c9af!important}
-.bh-warm-preview .home-hero{border-bottom:9px solid #76533b}
+
 .bh-warm-preview .home-hero .bg-gradient-to-b {
   background-image:linear-gradient(180deg,rgba(39,31,20,.29) 0%,rgba(44,33,24,.39) 48%,rgba(32,28,19,.76) 100%)!important;
 }
@@ -120,10 +120,7 @@ html.bh-warm-preview {
 }
 .bh-warm-preview .nav-cta:hover{color:#fff!important;background:#293d2b!important}
 .bh-warm-preview .nav-toggle{color:#293d2b!important;border-color:#293d2b!important}
-.bh-warm-preview .home-hero {
-  border-bottom:12px solid #c9a77d;
-  border-image:repeating-linear-gradient(94deg,#c9a77d 0 4px,#d4b18a 5px 7px,#bd9870 9px 10px,#c9a77d 12px 22px) 12;
-}
+
 .bh-warm-preview .bh-home-eyebrow{color:#293d2b}
 .bh-warm-preview .bh-history__copy h2{color:#59412c}
 .bh-warm-preview .bh-home-features{border-top:4px solid #c9a77d;border-bottom:4px solid #c9a77d;background:#ede6d8}

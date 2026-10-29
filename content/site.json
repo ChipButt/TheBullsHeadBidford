@@ -106,11 +106,10 @@
       "img01": "bulls-head-assets/04-bulls-head-beer-garden.png"
     },
     "hours": {
-      "t01": "Current summer hours",
       "t16": "Sunday",
       "t11": "3–9pm",
       "t12": "Friday",
-      "t02": "When the doors are open",
+      "t02": "Current Opening Hours",
       "t15": "1–10pm",
       "t13": "1–10pm",
       "t14": "Saturday",
@@ -118,7 +117,6 @@
       "t04": "Monday",
       "t18": "Food is coming soon.",
       "t06": "Tuesday",
-      "t03": "Our current opening hours.",
       "t08": "Wednesday",
       "t05": "1–9pm",
       "t10": "Thursday",
