@@ -95,6 +95,56 @@
               "path": "site.editorPages.index.img02"
             }
           ]
+        },
+        {
+          "label": "Meet your publicans",
+          "fields": [
+            {
+              "label": "About Us label",
+              "type": "text",
+              "path": "site.editorPages.index.t13"
+            },
+            {
+              "label": "About Us heading",
+              "type": "text",
+              "path": "site.editorPages.index.t14"
+            },
+            {
+              "label": "About Us paragraph 1",
+              "type": "textarea",
+              "path": "site.editorPages.index.t15"
+            },
+            {
+              "label": "About Us paragraph 2",
+              "type": "textarea",
+              "path": "site.editorPages.index.t16"
+            },
+            {
+              "label": "About Us paragraph 3",
+              "type": "textarea",
+              "path": "site.editorPages.index.t17"
+            },
+            {
+              "label": "About Us paragraph 4",
+              "type": "textarea",
+              "path": "site.editorPages.index.t18"
+            },
+            {
+              "label": "About Us paragraph 5",
+              "type": "textarea",
+              "path": "site.editorPages.index.t19"
+            },
+            {
+              "label": "About Us paragraph 6",
+              "type": "textarea",
+              "path": "site.editorPages.index.t20"
+            },
+            {
+              "label": "Anouska and Simon photo",
+              "type": "image",
+              "path": "site.editorPages.index.img03"
+            }
+          ]
         }
       ]
     },
