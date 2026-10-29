@@ -503,66 +503,6 @@
               "label": "Page introduction",
               "type": "textarea",
               "path": "site.editorPages.reviews.t02"
-            },
-            {
-              "label": "Review 1 date and category",
-              "type": "textarea",
-              "path": "site.editorPages.reviews.t03"
-            },
-            {
-              "label": "Review 1 title",
-              "type": "text",
-              "path": "site.editorPages.reviews.t04"
-            },
-            {
-              "label": "Review 1 text",
-              "type": "textarea",
-              "path": "site.editorPages.reviews.t05"
-            },
-            {
-              "label": "Review 1 author",
-              "type": "textarea",
-              "path": "site.editorPages.reviews.t06"
-            },
-            {
-              "label": "Review 2 date and category",
-              "type": "textarea",
-              "path": "site.editorPages.reviews.t07"
-            },
-            {
-              "label": "Review 2 title",
-              "type": "text",
-              "path": "site.editorPages.reviews.t08"
-            },
-            {
-              "label": "Review 2 text",
-              "type": "textarea",
-              "path": "site.editorPages.reviews.t09"
-            },
-            {
-              "label": "Review 2 author",
-              "type": "textarea",
-              "path": "site.editorPages.reviews.t10"
-            },
-            {
-              "label": "Review 3 date and category",
-              "type": "textarea",
-              "path": "site.editorPages.reviews.t11"
-            },
-            {
-              "label": "Review 3 title",
-              "type": "text",
-              "path": "site.editorPages.reviews.t12"
-            },
-            {
-              "label": "Review 3 text",
-              "type": "textarea",
-              "path": "site.editorPages.reviews.t13"
-            },
-            {
-              "label": "Review 3 author",
-              "type": "textarea",
-              "path": "site.editorPages.reviews.t14"
             }
           ]
         },

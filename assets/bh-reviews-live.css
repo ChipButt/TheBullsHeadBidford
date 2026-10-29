@@ -1,0 +1,46 @@
+/* Tripadvisor-hosted, automatically refreshed review snippets. */
+.bh-reviews-live {
+ width:min(100%,1040px);
+ margin:0 auto clamp(44px,5vw,72px);
+ text-align:center;
+}
+.bh-reviews-live__heading{max-width:680px;margin:0 auto 26px}
+.bh-reviews-live__eyebrow{
+ font:700 .74rem/1.4 "Inter",sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.18em;
+ color:#536c45;
+ margin:0 0 12px;
+}
+.bh-reviews-live__heading h2{
+ font-size:clamp(1.7rem,3vw,2.55rem);
+ line-height:1.18;
+ color:#293d2b;
+ margin:0 auto 13px;
+}
+.bh-reviews-live__heading p:not(.bh-reviews-live__eyebrow){
+ font:400 .95rem/1.65 "Inter",sans-serif;
+ color:#5b5a4d;
+ margin:0 auto;
+}
+.bh-reviews-live__embed {
+ max-width:940px;
+ min-height:150px;
+ margin:0 auto;
+ padding:24px clamp(15px,3vw,32px);
+ background:#f8f3e9;
+ border:1px solid #ded4bf;
+ border-top:4px solid #c9a77d;
+ border-radius:12px;
+ box-shadow:0 9px 28px rgba(38,53,39,.07);
+ overflow:auto;
+}
+.bh-reviews-live__embed .TA_selfserveprop {max-width:100%;margin:auto}
+.bh-reviews-live__embed .TA_links {margin:0;padding:0;list-style:none}
+.bh-reviews-live__embed a {color:#293d2b;text-decoration:underline;text-underline-offset:3px}
+.bh-reviews-live__embed iframe {max-width:100%;border:0}
+.bh-reviews-live__notice{font-size:.9rem;color:#5c654d;margin:18px 0 0}
+@media(max-width:700px) {
+ .bh-reviews-live{margin-bottom:40px}
+ .bh-reviews-live__embed{padding:18px 10px}
+}
