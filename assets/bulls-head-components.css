@@ -34,3 +34,28 @@
 @media(max-width:700px){.bh-about__inner{display:flex;flex-direction:column;align-items:stretch}.bh-about__photo{width:min(100%,460px);align-self:center}.bh-about__story h2{font-size:clamp(2.2rem,9vw,3.6rem)}.bh-footer__cta-inner{flex-direction:column;align-items:flex-start;gap:24px}.bh-footer__main{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 24px;padding-top:48px;padding-bottom:48px}.bh-footer__identity{grid-column:1/-1}.bh-footer__bottom{flex-direction:column}}
 @media(max-width:420px){.bh-footer__main{grid-template-columns:1fr}.bh-footer__identity{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){.bh-footer__button{transition:none}}
+
+/*
+ * Bulls Head title typography.
+ * The original Bitstream Flareserif 821 is proprietary. A locally installed
+ * copy can render headings for previews, but no font binary is published here.
+ * For public display, add the licensed webfont kit to this site and update the
+ * @font-face src with that licensed asset's URL.
+ */
+@font-face {
+  font-family: "Bulls Head Flareserif";
+  src: local("Flareserif821BT-Bold"), local("Flareserif 821 Bold");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  --bulls-heading-font: "Bulls Head Flareserif", "Inter Tight", Georgia, serif;
+  --font-heading: var(--bulls-heading-font);
+  --font-display: var(--bulls-heading-font);
+}
+:is(h1, h2, h3, h4, h5, h6, .font-heading, .display, .bh-about__story h2, .bh-footer__cta h2) {
+  font-family: var(--bulls-heading-font) !important;
+}
+/* Small footer navigation labels remain utilitarian, not display type. */
+.bh-footer__main h3 { font-family: "Inter", sans-serif !important; }
