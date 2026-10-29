@@ -1,0 +1,75 @@
+/* The Bulls Head — homepage-only editorial refinement, October 2026.
+   Intentionally scoped so other pages and the unchanged publicans story keep their styling. */
+.bh-home-container{width:min(1220px,calc(100% - 56px));margin-inline:auto}
+.bh-home-eyebrow{font:700 .74rem/1.4 "Inter",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8c6d43;margin:0 0 17px}
+.bh-history{background:#fbfaf7;color:#222a23;padding:clamp(68px,8vw,114px) 0}
+.bh-history__grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(44px,6vw,94px);align-items:center}
+.bh-history__copy{min-width:0}
+.bh-history__copy h2{font-size:clamp(2.1rem,3.2vw,3.25rem);line-height:1.11;letter-spacing:-.025em;max-width:16ch;margin:0 0 25px;font-weight:600}
+.bh-history__copy p:not(.bh-home-eyebrow):not(.bh-history__sources){font:400 clamp(1rem,1.15vw,1.075rem)/1.77 "Inter",sans-serif;color:#444f45;margin:0 0 18px;max-width:66ch}
+.bh-history__copy p:last-of-type{margin-bottom:0}
+.bh-history__sources{font:400 .77rem/1.6 "Inter",sans-serif;color:#677166;margin:24px 0 0}
+.bh-history__sources a{color:#526c53;text-underline-offset:3px;text-decoration-thickness:1px}
+.bh-history__photo{margin:0;align-self:stretch;min-height:580px}
+.bh-history__photo img{width:100%;height:100%;min-height:580px;max-height:850px;object-fit:cover;object-position:center;border-radius:10px;box-shadow:0 16px 40px rgba(30,44,32,.08)}
+.bh-home-features{padding:clamp(64px,7vw,104px) 0;background:#e9ece6;color:#253328}
+.bh-home-features__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,5.5vw,78px);align-items:center}
+.bh-home-features__photo{margin:0;min-width:0}
+.bh-home-features__photo img{display:block;width:100%;height:clamp(440px,43vw,580px);border-radius:10px;object-fit:cover;object-position:center;box-shadow:0 15px 35px rgba(20,38,28,.09)}
+.bh-home-features__body{min-width:0}
+.bh-home-features__body h2{font-size:clamp(2.05rem,3.2vw,3.3rem);line-height:1.13;letter-spacing:-.022em;margin:0 0 29px;font-weight:600}
+.bh-home-features__list{border-top:1px solid #c5cec3}
+.bh-home-feature{display:grid;grid-template-columns:52px minmax(0,1fr);align-items:start;gap:17px;padding:23px 0;border-bottom:1px solid #c5cec3}
+.bh-home-feature__icon{display:grid;place-items:center;width:47px;height:47px;border-radius:50%;background:#f8f6f0;color:#426148;border:1px solid #d6ded1}
+.bh-home-feature__icon svg{width:23px;height:23px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.bh-home-feature h3{font:700 1.09rem/1.35 "Inter",sans-serif;margin:2px 0 7px;color:#23382b}
+.bh-home-feature p{font:400 .98rem/1.65 "Inter",sans-serif;color:#4b584d;margin:0;max-width:46ch}
+.bh-footer .bh-home-footer-cta{background:#29382e}
+.bh-home-footer-cta__inner{padding-top:26px;padding-bottom:26px;display:flex;justify-content:center;align-items:center;gap:clamp(24px,5vw,65px);text-align:center}
+.bh-home-footer-cta__inner h2{font-size:clamp(1.45rem,2.2vw,2.05rem);line-height:1.15;font-weight:600;letter-spacing:-.015em;margin:0}
+.bh-home-footer-cta__inner p{font:400 .9rem/1.45 "Inter",sans-serif;color:#d3dcd1;margin:7px 0 0}
+.bh-home-visit-button{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;padding:12px 25px;min-height:45px;background:#e9d2a6;color:#1f3428!important;border:1px solid #e9d2a6;border-radius:9px;text-decoration:none;font:700 .89rem/1.2 "Inter",sans-serif;transition:background .18s,box-shadow .18s}
+.bh-home-visit-button:hover,.bh-home-visit-button:focus-visible{background:#f7e6c8;box-shadow:0 4px 14px rgba(0,0,0,.15);text-decoration:none;outline-offset:4px}
+.bh-home-footer-main{display:flex;flex-direction:column;align-items:center;gap:0;text-align:center;padding-top:clamp(35px,4.3vw,55px);padding-bottom:clamp(30px,4vw,48px)}
+.bh-home-footer-logo{display:inline-block;margin:0 auto 19px}
+.bh-home-footer-logo img{display:block;width:168px;max-height:119px;object-fit:contain}
+.bh-home-footer-tagline{font:500 clamp(.98rem,1.45vw,1.14rem)/1.7 "Inter",sans-serif;color:#e5e9e1;margin:0 auto 24px;max-width:690px}
+.bh-home-footer-tagline span{display:block}
+.bh-home-footer-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:7px 21px;margin:0 auto 13px}
+.bh-home-footer-links a{font:500 .89rem/1.5 "Inter",sans-serif;text-decoration:none;color:#d1ddcf}
+.bh-home-footer-links a:hover,.bh-home-footer-links a:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.bh-home-footer-address{font:400 .87rem/1.5 "Inter",sans-serif;color:#aebdaf;font-style:normal;margin:0}
+.bh-footer .bh-home-footer-bottom{display:flex;justify-content:center;text-align:center;align-items:center;padding-top:16px;padding-bottom:22px}
+.bh-footer .bh-home-footer-bottom small{font:400 .76rem/1.45 "Inter",sans-serif;color:#aebdaf}
+@media(max-width:940px){
+.bh-history__grid,.bh-home-features__grid{gap:34px}
+.bh-history__copy h2{font-size:clamp(2rem,3.5vw,2.8rem)}
+.bh-history__photo,.bh-history__photo img{min-height:550px}
+}
+@media(max-width:760px){
+.bh-home-container{width:min(620px,calc(100% - 36px))}
+.bh-history{padding:64px 0 70px}
+.bh-history__grid{grid-template-columns:1fr;gap:34px}
+.bh-history__copy h2{font-size:clamp(1.96rem,7vw,2.6rem);max-width:17ch;margin-bottom:23px}
+.bh-history__photo,.bh-history__photo img{min-height:0;height:auto;max-height:none}
+.bh-history__photo img{aspect-ratio:4/3;object-fit:cover}
+.bh-home-features{padding:62px 0 68px}
+.bh-home-features__grid{display:flex;flex-direction:column;gap:34px}
+.bh-home-features__photo{order:2;width:100%}
+.bh-home-features__photo img{height:auto;aspect-ratio:4/3}
+.bh-home-features__body{order:1;width:100%}
+.bh-home-features__body h2{font-size:clamp(2rem,7vw,2.75rem);margin-bottom:23px}
+.bh-home-feature{padding:18px 0}
+.bh-home-footer-cta__inner{padding-top:24px;padding-bottom:26px;flex-direction:column;gap:17px}
+.bh-home-footer-cta__inner h2{font-size:1.55rem}
+.bh-home-footer-main{padding-top:38px;padding-bottom:34px}
+.bh-home-footer-tagline{margin-bottom:20px}
+.bh-home-footer-links{gap:10px 17px}
+}
+@media(max-width:400px){
+.bh-home-feature{grid-template-columns:44px minmax(0,1fr);gap:13px}
+.bh-home-feature__icon{width:42px;height:42px}
+.bh-home-footer-tagline span{display:inline}
+.bh-home-footer-tagline span+span::before{content:" "}
+}
+@media(prefers-reduced-motion:reduce){.bh-home-visit-button{transition:none}}
