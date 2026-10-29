@@ -14,6 +14,18 @@ const applyChipInData = data => {
     const value=current[el.dataset.chipinImage];
     if(typeof value==='string'&&value.trim())el.setAttribute('src',value.replace(/^\//,''));
   });
+  // Responsive hero framing is content data, not a destructive crop of the photograph.
+  if(slug==='index'){
+    const hero=document.querySelector('.home-hero .hero-bg img[data-chipin-image="img01"]');
+    if(hero){
+      const framing=current.heroFraming||{};
+      const percent=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(100,Number(value))):50;
+      const desktop=framing.desktop||{};
+      const mobile=framing.mobile||{};
+      hero.style.setProperty('--bh-hero-desktop',percent(desktop.x)+'% '+percent(desktop.y)+'%');
+      hero.style.setProperty('--bh-hero-mobile',percent(mobile.x)+'% '+percent(mobile.y)+'%');
+    }
+  }
   const logo=site.editorBrand && site.editorBrand.logo;
   if(typeof logo==='string'&&logo.trim())
     document.querySelectorAll('[data-chipin-brand-image]').forEach(el=>el.setAttribute('src',logo.replace(/^\//,'')));
