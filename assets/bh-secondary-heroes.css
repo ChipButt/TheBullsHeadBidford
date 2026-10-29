@@ -130,3 +130,136 @@ html.bh-warm-preview main .bh-reviews-page .bh-reviews-showcase{
 @media(max-width:760px){
   :root{--bh-banner-to-panel-gap:53px}
 }
+
+/* One typographic grid across every interior hero (Home intentionally excluded).
+   Fixed rows mean the kicker, title and description have matching vertical
+   positions even when a particular page has no description. */
+:root{
+  --bh-interior-heading-size:clamp(1.25rem,2.65vw,2.3rem);
+  --bh-interior-hero-grid-rows:25px 74px 90px;
+}
+html.bh-warm-preview main section.bh-simple-hero,
+html.bh-warm-preview main section.bh-food-hero,
+html.bh-warm-preview main section.bh-visit-hero{
+  display:grid!important;
+  place-items:center!important;
+  padding:0!important;
+}
+html.bh-warm-preview main .bh-visit-hero__inner{
+  box-sizing:border-box;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0;
+  padding:0!important;
+  margin:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+html.bh-warm-preview main .bh-simple-hero__content,
+html.bh-warm-preview main .bh-food-hero__content,
+html.bh-warm-preview main .bh-visit-hero__copy{
+  box-sizing:border-box;
+  position:relative;
+  z-index:2;
+  width:min(1200px,100%)!important;
+  max-width:1200px!important;
+  height:auto!important;
+  margin:0 auto!important;
+  padding:0 20px!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:var(--bh-interior-hero-grid-rows);
+  row-gap:12px;
+  align-content:center;
+  align-items:center;
+  justify-items:center;
+  text-align:center!important;
+}
+html.bh-warm-preview main .bh-simple-hero__eyebrow,
+html.bh-warm-preview main .bh-food-hero__eyebrow,
+html.bh-warm-preview main .bh-visit-hero .bh-visit-eyebrow{
+  align-self:center;
+  margin:0!important;
+  color:#f1dcbd!important;
+  font:700 .73rem/1.55 "Inter",sans-serif!important;
+  letter-spacing:.22em!important;
+  text-transform:uppercase;
+  text-align:center!important;
+}
+html.bh-warm-preview main .bh-simple-hero__title,
+html.bh-warm-preview main .bh-simple-hero__title--long,
+html.bh-warm-preview main .bh-simple-hero__title--drinks,
+html.bh-warm-preview main .bh-food-hero__title,
+html.bh-warm-preview main .bh-visit-hero h1{
+  align-self:center;
+  box-sizing:border-box;
+  max-width:100%!important;
+  min-width:0;
+  margin:0!important;
+  padding:0!important;
+  color:#fff8ed!important;
+  font-family:var(--bulls-heading-font,"Cinzel",Georgia,serif)!important;
+  font-size:var(--bh-interior-heading-size)!important;
+  font-weight:800!important;
+  line-height:1.14!important;
+  letter-spacing:-.025em!important;
+  text-align:center!important;
+  white-space:nowrap;
+  text-wrap:nowrap;
+}
+html.bh-warm-preview main .bh-simple-hero__intro,
+html.bh-warm-preview main .bh-food-hero__intro{
+  align-self:center;
+  justify-self:center;
+  box-sizing:border-box;
+  max-width:710px!important;
+  margin:0!important;
+  padding:0!important;
+  color:#fff6e9!important;
+  font:500 clamp(.94rem,1.25vw,1.1rem)/1.57 "Inter",sans-serif!important;
+  text-align:center!important;
+}
+@media(max-width:767px){
+  :root{
+    --bh-interior-heading-size:clamp(1.22rem,4.75vw,2.05rem);
+    --bh-interior-hero-grid-rows:24px 90px 132px;
+  }
+  html.bh-warm-preview main .bh-simple-hero__content,
+  html.bh-warm-preview main .bh-food-hero__content,
+  html.bh-warm-preview main .bh-visit-hero__copy{
+    padding:0 18px!important;
+    row-gap:8px;
+  }
+  html.bh-warm-preview main .bh-simple-hero__title,
+  html.bh-warm-preview main .bh-simple-hero__title--long,
+  html.bh-warm-preview main .bh-simple-hero__title--drinks,
+  html.bh-warm-preview main .bh-food-hero__title,
+  html.bh-warm-preview main .bh-visit-hero h1{
+    white-space:normal;
+    text-wrap:balance;
+    overflow-wrap:normal;
+  }
+  html.bh-warm-preview main .bh-simple-hero__title--drinks{
+    font-size:clamp(.98rem,4vw,1.45rem)!important;
+    white-space:nowrap;
+    text-wrap:nowrap;
+  }
+  html.bh-warm-preview main .bh-simple-hero__eyebrow,
+  html.bh-warm-preview main .bh-food-hero__eyebrow,
+  html.bh-warm-preview main .bh-visit-hero .bh-visit-eyebrow{
+    font-size:.66rem!important;
+    letter-spacing:.18em!important;
+  }
+  html.bh-warm-preview main .bh-simple-hero__intro,
+  html.bh-warm-preview main .bh-food-hero__intro{
+    font-size:clamp(.84rem,3.45vw,.94rem)!important;
+    line-height:1.48!important;
+  }
+}
+/* The narrower Drinks title remains one line at the smallest mobile widths. */
+@media(max-width:390px){
+  html.bh-warm-preview main .bh-simple-hero__title--drinks{
+    font-size:clamp(.85rem,3.9vw,1rem)!important;
+  }
+}
