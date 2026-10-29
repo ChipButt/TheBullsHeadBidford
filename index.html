@@ -9,7 +9,7 @@
 #hero-positioner .hero-buttons{grid-column:2;grid-row:2;align-self:end;margin:0;width:auto;left:auto;right:auto;top:auto;bottom:auto}
 @media(max-width:1050px){#hero-positioner{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;padding-top:110px;padding-bottom:40px}#hero-positioner .hero-title{width:100%;max-width:850px;margin:0 0 24px}#hero-positioner .hero-copy{width:min(100%,36rem);margin:0 0 24px}#hero-positioner .hero-buttons{align-self:flex-start}}
 @media(max-width:767px){#hero-positioner{padding-top:105px;padding-bottom:34px}#hero-positioner .hero-title{margin-bottom:20px}#hero-positioner .hero-title h1{font-size:clamp(2.5rem,9.25vw,4.75rem);line-height:.98;letter-spacing:-.02em}#hero-positioner .hero-copy{font-size:1rem;line-height:1.5;margin-bottom:22px}#hero-positioner .hero-buttons{width:100%;align-self:stretch}#hero-positioner .hero-buttons a{min-width:0;flex:1 1 0;padding:12px 10px}}
-</style><link rel="stylesheet" href="assets/bulls-head-components.css"><style>.home-hero .hero-bg>img[data-chipin-image="img01"]{object-position:var(--bh-hero-desktop,50% 50%)}@media(max-width:767px){.home-hero .hero-bg>img[data-chipin-image="img01"]{object-position:var(--bh-hero-mobile,50% 50%)}}
+</style><link rel="stylesheet" href="assets/bulls-head-components.css"><link rel="stylesheet" href="assets/bh-home-refinement.css"><style>.home-hero .hero-bg>img[data-chipin-image="img01"]{object-position:var(--bh-hero-desktop,50% 50%)}@media(max-width:767px){.home-hero .hero-bg>img[data-chipin-image="img01"]{object-position:var(--bh-hero-mobile,50% 50%)}}
 /* Mobile: move headline and introduction to the top of the hero photo.
    Keep the navigation unobscured and the call-to-action buttons at the bottom. */
 @media (max-width:767px) {
@@ -61,7 +61,31 @@
 </div>
 <p class="hero-move hero-copy text-white/85 text-lg leading-[1.6]" data-hero-item="copy" data-chipin-text="t03">Real ale, a fully enclosed garden, open fires in winter and live music. Back under new management since August 2025.</p>
 <div class="hero-move hero-buttons flex gap-4" data-hero-item="buttons"><a href="drinks.html" class="bg-white text-foreground px-7 py-3.5 rounded-full text-sm font-medium">See the drinks</a><a href="visit.html" class="text-white px-7 py-3.5 rounded-full border border-white/30">Find us</a></div>
-</div></section><section class="page home-intro"><div class="wrap"><div class="grid md:grid-cols-2 gap-8 md:gap-14 items-stretch"><div class="flex flex-col justify-center"><p class="text-xs uppercase tracking-[0.3em] text-pulse mb-4" data-chipin-text="t04">36 High Street</p><h1 class="display" data-chipin-text="t05">Part of Bidford for more than two centuries</h1><p class="lead" data-chipin-text="t06">The Bulls Head has been part of Bidford life for more than 200 years. Reopened under new management in August 2025, it remains a traditional High Street local built around good beer, good company and a warm welcome.</p></div><div class="min-h-[420px] md:min-h-[560px]"><img src="bulls-head-assets/02-bulls-head-interior-fireplace.png" class="w-full h-full rounded-xl object-cover" alt="Inside The Bulls Head, Bidford-on-Avon" data-chipin-image="img02"></div></div><div class="cards"><div class="card"><h2 data-chipin-text="t07">Dog friendly</h2><p data-chipin-text="t08">Dogs are welcome.</p></div><div class="card"><h2 data-chipin-text="t09">Garden</h2><p data-chipin-text="t10">A fully enclosed beer garden.</p></div><div class="card"><h2 data-chipin-text="t11">Winter fires</h2><p data-chipin-text="t12">Real/open fires are part of the pub for the colder months.</p></div></div></div></section><section id="about-us" class="bh-about" aria-labelledby="bh-about-heading">
+</div></section><section class="bh-history" aria-labelledby="bh-history-heading">
+<div class="bh-home-container bh-history__grid">
+<div class="bh-history__copy">
+<p class="bh-home-eyebrow" data-chipin-text="t04">36 High Street · Our village story</p>
+<h2 id="bh-history-heading" data-chipin-text="t05">Two centuries on Bidford High Street</h2>
+<p data-chipin-text="t06">Bidford's story begins at the river. The Roman road known as Ryknild Street once crossed the Avon at a ford near St Laurence's Church. In the early fifteenth century a stone bridge took the crossing farther west. It was already being repaired in 1449, and its eight arches still carry people into the village today.</p>
+<p data-chipin-text="t21">By 1861, Bidford had around 950 residents and a busy High Street. Grocers, butchers and drapers served local households, while farmers, blacksmiths and other trades kept the village working. There were seven pubs and inns in Bidford at the time — and The Bulls Head was one of them.</p>
+<p data-chipin-text="t22">CAMRA records this pub as having served pints for more than 200 years. Generations of shops, trades and neighbours have come and gone around it, but the pub is still here at 36 High Street. It remains somewhere to meet after work, catch up with friends and take part in the life of the village.</p>
+<p class="bh-history__sources">History: <a href="https://www.warwickshire.gov.uk/major-transport-construction-projects/b4085-bidford-avon-river-bridge" target="_blank" rel="noopener noreferrer">Warwickshire County Council</a> · <a href="https://timetrail.warwickshire.gov.uk/exhibitionsview.aspx?eid=16&amp;page=136" target="_blank" rel="noopener noreferrer">Warwickshire Historic Environment Record</a> · <a href="https://camra.org.uk/pubs/bulls-head-bidford-on-avon-153794" target="_blank" rel="noopener noreferrer">CAMRA</a></p>
+</div>
+<figure class="bh-history__photo"><img src="bulls-head-assets/02-bulls-head-interior-fireplace.png" alt="Inside The Bulls Head, Bidford-on-Avon" loading="lazy" decoding="async" data-chipin-image="img02"></figure>
+</div></section>
+<section class="bh-home-features" aria-labelledby="bh-home-features-heading">
+<div class="bh-home-container bh-home-features__grid">
+<figure class="bh-home-features__photo"><img src="bulls-head-assets/04-bulls-head-beer-garden.png" alt="The enclosed beer garden at The Bulls Head" loading="lazy" decoding="async"></figure>
+<div class="bh-home-features__body">
+<p class="bh-home-eyebrow" data-chipin-text="t23">More than a pint</p>
+<h2 id="bh-home-features-heading" data-chipin-text="t24">A place to settle in</h2>
+<div class="bh-home-features__list">
+<article class="bh-home-feature"><span class="bh-home-feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5.5" cy="9.5" r="1.5"/><circle cx="9" cy="5.5" r="1.5"/><circle cx="15" cy="5.5" r="1.5"/><circle cx="18.5" cy="9.5" r="1.5"/><path d="M12 11.5c-2.4 0-3.5 2.1-5.2 3.6-1.1 1-1.9 2.1-1.3 3.5.4 1.1 1.7 1.6 3 1.2 1.3-.5 2.2-.8 3.5-.8s2.2.3 3.5.8c1.3.4 2.6-.1 3-1.2.6-1.4-.2-2.5-1.3-3.5-1.7-1.5-2.8-3.6-5.2-3.6Z"/></svg></span><div><h3 data-chipin-text="t07">Dog friendly</h3><p data-chipin-text="t08">Four-legged regulars are welcome too, so nobody has to miss out on a visit to the pub.</p></div></article>
+<article class="bh-home-feature"><span class="bh-home-feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22v-10"/><path d="M12 15C6 15 4 10 4 5c5 0 8 3 8 10Z"/><path d="M12 17c6 0 8-5 8-10-5 0-8 3-8 10Z"/></svg></span><div><h3 data-chipin-text="t09">The enclosed garden</h3><p data-chipin-text="t10">A fully enclosed beer garden, with room to take your drink outside and make the most of a dry day.</p></div></article>
+<article class="bh-home-feature"><span class="bh-home-feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22c5 0 8-3 8-8 0-3-2-6-5-8 0 3-2 4-3 5-1-2-1-4-1-7-4 4-7 7-7 11 0 4 3 7 8 7Z"/><path d="M12 22c2.2 0 3.8-1.4 3.8-3.6 0-1.8-1.2-3-2.3-4.3-.2 1.8-1 2.4-1.7 3.1-.6-1-1-1.5-1-3-1.9 1.7-2.7 3.1-2.7 4.6C8.1 20.9 9.8 22 12 22Z"/></svg></span><div><h3 data-chipin-text="t11">Real fires in winter</h3><p data-chipin-text="t12">When the colder months arrive, a real fire brings the warmth back inside.</p></div></article>
+</div>
+</div>
+</div></section><section id="about-us" class="bh-about" aria-labelledby="bh-about-heading">
 <div class="bh-about__inner">
 <figure class="bh-about__photo"><img src="bulls-head-assets/anouska-and-simon.png" alt="Anouska and Simon, the publicans of The Bulls Head" loading="lazy" decoding="async" width="1086" height="1448" data-chipin-image="img03"><figcaption>Anouska &amp; Simon <span>· Your publicans</span></figcaption></figure>
 <div class="bh-about__story">
@@ -74,13 +98,14 @@
 <p data-chipin-text="t19">The journey hasn’t always been easy, but we’re getting there. We hope to be serving food soon.</p>
 <p class="bh-about__signoff" data-chipin-text="t20">We’re proud to be the publicans of The Bulls Head, and we look forward to welcoming you.</p>
 </div></div></section></main><footer class="bh-footer" aria-label="The Bulls Head information">
-<div class="bh-footer__cta"><div class="bh-footer__container bh-footer__cta-inner"><div><p class="bh-footer__eyebrow">THE HEART OF BIDFORD</p><h2>Come and say hello</h2><p>Good company, a warm welcome and a proper village pub</p></div><a class="bh-footer__button" href="visit.html">Plan your visit <span aria-hidden="true">↗</span></a></div></div>
-<div class="bh-footer__container bh-footer__main">
-<div class="bh-footer__identity"><a href="index.html" aria-label="The Bulls Head homepage"><img src="bulls-head-assets/09-bulls-head-logo.png" alt="The Bulls Head" loading="lazy" width="150"></a><p>A traditional local with community at its heart, proudly run by Anouska and Simon</p></div>
-<div><h3>Explore</h3><nav aria-label="Footer navigation"><a href="index.html#about-us">About us</a><a href="drinks.html">Drinks</a><a href="food.html">Food updates</a><a href="live.html">Live music</a><a href="hours.html">Opening hours</a></nav></div>
-<div><h3>Get in touch</h3><a href="tel:01789772242">01789 772242</a><a class="bh-footer__email" href="mailto:thebullshead36@yahoo.com">thebullshead36@yahoo.com</a><a href="https://www.facebook.com/Thebullsheadbidford/" target="_blank" rel="noopener noreferrer">Find us on Facebook <span aria-hidden="true">↗</span></a></div>
-<div><h3>Find us</h3><address>36 High Street<br>Bidford-on-Avon<br>Alcester, B50 4AA</address><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Bulls+Head%2C+36+High+Street%2C+Bidford-on-Avon%2C+B50+4AA" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a></div>
-</div><div class="bh-footer__container bh-footer__bottom"><small>© <span id="footer-year">2026</span> The Bulls Head, Bidford-on-Avon</small><small>Made for our village community</small></div>
+<div class="bh-footer__cta bh-home-footer-cta"><div class="bh-footer__container bh-home-footer-cta__inner"><div><h2>Come and say hello</h2><p>Good company, a warm welcome and a place to call your local</p></div><a class="bh-home-visit-button" href="visit.html">Plan your visit</a></div></div>
+<div class="bh-footer__container bh-home-footer-main">
+<a class="bh-home-footer-logo" href="index.html" aria-label="The Bulls Head homepage"><img src="bulls-head-assets/09-bulls-head-logo.png" alt="The Bulls Head" loading="lazy" width="168"></a>
+<p class="bh-home-footer-tagline"><span>A traditional local with community at its heart,</span><span>proudly run by Anouska and Simon</span></p>
+<nav class="bh-home-footer-links" aria-label="Contact and find us"><a href="tel:01789772242">01789 772242</a><a href="mailto:thebullshead36@yahoo.com">Email the pub</a><a href="https://www.facebook.com/Thebullsheadbidford/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Bulls+Head%2C+36+High+Street%2C+Bidford-on-Avon%2C+B50+4AA" target="_blank" rel="noopener noreferrer">Directions</a></nav>
+<address class="bh-home-footer-address">36 High Street, Bidford-on-Avon, B50 4AA</address>
+</div>
+<div class="bh-footer__container bh-footer__bottom bh-home-footer-bottom"><small>© <span id="footer-year">2026</span> The Bulls Head, Bidford-on-Avon</small></div>
 </footer><script>/* Kinetic Monolith — static export interactions (vanilla JS) */
 (function () {
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
