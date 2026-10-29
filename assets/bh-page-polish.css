@@ -176,3 +176,8 @@ html.bh-warm-preview .bh-visit-hero__photo img{
   html.bh-warm-preview .bh-food-hero{padding:70px 22px 36px}
   html.bh-warm-preview .bh-visit-hero__inner{padding:88px 20px 40px}
 }
+
+/* Match the Food "stay in the loop" panel to the Hours and Reviews gold frame. */
+html.bh-warm-preview main .bh-food-updates .bh-food-social{
+  border:3px solid #c9a77d!important;
+}
