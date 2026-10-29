@@ -1,0 +1,125 @@
+/* Bulls Head shared page layout and footer. All public-facing pages share one system. */
+/* One deep woodland green for BOTH the call-to-action bar and final footer. */
+.bh-footer,
+.bh-footer .bh-home-footer-cta {background:#293d2b!important;color:#f7f1e8}
+.bh-footer .bh-home-footer-cta {
+ border-bottom:1px solid rgba(234,217,180,.3)!important;
+}
+.bh-footer .bh-home-footer-cta__inner {padding-top:25px;padding-bottom:25px}
+.bh-footer .bh-home-footer-cta__inner h2{color:#fff7ec}
+.bh-footer .bh-home-footer-cta__inner p{color:#e8ebdf}
+.bh-footer .bh-home-visit-button {
+ background:#eed6b1;color:#283b2b!important;border:1px solid #eed6b1;
+ box-shadow:none;border-radius:8px;
+}
+.bh-footer .bh-home-visit-button:hover,.bh-footer .bh-home-visit-button:focus-visible {
+ background:#fff0d8;border-color:#fff0d8;box-shadow:0 5px 14px rgba(0,0,0,.16);
+}
+.bh-footer .bh-home-footer-main{display:flex;flex-direction:column;align-items:center;text-align:center}
+.bh-footer .bh-home-footer-logo img{display:block;width:168px;object-fit:contain}
+.bh-footer .bh-home-footer-tagline{color:#f3eddf}
+.bh-footer .bh-home-footer-links{justify-content:center}
+.bh-footer .bh-home-footer-links a{color:#ebe2d0}
+.bh-footer .bh-home-footer-links a:hover{color:white}
+.bh-footer .bh-home-footer-address,.bh-footer .bh-home-footer-bottom small{color:#d3decb}
+.bh-footer .bh-home-footer-bottom{display:flex;justify-content:center;align-items:center;text-align:center;border-color:rgba(234,217,180,.22)}
+/* Secondary pages inherit the refined proportions and centred editorial rhythm. */
+.bh-unified-page main > .page:not(.bh-food-updates) {
+ min-height:0;
+ padding:clamp(130px,12vw,172px) clamp(22px,4vw,58px) clamp(66px,8vw,116px);
+ background:#fbfaf7;
+ color:#29352b;
+}
+.bh-unified-page main > .page > .wrap {max-width:1200px;margin-inline:auto}
+.bh-unified-page main .bh-page-intro{
+ text-align:center;max-width:900px;margin:0 auto clamp(34px,4.2vw,62px);
+}
+.bh-unified-page main .bh-page-intro .text-pulse{
+ color:#586a43;font-weight:700;letter-spacing:.2em;
+}
+.bh-unified-page main .bh-page-intro h1{
+ font-size:clamp(2.45rem,4.5vw,4.65rem);
+ line-height:1.14;letter-spacing:-.024em;
+ max-width:900px;margin:0 auto;
+ color:#394b36;
+}
+.bh-unified-page main .bh-page-intro .lead {
+ font:400 clamp(1rem,1.5vw,1.12rem)/1.78 "Inter",sans-serif;
+ max-width:680px;
+ color:#52604f;
+ margin:clamp(17px,2.4vw,26px) auto 0;
+ text-align:center;
+}
+.bh-unified-page main > .page > .wrap > img[data-chipin-image]{
+ display:block;width:100%;height:auto;max-height:570px;
+ aspect-ratio:16/9;object-fit:cover;object-position:center;
+ border:8px solid #e7dcc9;border-radius:8px;
+ box-shadow:0 12px 32px rgba(31,48,34,.09);
+ margin:0 auto clamp(36px,5vw,68px)!important;
+}
+.bh-unified-page main .cards {gap:clamp(18px,2vw,28px);margin-top:clamp(30px,4vw,54px)}
+.bh-unified-page main .cards .card {
+ padding:24px 22px 26px;
+ text-align:center;
+ border-top:4px solid #71815b;
+ background:#f3f0e7;
+ border-radius:2px 2px 9px 9px;
+}
+.bh-unified-page main .cards .card h2 {
+ font-size:clamp(1.25rem,2.1vw,1.9rem);
+ line-height:1.25;
+ color:#354733;
+}
+.bh-unified-page main .cards .card p{color:#57604f;font-size:1rem;line-height:1.65}
+.bh-unified-page main .cards .card a{color:#294c37;text-decoration:underline;text-underline-offset:3px}
+.bh-unified-page main .hours{
+ width:min(730px,100%);max-width:100%;
+ margin:34px auto 30px;
+ background:#f3f0e7;
+ border:1px solid #dfdccf;
+ padding:10px clamp(18px,3vw,34px) 16px;
+ border-radius:10px;
+}
+.bh-unified-page main .hours .row {border-color:#d6d7c8;color:#344535}
+.bh-unified-page main .hours+.lead{margin:28px auto 0;text-align:center}
+.bh-unified-page main .drinks-three .drink-tile img {
+ border:7px solid #e8dcc7;border-radius:9px!important;
+ box-shadow:0 7px 24px rgba(37,47,29,.08)
+}
+.bh-unified-page main .drinks-three .card{margin-top:18px}
+.bh-unified-page main .drinks-three+.lead{max-width:730px;margin:38px auto 0;text-align:center}
+.bh-unified-page main .reviews-three {gap:18px}
+.bh-unified-page main .reviews-three .card{height:100%;border-top-color:#71815b}
+.bh-unified-page main .review-stars{color:#64774a}
+.bh-unified-page main .reviews-three+.lead{text-align:center;margin-inline:auto}
+.bh-unified-page main .map-embed{display:block;max-width:100%}
+.bh-unified-page main .bh-food-updates.page {background:#fbfaf7}
+/* Legacy pages keep their existing editorial content but share a familiar presentation. */
+.bh-unified-legacy body{background:#fbfaf7;color:#344331}
+.bh-unified-legacy .header{background:#f7f0e3;border-bottom:2px solid #c9a77d}
+.bh-unified-legacy .brand,.bh-unified-legacy .nav a{color:#293d2b}
+.bh-unified-legacy .nav a.active,.bh-unified-legacy .nav a:hover{border-bottom-color:#71815b}
+.bh-unified-legacy .page-hero{background:#293d2b;border-bottom-color:#c9a77d}
+.bh-unified-legacy .page-hero .shell{text-align:center}
+.bh-unified-legacy .page-hero h1{margin-left:auto;margin-right:auto;font-size:clamp(2.5rem,5vw,5rem)}
+.bh-unified-legacy .page-hero .lead{margin-inline:auto}
+.bh-unified-legacy .page-hero .eyebrow{color:#e9d6b9}
+.bh-unified-legacy .concept{background:#e2d0af;color:#39462f}
+.bh-unified-legacy .service-card,.bh-unified-legacy .panel,.bh-unified-legacy .quick-card,.bh-unified-legacy .cta-panel{background:#f2eee4}
+@media(max-width:850px){
+ .bh-unified-page main .reviews-three{grid-template-columns:1fr!important}
+ .bh-unified-page main > .page:not(.bh-food-updates){padding-top:125px}
+}
+@media(max-width:700px){
+ .bh-footer .bh-home-footer-cta__inner{flex-direction:column;gap:16px;padding:24px 22px}
+ .bh-footer .bh-home-footer-main{padding-top:38px;padding-bottom:33px}
+ .bh-unified-page main .drinks-three{flex-direction:column!important;flex-wrap:nowrap!important}
+ .bh-unified-page main .drinks-three > .drink-tile{
+   display:block!important;flex:0 0 auto!important;
+   width:100%!important;min-width:0!important;max-width:100%!important;
+ }
+ .bh-unified-page main .drinks-three .drink-tile img{width:100%;aspect-ratio:4/3;object-fit:cover}
+ .bh-unified-page main .cards{grid-template-columns:1fr}
+ .bh-unified-page main > .page > .wrap > img[data-chipin-image]{aspect-ratio:4/3;max-height:450px}
+ .bh-unified-page main .bh-page-intro h1{font-size:clamp(2.12rem,8vw,3.25rem)}
+}
