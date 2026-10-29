@@ -88,3 +88,42 @@
 @media(max-width:760px){
   .bh-history__copy h2 {font-size:clamp(1.23rem,5.25vw,1.92rem);line-height:1.32;max-width:100%}
 }
+
+/* Alternating storytelling rhythm: photo / words, words / photo, photo / words. */
+.bh-history__grid > .bh-history__photo{order:-1}
+.bh-history__grid > .bh-history__copy{order:0}
+.bh-home-features__grid > .bh-home-features__body{order:-1}
+.bh-home-features__grid > .bh-home-features__photo{order:0}
+/* Intentional two-line publicans heading, with both names kept together. */
+.bh-about__story h2#bh-about-heading{
+  margin-bottom:27px;
+  font-size:clamp(2rem,3.35vw,3.45rem);
+  line-height:1.18;
+  letter-spacing:-.025em;
+}
+.bh-about__heading-kicker{
+  display:block;
+  color:#617151;
+  font:600 .58em/1.6 var(--bulls-heading-font,Georgia,serif);
+  letter-spacing:.01em;
+}
+.bh-about__heading-names{
+  display:block;
+  color:#604630;
+  font-size:.86em;
+  white-space:nowrap;
+}
+@media(max-width:960px){
+  .bh-about__story h2#bh-about-heading{font-size:clamp(1.7rem,3.25vw,2.75rem)}
+}
+@media(max-width:700px){
+  .bh-history__grid > .bh-history__photo{order:-1}
+  .bh-history__grid > .bh-history__copy{order:0}
+  .bh-home-features__grid > .bh-home-features__body{order:1}
+  .bh-home-features__grid > .bh-home-features__photo{order:2}
+  .bh-about__story h2#bh-about-heading{font-size:clamp(1.75rem,7vw,2.5rem)}
+  .bh-about__heading-names{font-size:clamp(1.35rem,6.3vw,2.1rem)}
+}
+@media(max-width:380px){
+  .bh-about__heading-names{font-size:clamp(1.2rem,5.7vw,1.42rem)}
+}
