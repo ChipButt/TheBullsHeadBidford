@@ -181,3 +181,24 @@ html.bh-warm-preview .bh-visit-hero__photo img{
 html.bh-warm-preview main .bh-food-updates .bh-food-social{
   border:3px solid #c9a77d!important;
 }
+
+/* Visit: align the five contact rows as a two-column directory at every width. */
+.bh-visit-page .bh-visit-contact{
+  grid-template-columns:minmax(84px, .85fr) minmax(0, 1.65fr);
+  gap:clamp(9px, 2vw, 18px);
+  align-items:start;
+}
+.bh-visit-page .bh-visit-contact > span{
+  text-align:left;
+}
+.bh-visit-page .bh-visit-contact > a,
+.bh-visit-page .bh-visit-contact > .bh-visit-postal-address{
+  text-align:right!important;
+  justify-self:stretch;
+  min-width:0;
+}
+/* Visit: straighten the exterior photo, leaving the banner and text level. */
+html.bh-warm-preview .bh-visit-hero__photo img{
+  transform:rotate(-2deg) scale(1.10);
+  transform-origin:center center;
+}
