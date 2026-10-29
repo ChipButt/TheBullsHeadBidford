@@ -35,47 +35,67 @@
               "path": "site.editorPages.index.t03"
             },
             {
-              "label": "About section label",
+              "label": "History section label",
               "type": "textarea",
               "path": "site.editorPages.index.t04"
             },
             {
-              "label": "About section heading",
+              "label": "History section heading",
               "type": "text",
               "path": "site.editorPages.index.t05"
             },
             {
-              "label": "About section description",
+              "label": "History paragraph 1",
               "type": "textarea",
               "path": "site.editorPages.index.t06"
             },
             {
-              "label": "Feature 1 heading",
+              "label": "History paragraph 2",
+              "type": "textarea",
+              "path": "site.editorPages.index.t21"
+            },
+            {
+              "label": "History paragraph 3",
+              "type": "textarea",
+              "path": "site.editorPages.index.t22"
+            },
+            {
+              "label": "Features section label",
+              "type": "text",
+              "path": "site.editorPages.index.t23"
+            },
+            {
+              "label": "Features section heading",
+              "type": "text",
+              "path": "site.editorPages.index.t24"
+            },
+            {
+              "label": "Dog-friendly heading",
               "type": "text",
               "path": "site.editorPages.index.t07"
             },
             {
-              "label": "Feature 1 description",
+              "label": "Dog-friendly description",
               "type": "textarea",
               "path": "site.editorPages.index.t08"
             },
             {
-              "label": "Feature 2 heading",
+              "label": "Garden heading",
               "type": "text",
               "path": "site.editorPages.index.t09"
             },
             {
-              "label": "Feature 2 description",
+              "label": "Garden description",
               "type": "textarea",
               "path": "site.editorPages.index.t10"
             },
             {
-              "label": "Feature 3 heading",
+              "label": "Winter fires heading",
               "type": "text",
               "path": "site.editorPages.index.t11"
             },
             {
-              "label": "Feature 3 description",
+              "label": "Winter fires description",
               "type": "textarea",
               "path": "site.editorPages.index.t12"
             }
@@ -85,14 +105,19 @@
           "label": "Replace pictures",
           "fields": [
             {
-              "label": "Photo 1",
+              "label": "Homepage hero photograph",
               "type": "image",
               "path": "site.editorPages.index.img01"
             },
             {
-              "label": "Photo 2",
+              "label": "History section photograph",
               "type": "image",
               "path": "site.editorPages.index.img02"
+            },
+            {
+              "label": "Garden feature photograph",
+              "type": "image",
+              "path": "site.editorPages.index.img04"
             }
           ]
         },
