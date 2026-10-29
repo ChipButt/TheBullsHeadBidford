@@ -1,53 +1,19 @@
-/* Bulls Head reviews: clean, coordinated platform sections.
-   Third-party widgets control their own review content and attributions. */
-.bh-unified-page main > .bh-reviews-page.page {
-  background:#f7f0e3;
-  padding-bottom:clamp(65px,7vw,104px);
-}
-.bh-reviews-page .bh-page-intro {margin-bottom:clamp(29px,4vw,48px)!important}
-.bh-reviews-page .bh-page-intro h1 {color:#293d2b}
-.bh-review-source {max-width:1140px;margin:0 auto}
-.bh-review-source+.bh-review-source {
-  margin-top:clamp(48px,6vw,78px);
-  padding-top:clamp(42px,5vw,60px);
-  border-top:1px solid #d9c8ae;
-}
-.bh-review-source__title {text-align:center;margin:0 auto clamp(22px,2.7vw,32px)}
-.bh-review-source__title h2 {
-  margin:0;color:#293d2b;
-  font:600 clamp(1.6rem,3vw,2.35rem)/1.2 var(--font-heading),Georgia,serif;
-  letter-spacing:-.02em;
-}
-.bh-review-source__content{width:100%;min-width:0}
-.bh-review-source__content .rpi{display:block;width:100%;min-height:180px;overflow:visible}
-.bh-review-source__attribution{
-  display:table;margin:16px auto 0;
-  color:#52644b!important;font:500 .78rem/1.5 "Inter",sans-serif;
-  text-decoration:underline!important;text-underline-offset:3px;
-}
-.bh-review-source__attribution:hover {color:#293d2b!important}
-.bh-review-source__content--tripadvisor{
-  display:flex;justify-content:center;align-items:flex-start;
-}
-.bh-tripadvisor-frame {
-  width:min(760px,100%);
-  background:#f9f5eb;
-  border:1px solid #dbcfba;
-  border-top:4px solid #c9a77d;
-  border-radius:12px;
-  padding:clamp(20px,3vw,37px);
-  box-shadow:0 10px 28px rgba(39,57,40,.075);
-  text-align:center;
-}
-.bh-tripadvisor-frame .TA_selfserveprop{max-width:100%;margin-inline:auto}
-.bh-tripadvisor-frame .TA_links{list-style:none;margin:0;padding:0}
-.bh-tripadvisor-frame .TA_links a{
-  display:inline-block;
-  color:#293d2b;text-decoration:underline;text-underline-offset:3px;
-  font:600 .96rem/1.6 "Inter",sans-serif;
-}
-.bh-tripadvisor-frame iframe {max-width:100%!important}
-@media(max-width:620px){
-  .bh-review-source__title{margin-bottom:22px}
-  .bh-tripadvisor-frame{padding:18px 12px}
-}
+/* Guest reviews share one editorial layout; third-party widgets retain their attributions. */
+.bh-unified-page main > .bh-reviews-page.page{background:#f7f0e3;padding-bottom:clamp(70px,7vw,115px)}
+.bh-reviews-page .bh-page-intro{margin-bottom:clamp(30px,4.5vw,54px)!important}
+.bh-reviews-page .bh-page-intro h1{color:#293d2b}
+.bh-reviews-showcase{width:min(1160px,100%);margin-inline:auto;min-width:0}
+.bh-google-reviews{width:100%;min-width:0}
+.bh-google-reviews .rpi{display:block;width:100%;min-width:0;overflow:visible}
+.bh-review-source__attribution{display:table;margin:14px auto 0;color:#52644b!important;font:500 .78rem/1.5 "Inter",sans-serif;text-decoration:underline!important;text-underline-offset:3px}
+.bh-review-source__attribution:hover{color:#293d2b!important}
+.bh-reviews-secondary{margin:clamp(33px,5vw,68px) auto 0;padding-top:clamp(22px,3vw,35px);border-top:1px solid #d9c8ae;text-align:center}
+.bh-tripadvisor-embed{width:min(100%,840px);margin-inline:auto;display:flex;justify-content:center;align-items:flex-start;min-width:0}
+.bh-tripadvisor-embed .TA_selfserveprop{margin:0 auto!important;max-width:100%!important;width:100%;text-align:center}
+.bh-tripadvisor-embed .TA_links{list-style:none;margin:0;padding:0}
+.bh-tripadvisor-embed .TA_links a{display:inline-block;padding:11px 21px;border:1px solid #c9a77d;border-radius:7px;color:#293d2b;font:600 .9rem/1.6 "Inter",sans-serif;text-decoration:none}
+.bh-tripadvisor-embed .TA_links a:hover{background:#f0e2cb}
+.bh-tripadvisor-embed iframe{max-width:100%!important;margin-inline:auto!important}
+.bh-tripadvisor-more{display:inline-flex;align-items:center;justify-content:center;gap:5px;margin-top:18px;color:#293d2b!important;font:600 .87rem/1.5 "Inter",sans-serif;text-decoration:underline!important;text-underline-offset:4px}
+.bh-tripadvisor-more:hover{color:#52644b!important}
+@media(max-width:700px){.bh-reviews-secondary{margin-top:34px}.bh-tripadvisor-embed{width:100%}.bh-reviews-page .bh-page-intro{margin-bottom:27px!important}}
