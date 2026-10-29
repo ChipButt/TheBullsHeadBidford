@@ -129,7 +129,9 @@
       "t02": "Coming Soon",
       "t05": "Coming soon.",
       "t08": "Bookings",
-      "t09": "Details will be added when food service begins."
+      "t09": "Details will be added when food service begins.",
+      "t10": "Be the first to know when food is served",
+      "t11": "Follow The Bulls Head for kitchen opening news, menus and serving times as soon as they're announced."
     },
     "live": {
       "img01": "bulls-head-assets/10-bulls-head-live-music.png",
@@ -171,5 +173,6 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Bulls+Head%2C+36+High+Street%2C+Bidford-on-Avon%2C+B50+4AA",
   "editorBrand": {
     "logo": "bulls-head-assets/09-bulls-head-logo.png"
-  }
+  },
+  "instagram": ""
 }
