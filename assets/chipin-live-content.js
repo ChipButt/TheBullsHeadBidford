@@ -26,6 +26,45 @@ const applyChipInData = data => {
       hero.style.setProperty('--bh-hero-mobile',percent(mobile.x)+'% '+percent(mobile.y)+'%');
     }
   }
+  // Food follow tiles. A missing Instagram profile must never link to a guessed account.
+  if(slug==='food'){
+    const socialUrl=(value,domain)=>{
+      if(typeof value!=='string'||!value.trim())return null;
+      try{
+        const parsed=new URL(value);
+        if(parsed.protocol!=='https:')return null;
+        if(parsed.hostname!==domain&&parsed.hostname!=='www.'+domain)return null;
+        return parsed.toString();
+      }catch{return null}
+    };
+    const facebook=document.querySelector('[data-bh-facebook]');
+    const facebookUrl=socialUrl(site.facebook,'facebook.com');
+    if(facebook&&facebookUrl)facebook.href=facebookUrl;
+    const instagram=document.querySelector('[data-bh-instagram]');
+    const instagramUrl=socialUrl(site.instagram,'instagram.com');
+    if(instagram){
+      const action=instagram.querySelector('.bh-food-follow-card__action');
+      if(instagramUrl){
+        instagram.href=instagramUrl;
+        instagram.target='_blank';
+        instagram.rel='noopener noreferrer';
+        instagram.removeAttribute('aria-disabled');
+        instagram.removeAttribute('tabindex');
+        instagram.classList.remove('is-unavailable');
+        instagram.setAttribute('aria-label','Follow The Bulls Head on Instagram');
+        if(action)action.textContent='Follow on Instagram';
+      }else{
+        instagram.removeAttribute('href');
+        instagram.removeAttribute('target');
+        instagram.removeAttribute('rel');
+        instagram.setAttribute('aria-disabled','true');
+        instagram.setAttribute('tabindex','-1');
+        instagram.classList.add('is-unavailable');
+        instagram.setAttribute('aria-label','Instagram profile link to be confirmed');
+        if(action)action.textContent='Profile link to be confirmed';
+      }
+    }
+  }
   const logo=site.editorBrand && site.editorBrand.logo;
   if(typeof logo==='string'&&logo.trim())
     document.querySelectorAll('[data-chipin-brand-image]').forEach(el=>el.setAttribute('src',logo.replace(/^\//,'')));
