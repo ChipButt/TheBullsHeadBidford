@@ -4,8 +4,8 @@
 .bh-reviews-page .bh-page-intro h1{color:#293d2b}
 .bh-reviews-showcase{width:min(1110px,100%);margin:0 auto}
 .bh-reviews-showcase .bh-review-frame{
-  box-sizing:border-box;background:#faf7f0;border:3px solid #c9a77d;
-  border-radius:13px;box-shadow:0 16px 36px rgba(40,55,40,.11);
+  box-sizing:border-box;background:#f7f0e3;border:3px solid #c9a77d;
+  border-radius:13px;box-shadow:none;
 }
 .bh-google-reviews{max-width:1110px;margin:0 auto;padding:clamp(16px,3.1vw,34px)}
 .bh-google-reviews .rpi{width:100%;min-width:0;display:block;overflow:visible}
@@ -81,7 +81,7 @@
   [role="tab"][aria-selected="true"],[class*="dot"][aria-current="true"],
   [class*="dot"].active
 ){background-color:#c9a77d!important;border-color:#c9a77d!important}
-.bh-reviews-showcase .bh-review-frame{box-shadow:0 8px 24px rgba(40,55,40,.065)}
+.bh-reviews-showcase .bh-review-frame{box-shadow:none}
 @media(max-width:680px){
   .bh-google-reviews .rpi :is(
     [class*="review-card"],[class*="review_card"],[class*="review-item"],
