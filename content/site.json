@@ -76,7 +76,17 @@
       "t18": "Our regular acoustic evenings are becoming a favourite with musicians and customers alike, whether they’re playing or joining in with a singalong.",
       "t19": "The journey hasn’t always been easy, but we’re getting there. We hope to be serving food soon.",
       "t20": "We’re proud to be the publicans of The Bulls Head, and we look forward to welcoming you.",
-      "img03": "bulls-head-assets/anouska-and-simon.png"
+      "img03": "bulls-head-assets/anouska-and-simon.png",
+      "heroFraming": {
+        "desktop": {
+          "x": 50,
+          "y": 50
+        },
+        "mobile": {
+          "x": 50,
+          "y": 50
+        }
+      }
     },
     "visit": {
       "t08": "Coming soon.",
