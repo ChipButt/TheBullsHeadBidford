@@ -85,3 +85,23 @@ html.bh-warm-preview main > section.bh-after-hero .wrap > img[data-chipin-image]
   }
   html.bh-warm-preview main > section.page.bh-after-hero{padding-top:40px!important}
 }
+
+/* The Live page uses the existing music photograph as its banner,
+   retaining exactly the same dimensions and type hierarchy as other pages. */
+html.bh-warm-preview main .bh-simple-hero--live{
+  background:#223326;
+}
+html.bh-warm-preview main .bh-simple-hero--live .bh-simple-hero__image{
+  position:absolute;inset:0;z-index:0;
+  display:block;width:100%;height:100%;
+  max-width:none;min-height:0;padding:0;margin:0;
+  object-fit:cover;object-position:center 47%;
+  border:0;border-radius:0;box-shadow:none;
+}
+html.bh-warm-preview main .bh-simple-hero--live .bh-simple-hero__shade{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(15,27,18,.55) 0%,rgba(15,27,18,.49) 42%,rgba(10,20,13,.72) 100%);
+}
+html.bh-warm-preview main .bh-simple-hero--live .bh-simple-hero__content{
+  position:relative;z-index:2;
+}
