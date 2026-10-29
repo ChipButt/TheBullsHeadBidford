@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
+
 /* Bulls Head publicans' story and consistent footer */
 .bh-about{background:#f7f4ee;color:#252b25;padding:clamp(68px,8vw,120px) 0}
 .bh-about__inner{max-width:1280px;margin:0 auto;padding:0 clamp(24px,4vw,56px);display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);gap:clamp(36px,5.5vw,88px);align-items:center}
@@ -36,26 +38,17 @@
 @media(prefers-reduced-motion:reduce){.bh-footer__button{transition:none}}
 
 /*
- * Bulls Head title typography.
- * The original Bitstream Flareserif 821 is proprietary. A locally installed
- * copy can render headings for previews, but no font binary is published here.
- * For public display, add the licensed webfont kit to this site and update the
- * @font-face src with that licensed asset's URL.
+ * Bulls Head display typography — Cinzel (SIL Open Font License 1.1).
+ * Verified against the Cinzel.zip supplied in the client's branding folder.
+ * Google Fonts serves the licensed webfont; body text remains Inter.
  */
-@font-face {
-  font-family: "Bulls Head Flareserif";
-  src: local("Flareserif821BT-Bold"), local("Flareserif 821 Bold");
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
 :root {
-  --bulls-heading-font: "Bulls Head Flareserif", "Inter Tight", Georgia, serif;
+  --bulls-heading-font: "Cinzel", Georgia, serif;
   --font-heading: var(--bulls-heading-font);
   --font-display: var(--bulls-heading-font);
 }
 :is(h1, h2, h3, h4, h5, h6, .font-heading, .display, .bh-about__story h2, .bh-footer__cta h2) {
   font-family: var(--bulls-heading-font) !important;
 }
-/* Small footer navigation labels remain utilitarian, not display type. */
+/* Keep small footer column labels legible and understated. */
 .bh-footer__main h3 { font-family: "Inter", sans-serif !important; }
