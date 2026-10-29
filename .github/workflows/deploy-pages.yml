@@ -20,9 +20,14 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    env:
+      TRIPADVISOR_API_KEY: ${{ secrets.TRIPADVISOR_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Refresh Tripadvisor review cards from authorised API
+        if: ${{ env.TRIPADVISOR_API_KEY != '' }}
+        run: python3 scripts/update_tripadvisor_reviews.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site

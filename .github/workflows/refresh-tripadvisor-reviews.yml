@@ -1,0 +1,41 @@
+name: Refresh Tripadvisor review tiles
+
+on:
+  schedule:
+    - cron: '13 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      TRIPADVISOR_API_KEY: ${{ secrets.TRIPADVISOR_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch three most recent Tripadvisor reviews
+        if: ${{ env.TRIPADVISOR_API_KEY != '' }}
+        run: python3 scripts/update_tripadvisor_reviews.py
+      - name: Configure Pages
+        if: ${{ env.TRIPADVISOR_API_KEY != '' }}
+        uses: actions/configure-pages@v5
+      - name: Upload site with refreshed review JSON
+        if: ${{ env.TRIPADVISOR_API_KEY != '' }}
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+      - name: Deploy updated reviews
+        if: ${{ env.TRIPADVISOR_API_KEY != '' }}
+        id: deployment
+        uses: actions/deploy-pages@v4
