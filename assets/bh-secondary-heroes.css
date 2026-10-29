@@ -265,3 +265,30 @@ html.bh-warm-preview main .bh-visit-hero__intro{
     font-size:clamp(.85rem,3.9vw,1rem)!important;
   }
 }
+
+/* Real pub photography in the Drinks, Hours and Reviews banners (preview). */
+html.bh-warm-preview main .bh-simple-hero[aria-labelledby="bh-drinks-page-title"],
+html.bh-warm-preview main .bh-simple-hero[aria-labelledby="bh-hours-page-title"],
+html.bh-warm-preview main .bh-simple-hero[aria-labelledby="bh-reviews-page-title"]{
+  background-color:#223326;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+html.bh-warm-preview main .bh-simple-hero[aria-labelledby="bh-drinks-page-title"]{
+  background-image:
+    linear-gradient(180deg,rgba(15,27,18,.55) 0%,rgba(15,27,18,.49) 42%,rgba(10,20,13,.72) 100%),
+    url("../bulls-head-assets/03-bulls-head-interior-bar.png");
+  background-position:center center,center 48%;
+}
+html.bh-warm-preview main .bh-simple-hero[aria-labelledby="bh-hours-page-title"]{
+  background-image:
+    linear-gradient(180deg,rgba(15,27,18,.52) 0%,rgba(15,27,18,.48) 42%,rgba(10,20,13,.70) 100%),
+    url("../bulls-head-assets/02-bulls-head-interior-fireplace.png");
+  background-position:center center,center 52%;
+}
+html.bh-warm-preview main .bh-simple-hero[aria-labelledby="bh-reviews-page-title"]{
+  background-image:
+    linear-gradient(180deg,rgba(15,27,18,.57) 0%,rgba(15,27,18,.51) 42%,rgba(10,20,13,.73) 100%),
+    url("../bulls-head-assets/04-bulls-head-beer-garden.png");
+  background-position:center center,center 55%;
+}
