@@ -73,3 +73,18 @@
 .bh-home-footer-tagline span+span::before{content:" "}
 }
 @media(prefers-reduced-motion:reduce){.bh-home-visit-button{transition:none}}
+
+
+/* Two fixed lines, centred over the heritage text column; preserved on mobile. */
+.bh-history__copy > .bh-home-eyebrow {text-align:center}
+.bh-history__copy h2 {
+  width:100%;max-width:none;text-align:center;
+  margin-left:auto;margin-right:auto;
+  font-size:clamp(1.72rem,2.1vw,2.28rem);
+  line-height:1.37;
+  letter-spacing:-.025em;
+}
+.bh-history__copy h2 > span {display:block;white-space:nowrap}
+@media(max-width:760px){
+  .bh-history__copy h2 {font-size:clamp(1.23rem,5.25vw,1.92rem);line-height:1.32;max-width:100%}
+}
