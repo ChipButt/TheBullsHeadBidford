@@ -206,7 +206,7 @@ html.bh-warm-preview .bh-visit-hero__photo img{
 /* Fit the Visit contact heading across the available details column. */
 .bh-visit-details{container-type:inline-size}
 .bh-visit-details h2.bh-visit-details__heading{
-  font-size:clamp(1.15rem,8.65cqw,5.8rem);
+  font-size:clamp(1.15rem,8.47cqw,5.8rem);
   letter-spacing:-.035em;
   white-space:nowrap;
   text-align:right;
