@@ -311,3 +311,78 @@ html.bh-warm-preview main .bh-simple-hero[aria-labelledby="bh-reviews-page-title
     transform:none!important;
   }
 }
+
+
+/* Mobile interior hero legibility: keep the whole text group below the fixed
+   80px navigation, without the old 24/90/132px grid rows. Let text determine
+   the required height instead of clipping it on small or zoomed screens. */
+@media (max-width: 767px) {
+  html.bh-warm-preview main section.bh-simple-hero,
+  html.bh-warm-preview main section.bh-food-hero,
+  html.bh-warm-preview main section.bh-visit-hero {
+    box-sizing: border-box;
+    height: auto!important;
+    min-height: max(390px, var(--bh-inner-hero-height))!important;
+    padding: calc(80px + clamp(18px, 3svh, 30px)) 18px clamp(26px, 5svh, 44px)!important;
+    display: flex!important;
+    flex-direction: column;
+    align-items: center!important;
+    justify-content: center!important;
+    overflow: hidden;
+  }
+
+  html.bh-warm-preview main .bh-simple-hero__content,
+  html.bh-warm-preview main .bh-food-hero__content,
+  html.bh-warm-preview main .bh-visit-hero__copy {
+    box-sizing: border-box;
+    display: flex!important;
+    flex-direction: column;
+    align-items: center!important;
+    justify-content: center!important;
+    gap: clamp(12px, 2svh, 18px)!important;
+    grid-template-rows: none!important;
+    height: auto!important;
+    min-height: 0;
+    width: min(100%, 680px)!important;
+    max-width: 100%!important;
+    padding: 0!important;
+    margin: 0 auto!important;
+    text-align: center!important;
+  }
+
+  html.bh-warm-preview main .bh-simple-hero__eyebrow,
+  html.bh-warm-preview main .bh-food-hero__eyebrow,
+  html.bh-warm-preview main .bh-visit-hero .bh-visit-eyebrow {
+    margin: 0!important;
+    flex-shrink: 0;
+  }
+
+  html.bh-warm-preview main .bh-simple-hero__title,
+  html.bh-warm-preview main .bh-food-hero__title,
+  html.bh-warm-preview main .bh-visit-hero h1 {
+    margin: 0!important;
+    width: 100%;
+    max-width: 100%!important;
+    white-space: normal;
+    text-wrap: balance;
+  }
+
+  html.bh-warm-preview main .bh-simple-hero__intro,
+  html.bh-warm-preview main .bh-food-hero__intro,
+  html.bh-warm-preview main .bh-visit-hero__intro {
+    margin: 0!important;
+    max-width: min(100%, 580px)!important;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Very narrow portrait screens get smaller side margins without losing
+   breathing room above the copy. */
+@media (max-width: 360px) {
+  html.bh-warm-preview main section.bh-simple-hero,
+  html.bh-warm-preview main section.bh-food-hero,
+  html.bh-warm-preview main section.bh-visit-hero {
+    padding-right: 14px!important;
+    padding-left: 14px!important;
+  }
+}
