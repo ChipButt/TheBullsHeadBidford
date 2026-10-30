@@ -292,3 +292,22 @@ html.bh-warm-preview main .bh-simple-hero[aria-labelledby="bh-reviews-page-title
     url("../bulls-head-assets/04-bulls-head-beer-garden.png");
   background-position:center center,center 55%;
 }
+
+/* Visit hero: avoid desktop zoom/rotation on narrow portrait screens. */
+@media (max-width: 767px){
+  html.bh-warm-preview main .bh-visit-hero__photo{
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    overflow:hidden;
+  }
+  html.bh-warm-preview main .bh-visit-hero__photo img{
+    display:block;
+    width:100%!important;
+    height:100%!important;
+    max-width:none;
+    object-fit:cover;
+    object-position:50% 50%;
+    transform:none!important;
+  }
+}
