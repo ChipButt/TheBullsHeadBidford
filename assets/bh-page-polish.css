@@ -202,3 +202,11 @@ html.bh-warm-preview .bh-visit-hero__photo img{
   transform:rotate(-2deg) scale(1.10);
   transform-origin:center center;
 }
+
+/* Fit the Visit contact heading across the available details column. */
+.bh-visit-details{container-type:inline-size}
+.bh-visit-details h2.bh-visit-details__heading{
+  font-size:clamp(1.3rem,7.1cqw,4.75rem);
+  letter-spacing:-.035em;
+  white-space:nowrap;
+}
