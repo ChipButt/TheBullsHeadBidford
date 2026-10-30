@@ -211,3 +211,9 @@ html.bh-warm-preview .bh-visit-hero__photo img{
   white-space:nowrap;
   text-align:right;
 }
+
+/* Mobile homepage: show the photo slideshow before its accompanying feature text. */
+@media (max-width: 767px){
+  .bh-home-features__grid > .bh-home-features__photo{order:1}
+  .bh-home-features__grid > .bh-home-features__body{order:2}
+}
